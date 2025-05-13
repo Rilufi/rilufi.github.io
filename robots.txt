@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rilufi.github.io/sitemap.xml
