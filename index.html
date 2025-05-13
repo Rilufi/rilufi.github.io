@@ -15,51 +15,157 @@
   <title>Yuri Abuchaim | Ciência de Dados</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header>
-    <img src="assets/imgs/foto-perfil.jpg" alt="Foto de Yuri Abuchaim">
-    <h1>Yuri Abuchaim</h1>
-    <p>Físico, Mestre em Astronomia • Ciência de Dados</p>
-    <div class="links">
-      <a href="https://github.com/rilufi" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://linkedin.com/in/seulinkedin" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="http://lattes.cnpq.br/6100327519689283" target="_blank"><i class="fas fa-book"></i> Lattes</a>
-      <a href="Curriculo_Yuri.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Currículo PDF</a>
+    <div class="header-content">
+      <img src="assets/imgs/foto-perfil.jpg" alt="Foto de Yuri Abuchaim" class="profile-img">
+      <div class="header-text">
+        <h1>Yuri Abuchaim</h1>
+        <p class="subtitle">Físico | Mestre em Astronomia | Cientista de Dados</p>
+        <div class="links">
+          <a href="https://github.com/rilufi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/seulinkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="http://lattes.cnpq.br/6100327519689283" target="_blank" aria-label="Lattes"><i class="fas fa-graduation-cap"></i></a>
+          <a href="Curriculo_Yuri.pdf" target="_blank" aria-label="Currículo"><i class="fas fa-file-pdf"></i></a>
+          <a href="mailto:seu@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
     </div>
   </header>
 
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <section>
+    <section id="sobre" class="section">
       <h2>Sobre mim</h2>
-      <p>Sou graduado em Física e mestre em Astronomia pela USP. Tenho experiência com análise de dados científicos, principalmente de surveys astronômicos (e.g. APOGEE), usando Python e SQL. Hoje, foco em projetos de Ciência de Dados com análise estatística, visualização e limpeza de dados.</p>
-      <p>Como hobby, crio bots automatizados que publicam conteúdo em redes sociais como Twitter, Bluesky e Instagram. Alguns dos temas incluem fotos de gatos e cachorros, temperaturas e imagens astronômicas diárias da NASA (APOD).</p>
+      <div class="about-content">
+        <p>Sou graduado em Física e mestre em Astronomia pela USP, com experiência em análise de dados científicos de surveys astronômicos (como o APOGEE), utilizando Python e SQL. Atualmente, concentro meus esforços em projetos de Ciência de Dados, com foco em:</p>
+        <ul>
+          <li>Análise estatística avançada</li>
+          <li>Visualização de dados impactante</li>
+          <li>Limpeza e preparação de datasets complexos</li>
+          <li>Desenvolvimento de pipelines de dados</li>
+        </ul>
+        <p>Como hobby, desenvolvo bots automatizados que publicam conteúdo científico e divertido em redes sociais (Twitter, Bluesky, Instagram), incluindo:</p>
+        <ul>
+          <li>Fotos astronômicas diárias (NASA APOD)</li>
+          <li>Dados meteorológicos</li>
+          <li>Conteúdo sobre pets</li>
+          <li>Divulgação científica</li>
+        </ul>
+      </div>
     </section>
 
-    <section>
-      <h2>Projetos</h2>
-      <ul>
-        <li>
-          <strong>Quimiodinâmica de Sobredensidades Estelares</strong><br>
-          Análise de dados do APOGEE, visualizações com Python, publicação no The Astrophysical Journal.<br>
-          <a href="https://github.com/rilufi/sobredensidade-triangulum" target="_blank">Ver projeto</a>
-        </li>
-        <li>
-          <strong>Análise Exploratória com Python</strong><br>
-          Notebooks com EDA de datasets públicos (ex: Titanic), usando pandas, seaborn, matplotlib.<br>
-          <a href="https://github.com/rilufi/eda-kaggle-public-data" target="_blank">Ver projeto</a>
-        </li>
-        <li>
-          <strong>Bots em Redes Sociais</strong><br>
-          Desenvolvimento de bots para publicação automatizada de conteúdos com Python e APIs. Exemplos: NASA APOD, fotos de pets, clima.<br>
-          <a href="https://github.com/rilufi" target="_blank">Ver no GitHub</a>
-        </li>
-      </ul>
+    <section id="projetos" class="section">
+      <h2>Projetos Destacados</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Quimiodinâmica de Sobredensidades Estelares</h3>
+          <p class="project-description">Análise avançada de dados do survey APOGEE, com visualizações em Python e publicação no The Astrophysical Journal. Este projeto envolveu:</p>
+          <ul>
+            <li>Processamento de grandes volumes de dados astronômicos</li>
+            <li>Análise estatística multivariada</li>
+            <li>Visualização científica de alta qualidade</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/rilufi/sobredensidade-triangulum" target="_blank" class="btn"><i class="fab fa-github"></i> Código</a>
+            <a href="#" class="btn"><i class="fas fa-book"></i> Artigo</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>Análise Exploratória de Dados (EDA)</h3>
+          <p class="project-description">Coleção de notebooks Jupyter com análises exploratórias de datasets públicos:</p>
+          <ul>
+            <li>Análise do dataset Titanic</li>
+            <li>Exploração de dados astronômicos</li>
+            <li>Visualizações com pandas, seaborn e matplotlib</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/rilufi/eda-kaggle-public-data" target="_blank" class="btn"><i class="fab fa-github"></i> Repositório</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>Bots para Redes Sociais</h3>
+          <p class="project-description">Desenvolvimento de bots automatizados para publicação de conteúdo:</p>
+          <ul>
+            <li>NASA APOD (Astronomy Picture of the Day)</li>
+            <li>Fotos de pets (gatos e cachorros)</li>
+            <li>Dados meteorológicos</li>
+            <li>Integração com APIs diversas</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/rilufi" target="_blank" class="btn"><i class="fab fa-github"></i> Repositórios</a>
+            <a href="#" class="btn"><i class="fab fa-twitter"></i> Exemplo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="habilidades" class="section">
+      <h2>Habilidades Técnicas</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Linguagens & Ferramentas</h3>
+          <ul class="skills-list">
+            <li><i class="fab fa-python"></i> Python (avançado)</li>
+            <li><i class="fas fa-database"></i> SQL</li>
+            <li><i class="fab fa-r-project"></i> R</li>
+            <li><i class="fas fa-terminal"></i> Bash/Shell</li>
+          </ul>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Ciência de Dados</h3>
+          <ul class="skills-list">
+            <li>Pandas, NumPy, SciPy</li>
+            <li>Matplotlib, Seaborn, Plotly</li>
+            <li>Scikit-learn, TensorFlow</li>
+            <li>Jupyter Notebooks</li>
+          </ul>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Outras Tecnologias</h3>
+          <ul class="skills-list">
+            <li><i class="fab fa-git-alt"></i> Git/GitHub</li>
+            <li><i class="fas fa-server"></i> Linux</li>
+            <li><i class="fas fa-cloud"></i> AWS/GCP (básico)</li>
+            <li>APIs REST</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <h2>Contato</h2>
+      <div class="contact-content">
+        <p>Interessado em colaborar ou conversar sobre ciência de dados, astronomia ou automação? Entre em contato!</p>
+        <div class="contact-methods">
+          <a href="mailto:seu@email.com" class="btn contact-btn"><i class="fas fa-envelope"></i> Email</a>
+          <a href="https://linkedin.com/in/seulinkedin" target="_blank" class="btn contact-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Yuri Abuchaim</p>
+    <div class="footer-content">
+      <p>© 2025 Yuri Abuchaim. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="#"><i class="fas fa-arrow-up"></i> Voltar ao topo</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
