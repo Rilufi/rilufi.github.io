@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TriAnd | Yuri Abuchaim</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #0a1a35;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem 1rem;
+      background: white;
+    }
+    h1, h2 {
+      color: #0a1a35;
+    }
+    .figure {
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .figure img {
+      max-width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+    .figure figcaption {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      background: #0a1a35;
+      color: white;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Quimiodinâmica da Sobredensidade TriAnd</h1>
+    <p>Resumo do artigo publicado por Yuri Abuchaim et al. no <strong>Astrophysical Journal</strong> (2023)</p>
+    <p><a href="https://doi.org/10.3847/1538-4357/acc9bc" target="_blank">Acessar artigo completo</a></p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Visão geral</h2>
+      <p>A sobredensidade TriAnd é uma estrutura estelar difusa localizada no halo da Via Láctea, próxima ao disco galáctico. A sua origem tem sido debatida: seria uma estrutura <em>in situ</em> (formada no próprio disco) ou remanescente de galáxias satélites <em>acretadas</em>?</p>
+      <p>Este estudo analisa 31 estrelas M gigantes candidatas a TriAnd, observadas com espectroscopia de alta resolução (GRACES/Gemini), e as compara com amostras do APOGEE, Gaia e SAGA.</p>
+    </section>
+
+    <section>
+      <h2>Metodologia</h2>
+      <ul>
+        <li>Seleção de estrelas via 2MASS + Gaia DR2</li>
+        <li>Observações espectroscópicas com resolução R ~ 40.000</li>
+        <li>Análise química de 11 elementos: Fe, α-elementos, metais pesados</li>
+        <li>Determinação de órbitas estelares com modelos Monte Carlo</li>
+        <li>Comparação com populações da GSE e do disco externo</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Principais resultados</h2>
+      <ul>
+        <li>A maioria das estrelas apresenta química compatível com formação no disco da Via Láctea</li>
+        <li>Um subconjunto mostra cinemática e abundâncias típicas de populações <em>acretadas</em> (ex: GSE)</li>
+        <li>Identificação de um "joelho" na relação [α/Fe] vs [Fe/H], evidenciando mistura de populações</li>
+        <li>Baixo conteúdo de Eu e alto Ba para estrelas TriAnd, sugerindo enriquecimento via s-processo</li>
+      </ul>
+    </section>
+
+    <section class="figure">
+      <figure>
+        <img src="figures/fig1_spatial_distribution.png" alt="Distribuição espacial das estrelas TriAnd">
+        <figcaption>Distribuição espacial das estrelas candidatas à TriAnd.</figcaption>
+      </figure>
+    </section>
+
+    <section class="figure">
+      <figure>
+        <img src="figures/fig5_abundances_alpha.png" alt="Abundâncias alfa comparadas">
+        <figcaption>Abundâncias α (Mg, Si, Ca, Ti) comparadas com estrelas do APOGEE e GSE.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Como citar</h2>
+      <p>Abuchaim, Y. et al. (2023). <em>The Chemodynamical Nature of the Triangulum–Andromeda Overdensity</em>. <strong>ApJ</strong>, 949:48. <br>
+      <a href="https://doi.org/10.3847/1538-4357/acc9bc">https://doi.org/10.3847/1538-4357/acc9bc</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="index.html" style="color: white; text-decoration: underline;">Voltar ao início</a></p>
+  </footer>
+</body>
+</html>
