@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bots APOD - Astronomia Automatizada</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #0B3D91;
+        }
+        
+        h1 {
+            color: #0B3D91;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #FC3D21;
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        
+        .bot-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .features {
+            margin-left: 20px;
+        }
+        
+        .features li {
+            margin-bottom: 8px;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .social-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .social-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .instagram {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            color: white;
+        }
+        
+        .twitter {
+            background: #000000;
+            color: white;
+        }
+        
+        .bluesky {
+            background: #1185FE;
+            color: white;
+        }
+        
+        .social-icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        code {
+            background: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        
+        .tech-badge {
+            display: inline-block;
+            background: #0B3D91;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Bots APOD - Astronomia Automatizada</h1>
+        <p>Projetos automatizados que publicam a Foto Astronômica do Dia da NASA em diferentes redes sociais</p>
+        
+        <div class="button-container">
+            <a href="https://instagram.com/apodinsta" class="social-button instagram">
+                <i class="fab fa-instagram social-icon"></i> @apodinsta
+            </a>
+            <a href="https://twitter.com/nasapod" class="social-button twitter">
+                <i class="fab fa-twitter social-icon"></i> @nasapod
+            </a>
+            <a href="https://bsky.app/profile/apodsky.bsky.social" class="social-button bluesky">
+                <i class="fas fa-cloud social-icon"></i> @apodsky.bsky.social
+            </a>
+        </div>
+    </header>
+    
+    <section>
+        <p>Desenvolvi dois sistemas automatizados que publicam diariamente a <strong>Astronomy Picture of the Day (APOD)</strong> da NASA em diferentes redes sociais, cada um adaptado às especificações técnicas e melhores práticas de cada plataforma.</p>
+    </section>
+    
+    <div class="bot-card">
+        <h2>APOD no Instagram (@apodinsta)</h2>
+        
+        <p>Este bot publica automaticamente a APOD diária no Instagram, processando tanto imagens quanto vídeos com formatação especial para cada tipo de mídia.</p>
+        
+        <h3>Principais Funcionalidades:</h3>
+        <ul class="features">
+            <li><strong>Detecção de Mídia</strong>: Identifica se a APOD é uma imagem, vídeo direto ou vídeo incorporado (incluindo links do YouTube)</li>
+            <li><strong>Processamento de Vídeo</strong>:
+                <ul>
+                    <li>Baixa vídeos de várias fontes incluindo links diretos da NASA e YouTube</li>
+                    <li>Processa vídeos para atender às especificações do Instagram (60s máximo, resolução 1080p)</li>
+                    <li>Inclui métodos alternativos quando o download direto falha</li>
+                </ul>
+            </li>
+            <li><strong>Geração de Legenda</strong>:
+                <ul>
+                    <li>Usa a API do Google Gemini para traduzir a explicação em inglês para português brasileiro</li>
+                    <li>Formata a legenda apropriadamente para o Instagram</li>
+                </ul>
+            </li>
+            <li><strong>Upload Confiável</strong>:
+                <ul>
+                    <li>Implementa sistemas mock para os requisitos de upload de vídeo do Instagram</li>
+                    <li>Inclui múltiplos métodos alternativos de upload</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>Tecnologias Utilizadas:</h3>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Instagrapi</span>
+        <span class="tech-badge">FFmpeg</span>
+        <span class="tech-badge">Google Gemini API</span>
+        <span class="tech-badge">NASA API</span>
+        
+        <div class="button-container">
+            <a href="https://instagram.com/apodinsta" class="social-button instagram">
+                <i class="fab fa-instagram social-icon"></i> Ver no Instagram
+            </a>
+        </div>
+    </div>
+    
+    <div class="bot-card">
+        <h2>APOD no Twitter/X e Bluesky (@nasapod e @apodsky)</h2>
+        
+        <p>Este bot mais sofisticado publica tanto no Twitter/X quanto no Bluesky simultaneamente, com otimizações específicas para cada plataforma e suporte a threads para explicações longas.</p>
+        
+        <h3>Principais Funcionalidades:</h3>
+        <ul class="features">
+            <li><strong>Suporte Multiplataforma</strong>:
+                <ul>
+                    <li>Publica tanto no Twitter (X) quanto no Bluesky simultaneamente</li>
+                    <li>Formata o conteúdo apropriadamente para cada plataforma</li>
+                </ul>
+            </li>
+            <li><strong>Manipulação Inteligente de Conteúdo</strong>:
+                <ul>
+                    <li>Para imagens: redimensiona e otimiza para as especificações de cada plataforma</li>
+                    <li>Para vídeos: baixa e corta para 140s para compatibilidade com o Twitter</li>
+                    <li>Para GIFs: preserva animação enquanto otimiza o tamanho do arquivo</li>
+                </ul>
+            </li>
+            <li><strong>Explicações em Thread</strong>:
+                <ul>
+                    <li>Divide explicações longas em posts encadeados</li>
+                    <li>Mantém a estrutura de conversa em ambas as plataformas</li>
+                </ul>
+            </li>
+            <li><strong>Acessibilidade</strong>:
+                <ul>
+                    <li>Usa IA Gemini para gerar texto alternativo descritivo para imagens</li>
+                    <li>Cria hashtags apropriadas para descoberta</li>
+                </ul>
+            </li>
+            <li><strong>Posts Históricos</strong>:
+                <ul>
+                    <li>Pode postar APODs históricas aleatórias (não apenas do dia atual)</li>
+                    <li>Cronograma postagem especial às 7h para a imagem do dia atual</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>Tecnologias Utilizadas:</h3>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Tweepy</span>
+        <span class="tech-badge">Bluesky API</span>
+        <span class="tech-badge">FFmpeg</span>
+        <span class="tech-badge">Google Gemini API</span>
+        <span class="tech-badge">NASA API</span>
+        
+        <div class="button-container">
+            <a href="https://twitter.com/nasapod" class="social-button twitter">
+                <i class="fab fa-twitter social-icon"></i> Ver no Twitter/X
+            </a>
+            <a href="https://bsky.app/profile/apodsky.bsky.social" class="social-button bluesky">
+                <i class="fas fa-cloud social-icon"></i> Ver no Bluesky
+            </a>
+        </div>
+    </div>
+    
+    <section>
+        <h2>Infraestrutura Compartilhada</h2>
+        <p>Ambos os bots utilizam:</p>
+        <ul>
+            <li>API APOD da NASA para buscar conteúdo diário</li>
+            <li>IA Gemini do Google para traduções e geração de texto alternativo</li>
+            <li>Sistemas robustos de tratamento de erros e notificações</li>
+            <li>Gerenciamento de autenticação e sessão específico para cada plataforma</li>
+            <li>Processamento de mídia com FFmpeg para otimização de vídeo/imagem</li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>Implantação</h2>
+        <p>Os bots rodam em uma base programada (o bot do Instagram diariamente, o bot do Twitter/Bluesky várias vezes ao dia com conteúdo histórico) usando:</p>
+        <ul>
+            <li>Variáveis de ambiente para armazenamento seguro de credenciais</li>
+            <li>Gerenciamento automatizado de sessão</li>
+            <li>Hospedagem em nuvem para operação 24/7</li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>Estes sistemas automatizados garantem que os entusiastas da astronomia recebam conteúdo APOD diariamente, formatado de maneira bonita em múltiplas plataformas, com recursos de acessibilidade e apresentação adequada para cada rede social.</p>
+        <p>© 2025 - Desenvolvido por Yuri Abuchaim</p>
+    </footer>
+</body>
+</html>
