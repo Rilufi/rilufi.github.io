@@ -60,11 +60,4 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Arquivos não incluídos (justificativa):
-       - Curriculo_Yuri.pdf (arquivo PDF)
-       - README.md (arquivo do GitHub)
-       - google9e884413a442b85b.html (verificação do Google)
-       - robots.txt (arquivo de configuração)
-       - style.css (arquivo CSS)
-  -->
 </urlset>
