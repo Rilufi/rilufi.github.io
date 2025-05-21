@@ -13,6 +13,9 @@
       --accent: #e74c3c;
       --light: #f8f9fa;
       --dark: #212529;
+      --astronomy: #6a5acd;
+      --pet: #ff69b4;
+      --weather: #1e90ff;
     }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -116,6 +119,27 @@
     .project-links a.covid:hover {
       background-color: rgba(231, 76, 60, 0.2);
     }
+    .project-links a.astronomy {
+      background-color: rgba(106, 90, 205, 0.1);
+      color: var(--astronomy);
+    }
+    .project-links a.astronomy:hover {
+      background-color: rgba(106, 90, 205, 0.2);
+    }
+    .project-links a.pet {
+      background-color: rgba(255, 105, 180, 0.1);
+      color: var(--pet);
+    }
+    .project-links a.pet:hover {
+      background-color: rgba(255, 105, 180, 0.2);
+    }
+    .project-links a.weather {
+      background-color: rgba(30, 144, 255, 0.1);
+      color: var(--weather);
+    }
+    .project-links a.weather:hover {
+      background-color: rgba(30, 144, 255, 0.2);
+    }
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -201,12 +225,31 @@
       </div>
 
       <div class="project">
-        <h3>Bots para Redes Sociais</h3>
-        <p>Desenvolvimento de bots automatizados para Twitter, Bluesky e Instagram que publicam conteúdo científico e divertido, integrando com diversas APIs.</p>
+        <h3>Bots Automatizados para Redes Sociais</h3>
+        <p>Coleção de bots que publicam conteúdo automatizado em diferentes plataformas, integrando diversas APIs e utilizando técnicas avançadas de processamento de dados e imagens.</p>
+        
+        <h4>Astronomy Picture of the Day</h4>
+        <p>Publica diariamente a imagem astronômica da NASA (APOD) no Instagram, Twitter e Bluesky, com tradução automática das explicações.</p>
         <div class="project-links">
-          <a href="apod.html" class="apod"><i class="fas fa-star"></i> Ver Resumo</a>
-          <a href="https://github.com/instasa" target="_blank"><i class="fab fa-github"></i> Repositório Instagram</a>
-          <a href="https://github.com/nasapod" target="_blank"><i class="fab fa-github"></i> Repositório Twitter/Bluesky</a>
+          <a href="apod.html" class="astronomy"><i class="fas fa-star"></i> Detalhes do Projeto</a>
+          <a href="https://github.com/rilufi/apodinsta" target="_blank" class="astronomy"><i class="fab fa-github"></i> Instagram Bot</a>
+          <a href="https://github.com/rilufi/nasapod" target="_blank" class="astronomy"><i class="fab fa-github"></i> Twitter/Bluesky Bot</a>
+        </div>
+
+        <h4>PetBots - Gatos e Cachorros</h4>
+        <p>Bots que postam imagens fofas de pets com legendas criativas geradas por IA, além de interagir com a comunidade de amantes de animais.</p>
+        <div class="project-links">
+          <a href="petbot.html" class="pet"><i class="fas fa-paw"></i> Detalhes do Projeto</a>
+          <a href="https://github.com/rilufi/gatobot" target="_blank" class="pet"><i class="fab fa-github"></i> Twitter/Bluesky Bot</a>
+          <a href="https://github.com/rilufi/boturinsta" target="_blank" class="pet"><i class="fab fa-github"></i> Instagram Gatos</a>
+          <a href="https://github.com/rilufi/doglufi" target="_blank" class="pet"><i class="fab fa-github"></i> Instagram Cachorros</a>
+        </div>
+
+        <h4>Botoronga - Monitor de Temperatura</h4>
+        <p>Bot que coleta dados meteorológicos, gera gráficos da variação de temperatura em São Paulo e interage com posts sobre o clima.</p>
+        <div class="project-links">
+          <a href="clima.html" class="weather"><i class="fas fa-temperature-low"></i> Detalhes do Projeto</a>
+          <a href="https://github.com/rilufi/botoronga" target="_blank" class="weather"><i class="fab fa-github"></i> Repositório</a>
         </div>
       </div>
     </section>
