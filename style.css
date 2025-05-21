@@ -262,6 +262,11 @@ footer {
   margin-top: 1rem;
 }
 
+.footer-link {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .header-text h1 {
