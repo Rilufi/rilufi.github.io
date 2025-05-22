@@ -147,30 +147,6 @@
       background-color: var(--dark);
       color: white;
     }
-    .language-switcher {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      gap: 10px;
-    }
-    .language-btn {
-      background: rgba(255,255,255,0.2);
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .language-btn:hover {
-      background: rgba(255,255,255,0.3);
-    }
-    .language-btn.active {
-      background: white;
-      color: var(--primary);
-      font-weight: bold;
-    }
     @media (max-width: 600px) {
       .links {
         flex-direction: column;
@@ -179,11 +155,6 @@
       .links a {
         width: 100%;
         justify-content: center;
-      }
-      .language-switcher {
-        position: static;
-        justify-content: center;
-        margin-top: 10px;
       }
     }
   </style>
@@ -194,10 +165,6 @@
     <button class="language-btn">EN</button>
   </div>
   <header>
-    <div class="language-switcher">
-      <button class="language-btn active" onclick="switchLanguage('pt')">PT</button>
-      <button class="language-btn" onclick="switchLanguage('en')">EN</button>
-    </div>
     <img src="assets/imgs/foto-perfil.jpg" alt="Foto de Yuri Abuchaim" class="profile-img">
     <h1>Yuri Abuchaim</h1>
     <p class="subtitle">Físico, Mestre em Astronomia • Ciência de Dados</p>
@@ -298,19 +265,7 @@
     <p>© 2025 Yuri Abuchaim</p>
     <p><a href="mailto:yuri.abuchaim@gmail.com" style="color: white;"><i class="fas fa-envelope"></i> Contato</a></p>
   </footer>
-
-  <script>
-    function switchLanguage(lang) {
-      if (lang === 'en') {
-        // Redirect to English version or implement translation logic
-        window.location.href = '../en/index.html';
-      } else {
-        // Already on Portuguese version
-        document.querySelector('.language-btn.active').classList.remove('active');
-        document.querySelector('.language-btn:first-child').classList.add('active');
-      }
-    }
-  </script>
+  
   <script src="script.js"></script>
 </body>
 </html>
