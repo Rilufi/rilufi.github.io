@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetBots Project | Yuri Abuchaim</title>
+    <style>
+        .pet-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .pet-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .pet-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        /* Keep other styles consistent */
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <button class="language-btn" onclick="window.location.href='../pt/petbot.html'">PT</button>
+        <button class="language-btn active">EN</button>
+    </div>
+
+    <header>
+        <h1>PetBots: Automated Pet Content</h1>
+        <p>Social media bots that post adorable pets with AI-generated captions</p>
+    </header>
+
+    <section>
+        <h2>Active Accounts</h2>
+        <div class="pet-showcase">
+            <div class="pet-card">
+                <img src="../assets/imgs/cat_example.jpg" alt="Cat posted by bot">
+                <div class="card-body">
+                    <h3>@boturinsta</h3>
+                    <p>Daily cats on Instagram</p>
+                </div>
+            </div>
+            <div class="pet-card">
+                <img src="../assets/imgs/dog_example.jpg" alt="Dog posted by bot">
+                <div class="card-body">
+                    <h3>@doglufi</h3>
+                    <p>Weekly dogs on Instagram</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical Implementation</h2>
+        <ul>
+            <li><strong>Image Sources:</strong> The Cat API, Dog API, and AI-generated pets</li>
+            <li><strong>Caption Generation:</strong> Google Gemini AI</li>
+            <li><strong>Posting Frequency:</strong> Every 3-6 hours</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Yuri Abuchaim | Bringing joy through automated pets</p>
+    </footer>
+</body>
+</html>
