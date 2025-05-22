@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical COVID-19 Analysis | Yuri Abuchaim</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .phase {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        /* Keep other styles from previous example */
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <button class="language-btn" onclick="window.location.href='../pt/covid_historico.html'">PT</button>
+        <button class="language-btn active">EN</button>
+    </div>
+
+    <header>
+        <h1>COVID-19 in Brazil: Historical Analysis (2020-2024)</h1>
+    </header>
+
+    <section class="timeline">
+        <div class="phase">
+            <h2>Initial Wave (2020)</h2>
+            <div class="graph-container">
+                <img src="../assets/imgs/covid_2020.png" alt="2020 outbreak" class="graph">
+            </div>
+            <p>First cases reported in São Paulo with rapid spread to major urban centers.</p>
+        </div>
+
+        <div class="phase">
+            <h2>Vaccination Era (2021-2022)</h2>
+            <div class="graph-container">
+                <img src="../assets/imgs/covid_vaccine.png" alt="Vaccination impact" class="graph">
+            </div>
+            <p>Correlation between vaccination rates and mortality reduction.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Analysis by Yuri Abuchaim | Data processed from multiple official sources</p>
+    </footer>
+</body>
+</html>
