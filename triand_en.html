@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TriAnd | Yuri Abuchaim</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #0a1a35;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem 1rem;
+      background: white;
+    }
+    h1, h2 {
+      color: #0a1a35;
+    }
+    .figure {
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .figure img {
+      max-width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+    .figure figcaption {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      background: #0a1a35;
+      color: white;
+      padding: 1rem;
+    }
+    .authors {
+      font-style: italic;
+      margin: 1rem 0;
+    }
+    .highlight {
+      background-color: #f0f7ff;
+      padding: 1rem;
+      border-left: 4px solid #0a1a35;
+      margin: 1rem 0;
+    }
+    .language-switcher {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+    .language-btn {
+      background: rgba(10, 26, 53, 0.2);
+      border: none;
+      color: #0a1a35;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .language-btn:hover {
+      background: rgba(10, 26, 53, 0.3);
+    }
+    .language-btn.active {
+      background: #0a1a35;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="language-switcher">
+    <button class="language-btn" onclick="window.location.href='triand.html'">PT</button>
+    <button class="language-btn active">EN</button>
+  </div>
+
+  <header>
+    <h1>The Chemodynamical Nature of the Triangulum-Andromeda Overdensity (TriAnd)</h1>
+    <p class="authors">Yuri Abuchaim et al. | The Astrophysical Journal, Volume 949, Number 48 (2023)</p>
+    <p><a href="https://doi.org/10.3847/1538-4357/acc9bc" target="_blank">Access full article</a></p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Overview</h2>
+      <p>The Triangulum-Andromeda (TriAnd) overdensity is a stellar structure located in the outer disk of the Milky Way, approximately 18 kpc from the Sun, in the direction of galactic coordinates <em>l</em> ~ -125° and <em>b</em> ~ -25°.</p>
+      
+      <div class="highlight">
+        <p>This study presents the most comprehensive chemodynamical analysis of TriAnd to date, using a sample of 31 candidate stars observed with the high-resolution GRACES spectrograph (R = 40,000) at the Gemini North telescope (8.1m).</p>
+      </div>
+
+      <p>The origin of TriAnd has been controversial since its discovery, with previous studies suggesting scenarios ranging from <em>in situ</em> formation (born in the galactic disk) to an <em>accreted</em> population (from satellite galaxies). Our work aims to resolve this debate through a combined analysis of dynamical parameters and chemical abundances.</p>
+    </section>
+
+    <section>
+      <h2>Methodology</h2>
+      <h3>Sample Selection</h3>
+      <ul>
+        <li>M giant stars selected from the 2MASS catalog</li>
+        <li>Photometric criteria to separate giants from dwarfs</li>
+        <li>Selection in the region -90° < l < -160° and -10° > b > -45°</li>
+        <li>Proper motion filtering using Gaia DR2 to reduce contamination</li>
+      </ul>
+
+      <h3>Spectroscopic Analysis</h3>
+      <ul>
+        <li>Observations with GRACES/Gemini (R ~ 40,000, 4000-10000 Å)</li>
+        <li>Determination of atmospheric parameters (T<sub>eff</sub>, log g, [Fe/H]) via MOOG</li>
+        <li>Abundance analysis for 11 elements: Na, Mg, Al, Si, Ca, Ti, Cr, Fe, Ni, Ba, Eu</li>
+        <li>NLTE corrections applied for Fe, Mg, Ca, Cr and Si</li>
+      </ul>
+
+      <h3>Galactic Dynamics</h3>
+      <ul>
+        <li>Calculation of stellar orbits using AGAMA (integration for 5 Gyr)</li>
+        <li>Galactic potential model from McMillan (2017)</li>
+        <li>1000 Monte Carlo realizations for each star</li>
+        <li>Comparison with outer disk and halo populations</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Results</h2>
+      <h3>Stellar Dynamics</h3>
+      <ul>
+        <li><strong>Most stars</strong> show low eccentricity (e < 0.4) and inclination, compatible with disk populations</li>
+        <li><strong>6 stars</strong> display high eccentricity (e > 0.4), suggesting accreted origin</li>
+        <li>Orbital energy (E) and angular momentum (L<sub>z</sub>) consistent with outer disk for the main population</li>
+      </ul>
+
+      <h3>Chemical Abundances</h3>
+      <ul>
+        <li>Mean metallicity [Fe/H] ~ -0.8 dex, more metal-poor than the outer disk</li>
+        <li>α-element patterns (Mg, Si, Ca, Ti) similar to the outer thin disk</li>
+        <li>High-eccentricity stars show chemical patterns similar to Gaia-Sausage/Enceladus (GSE)</li>
+        <li>High [Ba/Fe] and [Ba/Eu] suggest predominant enrichment by s-process</li>
+        <li>Identification of 3 possible highly r-process enriched r-II stars</li>
+      </ul>
+
+      <div class="highlight">
+        <p>Our results indicate that TriAnd is predominantly an <em>in situ</em> population of the outer disk, possibly formed by disk dynamical heating, with a small contamination of accreted stars that spatially coincide with the structure.</p>
+      </div>
+    </section>
+
+    <section class="figure">
+      <figure>
+        <img src="assets/imgs/fig3_orbital_parameters.jpg" alt="Orbital parameters of TriAnd stars">
+        <figcaption>Orbital parameters of TriAnd stars: (a) Eccentricity vs. inclination; (b) Orbital energy vs. angular momentum; (c-d) Spatial projections with velocity vectors.</figcaption>
+      </figure>
+    </section>
+
+    <section class="figure">
+      <figure>
+        <img src="assets/imgs/fig5_abundances_alpha.jpg" alt="Alpha element abundances">
+        <figcaption>Relation [α/Fe] vs [Fe/H] for Mg, Si, Ca and Ti, comparing TriAnd stars (blue) with outer disk populations (gray) and GSE (yellow).</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Implications and Conclusions</h2>
+      <p>This study resolves the controversy about TriAnd's nature, demonstrating that:</p>
+      <ol>
+        <li>The main population has an <em>in situ</em> origin, formed in the galactic disk</li>
+        <li>The apparent "chemical complexity" reported in previous studies is due to contamination by accreted stars</li>
+        <li>The outer galactic disk presents substructures formed by dynamical perturbations</li>
+        <li>Future studies should consider the possibility of mixed populations in stellar overdensities</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>How to Cite</h2>
+      <p>Abuchaim, Y., Perottoni, H. D., Rossi, S., et al. 2023, ApJ, 949, 48<br>
+      <strong>Title:</strong> The Chemodynamical Nature of the Triangulum-Andromeda Overdensity<br>
+      <strong>DOI:</strong> <a href="https://doi.org/10.3847/1538-4357/acc9bc">10.3847/1538-4357/acc9bc</a></p>
+      
+      <p><strong>Collaborators:</strong> University of São Paulo, Universitat de Barcelona, University of Chicago, UNAM, Federal University of Goiás, NOIRLab, Observatório Nacional, Federal University of Rio de Janeiro</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>"My soul comes from better worlds and I have an incurable longing for the stars."</p>
+    <p>© 2025 - Developed by Yuri Abuchaim</p>
+    <a href="index_en.html" class="footer-link">Back to home</a>
+  </footer>
+</body>
+</html>
