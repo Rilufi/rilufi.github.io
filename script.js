@@ -1,6 +1,6 @@
 /**
  * script.js - Language control and main functionalities
- * @version 1.3
+ * @version 1.4
  * @description Manages language switching and user preferences for all pages
  */
 
@@ -32,13 +32,18 @@ const languageConfig = {
   }
 };
 
-
 /**
- * Gets the current page identifier based on URL
+ * Gets the current page identifier based on URL.
+ * Improved to handle similar page names more accurately.
  */
-function getCurrentPage() {
+function getCurrentPageIdentifier() {
   const path = window.location.pathname;
+  // Remove leading/trailing slashes and potential '/en/' prefix
+  const cleanPath = path.replace(/^\/(en\/)?|\/$/g, '');
+
+  // Map of file names (without extension) to identifiers
   const pageMap = {
+    'index': 'home',
     'petbot': 'petbot',
     'apod': 'apod',
     'covid_atual': 'covid_atual',
@@ -46,11 +51,22 @@ function getCurrentPage() {
     'clima': 'clima',
     'triand': 'triand'
   };
-  
-  for (const [key, value] of Object.entries(pageMap)) {
-    if (path.includes(key)) return value;
+
+  for (const [fileName, identifier] of Object.entries(pageMap)) {
+    // Check if the cleanPath ends with the fileName (e.g., 'index' for 'index.html')
+    if (cleanPath.endsWith(fileName + '.html') || (fileName === 'index' && (cleanPath === '' || cleanPath === 'index.html'))) {
+      return identifier;
+    }
   }
   return 'home'; // Default to home if no match
+}
+
+/**
+ * Determines the current active language based on the URL.
+ * @returns {string} 'pt' or 'en'
+ */
+function getCurrentLanguage() {
+  return window.location.pathname.includes('/en/') ? 'en' : 'pt';
 }
 
 /**
@@ -61,42 +77,40 @@ function switchLanguage(lang) {
   if (languageConfig[lang]) {
     // Store preference
     localStorage.setItem(languageConfig[lang].storageKey, lang);
-    
+
     // Get current page identifier
-    const currentPage = getCurrentPage();
-    
-    // Redirect to the selected language version
-    if (languageConfig[lang].path[currentPage]) {
-      window.location.href = languageConfig[lang].path[currentPage];
-    } else {
-      // Fallback to home if page not found in config
-      window.location.href = languageConfig[lang].path['home'];
+    const currentPage = getCurrentPageIdentifier();
+    const currentLanguage = getCurrentLanguage();
+
+    // Only redirect if changing to a different language
+    if (lang !== currentLanguage) {
+      // Redirect to the selected language version
+      if (languageConfig[lang].path[currentPage]) {
+        window.location.href = languageConfig[lang].path[currentPage];
+      } else {
+        // Fallback to home if page not found in config
+        window.location.href = languageConfig[lang].path['home'];
+      }
     }
   }
 }
 
 /**
- * Applies user's preferred language
+ * Applies user's preferred language on initial load.
+ * This function only redirects if the current page's language
+ * does not match the preferred language.
  */
 function applyPreferredLanguage() {
   const preferredLanguage = localStorage.getItem('preferredLanguage');
-  if (!preferredLanguage) return;
+  if (!preferredLanguage) return; // No preferred language set
 
-  const currentPath = window.location.pathname;
-  const shouldRedirectToPT = preferredLanguage === 'pt' && currentPath.includes('/en/');
-  const shouldRedirectToEN = preferredLanguage === 'en' && !currentPath.includes('/en/');
-  
-  if (shouldRedirectToPT || shouldRedirectToEN) {
-    const currentPage = getCurrentPage();
-    const targetLang = shouldRedirectToPT ? 'pt' : 'en';
-    
-    // Check if the target page exists in config
-    if (languageConfig[targetLang].path[currentPage]) {
-      window.location.href = languageConfig[targetLang].path[currentPage];
-    } else {
-      // Fallback to home if specific page not configured
-      window.location.href = languageConfig[targetLang].path['home'];
-    }
+  const currentLanguage = getCurrentLanguage();
+  const currentPage = getCurrentPageIdentifier();
+
+  // If preferred language is different from current page's language, redirect
+  if (preferredLanguage !== currentLanguage) {
+    const targetPath = languageConfig[preferredLanguage].path[currentPage] || languageConfig[preferredLanguage].path['home'];
+    window.location.href = targetPath;
   }
 }
 
@@ -104,15 +118,14 @@ function applyPreferredLanguage() {
  * Activates the current language button
  */
 function setActiveLanguageButton() {
-  const currentPath = window.location.pathname;
+  const currentLanguage = getCurrentLanguage();
   const languageButtons = document.querySelectorAll('.language-btn');
-  const isEnglish = currentPath.includes('/en/');
-  
+
   languageButtons.forEach(button => {
     button.classList.remove('active');
     const buttonLang = button.textContent.trim().toLowerCase();
-    
-    if ((isEnglish && buttonLang === 'en') || (!isEnglish && buttonLang === 'pt')) {
+
+    if (buttonLang === currentLanguage) {
       button.classList.add('active');
     }
   });
@@ -123,9 +136,10 @@ function setActiveLanguageButton() {
  */
 function init() {
   try {
+    // Apply preferred language only if not already on the correct language page
     applyPreferredLanguage();
     setActiveLanguageButton();
-    
+
     // Event listeners for language buttons
     document.querySelectorAll('.language-btn').forEach(button => {
       button.addEventListener('click', function() {
