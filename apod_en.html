@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APOD Bots - Automated Astronomy</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #0B3D91;
+        }
+        
+        h1 {
+            color: #0B3D91;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #FC3D21;
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        
+        .bot-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .features {
+            margin-left: 20px;
+        }
+        
+        .features li {
+            margin-bottom: 8px;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .social-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .social-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .instagram {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            color: white;
+        }
+        
+        .twitter {
+            background: #000000;
+            color: white;
+        }
+        
+        .bluesky {
+            background: #1185FE;
+            color: white;
+        }
+        
+        .social-icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        code {
+            background: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        
+        .tech-badge {
+            display: inline-block;
+            background: #0B3D91;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .language-btn {
+            background: rgba(11, 61, 145, 0.2);
+            border: none;
+            color: #0B3D91;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .language-btn:hover {
+            background: rgba(11, 61, 145, 0.3);
+        }
+        .language-btn.active {
+            background: #0B3D91;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="language-switcher">
+        <button class="language-btn" onclick="window.location.href='apod.html'">PT</button>
+        <button class="language-btn active">EN</button>
+    </div>
+    
+    <header>
+        <h1>APOD Bots - Automated Astronomy</h1>
+        <p>Automated projects that publish NASA's Astronomy Picture of the Day on different social networks</p>
+        
+        <div class="button-container">
+            <a href="https://instagram.com/apodinsta" class="social-button instagram">
+                <i class="fab fa-instagram social-icon"></i> @apodinsta
+            </a>
+            <a href="https://twitter.com/nasapod" class="social-button twitter">
+                <i class="fab fa-twitter social-icon"></i> @nasapod
+            </a>
+            <a href="https://bsky.app/profile/nasapodsky.bsky.social" class="social-button bluesky">
+                <i class="fas fa-cloud social-icon"></i> @nasapodsky.bsky.social
+            </a>
+        </div>
+    </header>
+    
+    <section>
+        <p>I developed two automated systems that daily publish NASA's <strong>Astronomy Picture of the Day (APOD)</strong> on different social networks, each adapted to the technical specifications and best practices of each platform.</p>
+    </section>
+    
+    <div class="bot-card">
+        <h2>APOD on Instagram (@apodinsta)</h2>
+        
+        <p>This bot automatically publishes the daily APOD on Instagram, processing both images and videos with special formatting for each media type.</p>
+        
+        <h3>Main Features:</h3>
+        <ul class="features">
+            <li><strong>Media Detection</strong>: Identifies whether the APOD is an image, direct video, or embedded video (including YouTube links)</li>
+            <li><strong>Video Processing</strong>:
+                <ul>
+                    <li>Downloads videos from various sources including direct NASA links and YouTube</li>
+                    <li>Processes videos to meet Instagram specifications (60s max, 1080p resolution)</li>
+                    <li>Includes alternative methods when direct download fails</li>
+                </ul>
+            </li>
+            <li><strong>Caption Generation</strong>:
+                <ul>
+                    <li>Uses Google Gemini API to translate the English explanation to Brazilian Portuguese</li>
+                    <li>Formats the caption appropriately for Instagram</li>
+                </ul>
+            </li>
+            <li><strong>Reliable Upload</strong>:
+                <ul>
+                    <li>Implements mock systems for Instagram's video upload requirements</li>
+                    <li>Includes multiple alternative upload methods</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>Technologies Used:</h3>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Instagrapi</span>
+        <span class="tech-badge">FFmpeg</span>
+        <span class="tech-badge">Google Gemini API</span>
+        <span class="tech-badge">NASA API</span>
+        
+        <div class="button-container">
+            <a href="https://instagram.com/apodinsta" class="social-button instagram">
+                <i class="fab fa-instagram social-icon"></i> View on Instagram
+            </a>
+        </div>
+    </div>
+    
+    <div class="bot-card">
+        <h2>APOD on Twitter/X and Bluesky (@nasapod and @nasapodsky)</h2>
+        
+        <p>This more sophisticated bot publishes simultaneously on both Twitter/X and Bluesky, with specific optimizations for each platform and support for threads for long explanations.</p>
+        
+        <h3>Main Features:</h3>
+        <ul class="features">
+            <li><strong>Multi-platform Support</strong>:
+                <ul>
+                    <li>Publishes on both Twitter (X) and Bluesky simultaneously</li>
+                    <li>Formats content appropriately for each platform</li>
+                </ul>
+            </li>
+            <li><strong>Smart Content Handling</strong>:
+                <ul>
+                    <li>For images: resizes and optimizes for each platform's specifications</li>
+                    <li>For videos: downloads and cuts to 140s for Twitter compatibility</li>
+                    <li>For GIFs: preserves animation while optimizing file size</li>
+                </ul>
+            </li>
+            <li><strong>Threaded Explanations</strong>:
+                <ul>
+                    <li>Splits long explanations into threaded posts</li>
+                    <li>Maintains conversation structure on both platforms</li>
+                </ul>
+            </li>
+            <li><strong>Accessibility</strong>:
+                <ul>
+                    <li>Uses Gemini AI to generate descriptive alt text for images</li>
+                    <li>Creates appropriate hashtags for discovery</li>
+                </ul>
+            </li>
+            <li><strong>Historical Posts</strong>:
+                <ul>
+                    <li>Can post random historical APODs (not just the current day's)</li>
+                    <li>Special posting schedule at 7am for the current day's image</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>Technologies Used:</h3>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Tweepy</span>
+        <span class="tech-badge">Bluesky API</span>
+        <span class="tech-badge">FFmpeg</span>
+        <span class="tech-badge">Google Gemini API</span>
+        <span class="tech-badge">NASA API</span>
+        
+        <div class="button-container">
+            <a href="https://twitter.com/nasapod" class="social-button twitter">
+                <i class="fab fa-twitter social-icon"></i> View on Twitter/X
+            </a>
+            <a href="https://bsky.app/profile/nasapodsky.bsky.social" class="social-button bluesky">
+                <i class="fas fa-cloud social-icon"></i> View on Bluesky
+            </a>
+        </div>
+    </div>
+    
+    <section>
+        <h2>Shared Infrastructure</h2>
+        <p>Both bots use:</p>
+        <ul>
+            <li>NASA APOD API to fetch daily content</li>
+            <li>Google Gemini AI for translations and alt text generation</li>
+            <li>Robust error handling and notification systems</li>
+            <li>Platform-specific authentication and session management</li>
+            <li>Media processing with FFmpeg for video/image optimization</li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>Deployment</h2>
+        <p>The bots run on a scheduled basis (the Instagram bot daily, the Twitter/Bluesky bot multiple times a day with historical content) using:</p>
+        <ul>
+            <li>Environment variables for secure credential storage</li>
+            <li>Automated session management</li>
+            <li>Cloud hosting for 24/7 operation</li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>These automated systems ensure astronomy enthusiasts receive daily APOD content, beautifully formatted for multiple platforms, with accessibility features and proper presentation for each social network.</p>
+        <p>© 2025 - Developed by Yuri Abuchaim</p>
+        <a href="index_en.html" class="footer-link">Back to home</a>
+    </footer>
+</body>
+</html>
