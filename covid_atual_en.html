@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time COVID-19 Brazil Dashboard | Yuri Abuchaim</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e74c3c;
+        }
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .language-btn {
+            background: rgba(231, 76, 60, 0.2);
+            border: none;
+            color: #e74c3c;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .language-btn.active {
+            background: #e74c3c;
+            color: white;
+        }
+        .graph-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .graph {
+            max-width: 100%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <button class="language-btn" onclick="window.location.href='../pt/covid_atual.html'">PT</button>
+        <button class="language-btn active">EN</button>
+    </div>
+
+    <header>
+        <h1>Real-Time COVID-19 Brazil Dashboard</h1>
+        <p>Automated monitoring system with daily WHO data updates</p>
+    </header>
+
+    <section>
+        <h2>Current Trends</h2>
+        <div class="graph-container">
+            <img src="../assets/imgs/covid_current_cases.png" alt="Daily COVID-19 cases in Brazil" class="graph">
+            <p>7-day moving average of new cases</p>
+        </div>
+        
+        <div class="graph-container">
+            <img src="../assets/imgs/covid_current_deaths.png" alt="Daily COVID-19 deaths in Brazil" class="graph">
+            <p>7-day moving average of fatalities</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Data Pipeline</h2>
+        <ul>
+            <li><strong>Source:</strong> WHO global COVID-19 dataset</li>
+            <li><strong>Update Frequency:</strong> Daily at 7:00 UTC</li>
+            <li><strong>Methodology:</strong> Python (Pandas + Matplotlib)</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Yuri Abuchaim | Data Source: World Health Organization</p>
+        <a href="index_en.html">Back to Home</a>
+    </footer>
+</body>
+</html>
