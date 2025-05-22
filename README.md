@@ -1,31 +1,59 @@
-# 👋 Olá! Eu sou Yuri Abuchaim
+# 🌌 Portfólio de Yuri Abuchaim 🇧🇷
 
-Sou físico e mestre em Astronomia pela USP, com forte experiência em análise de dados científicos. Hoje, me especializo em Ciência de Dados, com foco em Python, SQL e visualização de dados. Como hobby, crio bots automatizados que publicam conteúdo em redes sociais como Twitter, Bluesky e Instagram. Alguns dos temas incluem fotos de gatos e cachorros, temperaturas e imagens astronômicas diárias da NASA (APOD).
+Site pessoal/portfólio mostrando projetos profissionais e acadêmicos.
 
-Tenho interesse em aplicar pensamento analítico e ferramentas computacionais para extrair valor de dados complexos — seja em pesquisa, negócios ou projetos freelance.
+## 🚀 Projetos Destacados
+1. **Bots de Redes Sociais**
+   - @apodinsta (Astronomia)
+   - @botoronga2 (Clima)
+   - @boturitter (Pets)
 
----
+2. **Análise Científica**
+   - Quimiodinâmica de estrelas
+   - Processamento de dados astronômicos
 
-## 🚀 Tecnologias & Ferramentas
-- Python (Pandas, NumPy, Matplotlib, Seaborn)
-- SQL (PostgreSQL, SQLite)
-- Jupyter Notebooks
-- Git & GitHub
-- Visualização e análise exploratória de dados
+3. **Visualização de Dados**
+   - COVID-19 no Brasil
+   - Séries temporais complexas
 
----
+## 🛠 Tecnologias do Site
+- HTML5/CSS3
+- GitHub Pages
+- Design responsivo
 
-## 📊 Projetos em Destaque
+## 📫 Links Importantes
+- [LinkedIn](https://linkedin.com/in/yuri-abuchaim-1472bb1a1)
+- [Lattes](http://lattes.cnpq.br/6100327519689283)
+- [GitHub](https://github.com/rilufi)
+- Email: yuri.abuchaim@gmail.com
 
-### 🌌 [Quimiodinâmica de Sobredensidades Estelares](https://github.com/seuusuario/sobredensidade-triangulum)
-Estudo de composição química e dinâmica de estrelas em sobredensidades da Via Láctea. Dados de surveys astronômicos analisados com Python, visualizações com Matplotlib e análise estatística.
+===========================================
 
-### 📈 [Análise Exploratória com Python - Kaggle](https://github.com/seuusuario/eda-kaggle-public-data)
-Notebooks com análise de dados públicos (Titanic, vendas, entre outros), explorando visualização, correlações e preparação de dados para modelagem.
+# 🌌 Yuri Abuchaim's Portfolio 🇺🇸
 
----
+Personal website/portfolio showcasing professional and academic projects.
 
-## 📫 Contato
-- 📧 [yuri.abuchaim@gmail.com](mailto:yuri.abuchaim@gmail.com)
-- 💼 [LinkedIn](https://linkedin.com/in/yuri-abuchaim-1472bb1a1)
-- 🌐 [Currículo Lattes](http://lattes.cnpq.br/6100327519689283)
+## 🚀 Featured Projects
+1. **Social Media Bots**
+   - @apodinsta (Astronomy)
+   - @botoronga2 (Weather)
+   - @boturitter (Pets)
+
+2. **Scientific Analysis**
+   - Stellar chemodynamics
+   - Astronomical data processing
+
+3. **Data Visualization**
+   - COVID-19 in Brazil
+   - Complex time series
+
+## 🛠 Website Technologies
+- HTML5/CSS3
+- GitHub Pages
+- Responsive design
+
+## 📫 Important Links
+- [LinkedIn](https://linkedin.com/in/yuri-abuchaim-1472bb1a1)
+- [Lattes CV](http://lattes.cnpq.br/6100327519689283)
+- [GitHub](https://github.com/rilufi)
+- Email: yuri.abuchaim@gmail.com
