@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botoronga - Temperature Monitor in SP</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #2A5CAA;
+        }
+        
+        h1 {
+            color: #2A5CAA;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #E74C3C;
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        
+        .bot-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .features {
+            margin-left: 20px;
+        }
+        
+        .features li {
+            margin-bottom: 8px;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .social-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .social-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .twitter {
+            background: #000000;
+            color: white;
+        }
+        
+        .bluesky {
+            background: #1185FE;
+            color: white;
+        }
+        
+        .social-icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        code {
+            background: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        
+        .tech-badge {
+            display: inline-block;
+            background: #2A5CAA;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .data-badge {
+            background: #E74C3C;
+        }
+        
+        .graph-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .graph-example {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .language-btn {
+            background: rgba(42, 92, 170, 0.2);
+            border: none;
+            color: #2A5CAA;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .language-btn:hover {
+            background: rgba(42, 92, 170, 0.3);
+        }
+        .language-btn.active {
+            background: #2A5CAA;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="language-switcher">
+        <button class="language-btn" onclick="window.location.href='clima.html'">PT</button>
+        <button class="language-btn active">EN</button>
+    </div>
+    
+    <header>
+        <h1>Botoronga - Temperature Monitor in SP</h1>
+        <p>Bot that posts daily updates with temperature variation graphs in São Paulo</p>
+        
+        <div class="button-container">
+            <a href="https://twitter.com/botoronga2" class="social-button twitter">
+                <i class="fab fa-twitter social-icon"></i> @botoronga2
+            </a>
+            <a href="https://bsky.app/profile/botoronga.bsky.social" class="social-button bluesky">
+                <i class="fas fa-cloud social-icon"></i> @botoronga.bsky.social
+            </a>
+        </div>
+    </header>
+    
+    <div class="graph-container">
+        <img src="assets/imgs/clima2.png" alt="Temperature graph example" class="graph-example">
+    </div>
+    
+    <div class="bot-card">
+        <h2>About Botoronga</h2>
+        
+        <p>Botoronga is an automated system that monitors and publishes daily temperature variations in São Paulo city, with informative graphs and community interactions.</p>
+        
+        <h3>Main Features:</h3>
+        <ul class="features">
+            <li><strong>Weather Data Collection</strong>:
+                <ul>
+                    <li>Captures temperature data from reliable sources</li>
+                    <li>Processes hourly information</li>
+                    <li>Converts units and applies filters for better visualization</li>
+                </ul>
+            </li>
+            <li><strong>Graph Generation</strong>:
+                <ul>
+                    <li>Creates clear visualizations of temperature variation</li>
+                    <li>Applies smoothing for better readability</li>
+                    <li>Includes informative markings and legends</li>
+                </ul>
+            </li>
+            <li><strong>Automated Publishing</strong>:
+                <ul>
+                    <li>Posts daily graphs on Twitter/X and Bluesky</li>
+                    <li>Includes current temperature at posting time</li>
+                    <li>Platform-specific formatting</li>
+                </ul>
+            </li>
+            <li><strong>Community Interaction</strong>:
+                <ul>
+                    <li>Identifies and interacts with posts about temperature in SP</li>
+                    <li>Likes and reposts relevant content</li>
+                    <li>Respects API rate limits</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>Technologies Used:</h3>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Selenium</span>
+        <span class="tech-badge">Matplotlib</span>
+        <span class="tech-badge">Tweepy</span>
+        <span class="tech-badge">Bluesky API</span>
+        <span class="tech-badge data-badge">OpenWeatherMap API</span>
+    </div>
+    
+    <div class="bot-card">
+        <h2>How It Works</h2>
+        
+        <h3>Data Collection and Processing Flow:</h3>
+        <ol class="features">
+            <li><strong>Data Collection</strong>: Accesses weather sources to obtain historical temperature data</li>
+            <li><strong>Processing</strong>:
+                <ul>
+                    <li>Converts temperatures from Fahrenheit to Celsius</li>
+                    <li>Groups data by hour</li>
+                    <li>Applies smoothing filter for better visualization</li>
+                </ul>
+            </li>
+            <li><strong>Graph Generation</strong>: Creates visualization with Matplotlib including:
+                <ul>
+                    <li>Title with current date</li>
+                    <li>Clearly marked axes</li>
+                    <li>Grid for easy reading</li>
+                </ul>
+            </li>
+            <li><strong>Current Temperature</strong>: Queries OpenWeatherMap API to get temperature at posting time</li>
+            <li><strong>Publishing</strong>: Sends the graph and information to Twitter/X and Bluesky</li>
+        </ol>
+        
+        <h3>Automated Interaction:</h3>
+        <ul class="features">
+            <li>Searches for posts with hashtags related to temperature in SP</li>
+            <li>Filters inappropriate content or suspicious accounts</li>
+            <li>Records interactions to avoid duplicates</li>
+            <li>Respects API rate limits with exponential backoff</li>
+        </ul>
+    </div>
+    
+    <div class="bot-card">
+        <h2>Output Example</h2>
+        
+        <div class="graph-container">
+            <img src="assets/imgs/clima1.png" alt="Graph example" class="graph-example">
+            <p><em>Temperature variation graph in São Paulo with smoothed data</em></p>
+        </div>
+        
+        <h3>Typical Post:</h3>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; margin: 20px 0;">
+            <p><strong>Current temperature in São Paulo: 22.5°C</strong></p>
+            <p>Temperature variation throughout the day:</p>
+            <p>#TemperatureSP #Weather #SãoPaulo</p>
+        </div>
+    </div>
+    
+    <section>
+        <h2>Monitoring and Control</h2>
+        <p>Botoronga includes advanced systems to ensure continuous operation within platform limits:</p>
+        <ul>
+            <li><strong>Interaction Logging</strong>: Stores all actions to avoid duplicates</li>
+            <li><strong>Rate Limits</strong>: Respects API rate limits with precise counting</li>
+            <li><strong>Exponential Backoff</strong>: Intelligent pauses when limits are reached</li>
+            <li><strong>Notifications</strong>: Alert system for operational issues</li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>© 2025 - Developed by Yuri Abuchaim</p>
+        <a href="index_en.html" class="footer-link">Back to home</a>
+    </footer>
+</body>
+</html>
