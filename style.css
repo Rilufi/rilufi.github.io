@@ -285,3 +285,31 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Línguas */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.language-btn {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.language-btn:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.language-btn.active {
+    background: white;
+    color: #0a1a35;
+    font-weight: bold;
+}
