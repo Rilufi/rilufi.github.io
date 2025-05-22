@@ -8,29 +8,30 @@
 const languageConfig = {
   'pt': {
     path: {
-      'home': '../index.html',
-      'petbot': '../petbot.html',
-      'apod': '../apod.html',
-      'covid_atual': '../covid_atual.html',
-      'covid_historico': '../covid_historico.html',
-      'clima': '../clima.html',
-      'triand': '../triand.html'
+      'home': '/index.html',
+      'petbot': '/petbot.html',
+      'apod': '/apod.html',
+      'covid_atual': '/covid_atual.html',
+      'covid_historico': '/covid_historico.html',
+      'clima': '/clima.html',
+      'triand': '/triand.html'
     },
     storageKey: 'preferredLanguage'
   },
   'en': {
     path: {
-      'home': 'en/index.html',
-      'petbot': 'en/petbot.html',
-      'apod': 'en/apod.html',
-      'covid_atual': 'en/covid_atual.html',
-      'covid_historico': 'en/covid_historico.html',
-      'clima': 'en/clima.html',
-      'triand': 'en/triand.html'
+      'home': '/en/index.html',
+      'petbot': '/en/petbot.html',
+      'apod': '/en/apod.html',
+      'covid_atual': '/en/covid_atual.html',
+      'covid_historico': '/en/covid_historico.html',
+      'clima': '/en/clima.html',
+      'triand': '/en/triand.html'
     },
     storageKey: 'preferredLanguage'
   }
 };
+
 
 /**
  * Gets the current page identifier based on URL
