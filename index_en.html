@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yuri Abuchaim's Portfolio - Data Scientist with background in Physics and Astronomy">
+  <title>Yuri Abuchaim | Data Science</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #0a1a35;
+      --secondary: #3498db;
+      --accent: #e74c3c;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --astronomy: #6a5acd;
+      --pet: #ff69b4;
+      --weather: #1e90ff;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light);
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: linear-gradient(135deg, var(--primary), var(--dark));
+      color: white;
+      position: relative;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      margin: 0.5rem 0;
+      font-size: 2rem;
+    }
+    .subtitle {
+      margin: 0 0 1.5rem;
+      opacity: 0.9;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .links a {
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      background-color: rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+    .links a:hover {
+      background-color: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid var(--secondary);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .project {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+    .project h3 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+    .project-links {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+    .project-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--secondary);
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      background-color: rgba(52, 152, 219, 0.1);
+      transition: all 0.2s ease;
+    }
+    .project-links a:hover {
+      background-color: rgba(52, 152, 219, 0.2);
+      text-decoration: none;
+    }
+    .project-links a.covid {
+      background-color: rgba(231, 76, 60, 0.1);
+      color: var(--accent);
+    }
+    .project-links a.covid:hover {
+      background-color: rgba(231, 76, 60, 0.2);
+    }
+    .project-links a.astronomy {
+      background-color: rgba(106, 90, 205, 0.1);
+      color: var(--astronomy);
+    }
+    .project-links a.astronomy:hover {
+      background-color: rgba(106, 90, 205, 0.2);
+    }
+    .project-links a.pet {
+      background-color: rgba(255, 105, 180, 0.1);
+      color: var(--pet);
+    }
+    .project-links a.pet:hover {
+      background-color: rgba(255, 105, 180, 0.2);
+    }
+    .project-links a.weather {
+      background-color: rgba(30, 144, 255, 0.1);
+      color: var(--weather);
+    }
+    .project-links a.weather:hover {
+      background-color: rgba(30, 144, 255, 0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: var(--dark);
+      color: white;
+    }
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .language-btn {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .language-btn:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    .language-btn.active {
+      background: white;
+      color: var(--primary);
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      .links {
+        flex-direction: column;
+        align-items: center;
+      }
+      .links a {
+        width: 100%;
+        justify-content: center;
+      }
+      .language-switcher {
+        position: static;
+        justify-content: center;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="language-switcher">
+      <button class="language-btn" onclick="switchLanguage('pt')">PT</button>
+      <button class="language-btn active" onclick="switchLanguage('en')">EN</button>
+    </div>
+    <img src="assets/imgs/foto-perfil.jpg" alt="Yuri Abuchaim's photo" class="profile-img">
+    <h1>Yuri Abuchaim</h1>
+    <p class="subtitle">Physicist, MSc in Astronomy • Data Science</p>
+    <div class="links">
+      <a href="https://github.com/rilufi" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/yuri-abuchaim-1472bb1a1" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="http://lattes.cnpq.br/6100327519689283" target="_blank"><i class="fas fa-book"></i> Lattes</a>
+      <a href="Curriculo_Yuri.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Resume</a>
+    </div>
+  </header>
+  
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>I'm a physicist with a Master's degree in Astronomy from USP, experienced in scientific data analysis using Python and SQL. Currently working on Data Science projects, focusing on:</p>
+      <ul>
+        <li>Statistical analysis and data visualization</li>
+        <li>Data cleaning and preparation</li>
+        <li>Data pipeline development</li>
+      </ul>
+      <p>As a hobby, I create automated bots that publish content on social media, including astronomical images (NASA APOD), weather data, and pet photos.</p>
+    </section>
+
+    <section>
+      <h2>Featured Projects</h2>
+      
+      <div class="project">
+        <h3>Real-time COVID-19 Monitoring</h3>
+        <p>Automated system that collects, processes and visualizes daily updated data from the World Health Organization about the pandemic in Brazil. The pipeline includes:</p>
+        <ul>
+          <li>Automatic data collection from WHO</li>
+          <li>Processing with Python (Pandas, Matplotlib)</li>
+          <li>Interactive trend visualization</li>
+          <li>Comparison with historical data</li>
+        </ul>
+        <div class="project-links">
+          <a href="covid_atual.html" class="covid"><i class="fas fa-chart-line"></i> Current Dashboard</a>
+          <a href="https://github.com/rilufi/pythovid" target="_blank" class="covid"><i class="fab fa-github"></i> Python Code</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>Historical Analysis of COVID-19 in Brazil</h3>
+        <p>Comprehensive study of the pandemic evolution in Brazil, with data from 2020 to 2024. The project includes:</p>
+        <ul>
+          <li>Temporal analysis of cases and deaths</li>
+          <li>Comparison between Brazilian states</li>
+          <li>Fatality rate calculation</li>
+          <li>Pattern and trend visualization</li>
+        </ul>
+        <div class="project-links">
+          <a href="covid_historico.html" class="covid"><i class="fas fa-chart-bar"></i> Complete Analysis</a>
+          <a href="https://github.com/rilufi/covid19_historico" target="_blank" class="covid"><i class="fab fa-github"></i> Repository</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>Chemodynamics of Stellar Overdensities</h3>
+        <p>Analysis of TriAnd overdensity data using GRACES spectrograph data with Python, resulting in publication in The Astrophysical Journal. Processing of large volumes of astronomical data with advanced statistical analysis.</p>
+        <div class="project-links">
+          <a href="triand.html"><i class="fas fa-star"></i> View Summary</a>
+          <a href="https://doi.org/10.3847/1538-4357/acc9bc"><i class="fas fa-book"></i> Full Paper</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>Automated Social Media Bots</h3>
+        <p>Collection of bots that publish automated content on different platforms, integrating various APIs and using advanced data and image processing techniques.</p>
+        
+        <h4>Astronomy Picture of the Day</h4>
+        <p>Daily publishes NASA's APOD on Instagram, Twitter and Bluesky, with automatic translation of explanations.</p>
+        <div class="project-links">
+          <a href="apod.html" class="astronomy"><i class="fas fa-star"></i> Project Details</a>
+          <a href="https://github.com/rilufi/apodinsta" target="_blank" class="astronomy"><i class="fab fa-github"></i> Instagram Bot</a>
+          <a href="https://github.com/rilufi/nasapod" target="_blank" class="astronomy"><i class="fab fa-github"></i> Twitter/Bluesky Bot</a>
+        </div>
+
+        <h4>PetBots - Cats and Dogs</h4>
+        <p>Bots that post cute pet photos with creative AI-generated captions, and interact with the pet lover community.</p>
+        <div class="project-links">
+          <a href="petbot.html" class="pet"><i class="fas fa-paw"></i> Project Details</a>
+          <a href="https://github.com/rilufi/gatobot" target="_blank" class="pet"><i class="fab fa-github"></i> Twitter/Bluesky Bot</a>
+          <a href="https://github.com/rilufi/boturinsta" target="_blank" class="pet"><i class="fab fa-github"></i> Instagram Cats</a>
+          <a href="https://github.com/rilufi/doglufi" target="_blank" class="pet"><i class="fab fa-github"></i> Instagram Dogs</a>
+        </div>
+
+        <h4>Botoronga - Temperature Monitor</h4>
+        <p>Bot that collects weather data, generates temperature variation graphs in São Paulo and interacts with posts about weather.</p>
+        <div class="project-links">
+          <a href="clima.html" class="weather"><i class="fas fa-temperature-low"></i> Project Details</a>
+          <a href="https://github.com/rilufi/botoronga" target="_blank" class="weather"><i class="fab fa-github"></i> Repository</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Yuri Abuchaim</p>
+    <p><a href="mailto:yuri.abuchaim@gmail.com" style="color: white;"><i class="fas fa-envelope"></i> Contact</a></p>
+  </footer>
+
+  <script>
+    function switchLanguage(lang) {
+      if (lang === 'pt') {
+        // Redirect to Portuguese version
+        window.location.href = 'index.html';
+      } else {
+        // Already on English version
+        document.querySelector('.language-btn.active').classList.remove('active');
+        document.querySelector('.language-btn:last-child').classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
