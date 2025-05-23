@@ -1,0 +1,55 @@
+name: Daily COVID Data Update # Nome do seu workflow
+
+on:
+  schedule:
+    # Agenda a execução diária do workflow.
+    # '0 10 * * *' significa "às 10:00 UTC, todos os dias", que é 7h da manhã no Brasil.
+    # Você pode ajustar o horário se quiser.
+    # Mais sobre cron syntax: https://crontab.guru/
+    - cron: '0 10 * * *' 
+  
+  # Permite que você execute o workflow manualmente na aba "Actions" do GitHub
+  workflow_dispatch: 
+
+jobs:
+  update-covid-data:
+    runs-on: ubuntu-latest # O sistema operacional em que o job será executado (servidor virtual do GitHub)
+
+    steps:
+    - name: Checkout repository # Passo para clonar seu repositório
+      uses: actions/checkout@v4
+      with:
+        # O token GITHUB_TOKEN é automaticamente fornecido pelo GitHub Actions
+        # e é necessário para que a ação de commit possa enviar mudanças de volta para o repositório.
+        token: ${{ secrets.GITHUB_TOKEN }} 
+        # fetch-depth: 0 é necessário para que a ação de auto-commit funcione corretamente
+        # pois ela precisa do histórico completo do git.
+        fetch-depth: 0 
+
+    - name: Set up Python # Configura o ambiente Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x' # Usa a versão mais recente do Python 3 (ex: 3.10, 3.11, 3.12)
+
+    - name: Install dependencies # Instala as bibliotecas Python necessárias
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas requests
+
+    - name: Run COVID data update script # Executa o seu script Python
+      run: python update_covid_data.py
+
+    - name: Commit and Push changes # Comita e envia o arquivo JSON atualizado de volta para o repositório
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        # Mensagem do commit que aparecerá no histórico do seu repositório
+        commit_message: "Automated: Atualização diária dos dados de COVID-19 (WHO)"
+        # Padrão de arquivos para comitar. Isso garantirá que apenas o JSON seja comitado.
+        file_pattern: "data/covid_metrics.json"
+        # Autor do commit
+        commit_author: "GitHub Actions <actions@github.com>"
+        # O 'skip_fetch: true' é importante aqui porque o 'checkout@v4' já fez o fetch-depth: 0
+        skip_fetch: true
+        # Esta ação automaticamente verifica se houve mudanças no arquivo antes de comitar.
+        # Se o data/covid_metrics.json não mudou desde a última execução, nenhum commit será feito.
+        # Isso é bom para evitar commits desnecessários se os dados da OMS não mudaram.
