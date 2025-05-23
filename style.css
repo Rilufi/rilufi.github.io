@@ -1,302 +1,367 @@
 /* Estilos gerais */
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --accent-color: #e74c3c;
-  --light-color: #ecf0f1;
-  --dark-color: #2c3e50;
-  --text-color: #333;
-  --text-light: #7f8c8d;
+    /* Cores atualizadas para combinar com o seu header original */
+    --primary-color: #0a1a35; /* Era #2c3e50 */
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #f8f9fa; /* Era #ecf0f1 */
+    --dark-color: #212529; /* Era #2c3e50 */
+    --text-color: #333;
+    --text-light: #7f8c8d;
+
+    /* Cores de projeto específicas (importantes para o seu site) */
+    --astronomy: #6a5acd;
+    --pet: #ff69b4;
+    --weather: #1e90ff;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color); /* Usando variável para consistência */
 }
 
 a {
-  color: var(--secondary-color);
-  text-decoration: none;
-  transition: all 0.3s ease;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 a:hover {
-  color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 /* Header */
 header {
-  background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative; /* **CRUCIAL** para o language-switcher se posicionar corretamente */
 }
 
 .header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid white;
-  margin-bottom: 1rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-bottom: 1rem;
 }
 
 .header-text h1 {
-  margin: 0.5rem 0;
-  font-size: 2.5rem;
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
 }
 
 .subtitle {
-  margin: 0 0 1rem;
-  font-size: 1.2rem;
-  opacity: 0.9;
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
 }
 
 .links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .links a {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease; /* Adicionado para uma transição suave ao hover */
 }
 
 .links a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px); /* Efeito sutil de levantar ao hover */
 }
 
-/* Navegação */
+/* Navegação (se presente em outras páginas) */
 .main-nav {
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .main-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .main-nav li {
-  margin: 0;
+    margin: 0;
 }
 
 .main-nav a {
-  display: block;
-  padding: 1rem 1.5rem;
-  color: var(--dark-color);
-  font-weight: 500;
+    display: block;
+    padding: 1rem 1.5rem;
+    color: var(--dark-color);
+    font-weight: 500;
 }
 
 .main-nav a:hover {
-  color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 /* Seções */
-.section {
-  padding: 3rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Ajustado para usar a estrutura main/section dos seus HTMLs */
+main {
+    max-width: 800px; /* Consistente com seu index.html */
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-.section h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--primary-color);
-  position: relative;
+section {
+    margin-bottom: 3rem; /* Consistente com seu index.html */
 }
 
-.section h2::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 3px;
-  background-color: var(--secondary-color);
-  margin: 0.5rem auto;
+/* O estilo h2 abaixo substituirá o .section h2 e .section h2::after */
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left; /* Padrão do index.html */
+    position: relative; /* Mantido se você tiver ::after em algum h2 */
+}
+
+h2::after { /* Se você quiser o sublinhado centralizado, use uma classe como h2.centered */
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 0.5rem auto 0; /* Ajustado para espaçamento */
+    /* Este estilo só será aplicado se o h2 tiver a classe 'centered' no HTML */
 }
 
 /* Projetos */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
+/* Renomeado de .project-card para .project para combinar com seu HTML */
+.project {
+    background-color: white; /* Era 'background: white;' */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ajustado para ser mais leve como seu index.html */
+    transition: transform 0.3s ease;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem; /* Do seu index.html */
 }
 
-.project-card {
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  padding: 1.5rem;
+.project:hover {
+    transform: translateY(-5px);
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-card h3 {
-  margin-top: 0;
-  color: var(--primary-color);
+.project h3 {
+    margin-top: 0;
+    color: var(--primary-color);
 }
 
 .project-description {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .project-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
+    display: flex;
+    gap: 0.8rem; /* Consistente com seu index.html */
+    margin-top: 1rem; /* Consistente com seu index.html */
+    flex-wrap: wrap; /* Para quebrar linhas em telas menores */
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: var(--secondary-color);
-  color: white;
-  border-radius: 5px;
-  font-size: 0.9rem;
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secondary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    background-color: rgba(52, 152, 219, 0.1);
+    transition: all 0.2s ease;
+}
+
+.project-links a:hover {
+    background-color: rgba(52, 152, 219, 0.2);
+    text-decoration: none;
+}
+
+/* Cores específicas de projeto (muito bom mantê-las!) */
+.project-links a.covid {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--accent-color);
+}
+.project-links a.covid:hover {
+    background-color: rgba(231, 76, 60, 0.2);
+}
+.project-links a.astronomy {
+    background-color: rgba(106, 90, 205, 0.1);
+    color: var(--astronomy);
+}
+.project-links a.astronomy:hover {
+    background-color: rgba(106, 90, 205, 0.2);
+}
+.project-links a.pet {
+    background-color: rgba(255, 105, 180, 0.1);
+    color: var(--pet);
+}
+.project-links a.pet:hover {
+    background-color: rgba(255, 105, 180, 0.2);
+}
+.project-links a.weather {
+    background-color: rgba(30, 144, 255, 0.1);
+    color: var(--weather);
+}
+.project-links a.weather:hover {
+    background-color: rgba(30, 144, 255, 0.2);
+}
+
+/* Estilos de gráficos/metodologia (do covid_historico.html) */
+.graph-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+.graph-container:hover {
+    transform: translateY(-5px);
+}
+.methodology-box {
+    background-color: #f8f9fa;
+    border-left: 5px solid #0d6efd;
+    padding: 20px;
+    margin: 40px 0;
+}
+.graph-title {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.btn { /* Se você tem um botão genérico para algo diferente de links de projeto */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 5px;
+    font-size: 0.9rem;
 }
 
 .btn:hover {
-  background-color: var(--primary-color);
-  color: white;
+    background-color: var(--primary-color);
+    color: white;
 }
 
-/* Habilidades */
+
+/* Habilidades (se você tiver uma seção de habilidades separada) */
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
 }
 
 .skill-category {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 .skill-category h3 {
-  margin-top: 0;
-  color: var(--primary-color);
+    margin-top: 0;
+    color: var(--primary-color);
 }
 
 .skills-list {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .skills-list li {
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 /* Contato */
 .contact-content {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact-methods {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
-.contact-btn {
-  padding: 0.75rem 1.5rem;
+.contact-btn { /* Se o botão de contato tiver padding diferente do .btn */
+    padding: 0.75rem 1.5rem;
 }
 
 /* Footer */
 footer {
-  background-color: var(--dark-color);
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 2rem;
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem; /* Consistente com seu index.html */
+    margin-top: 2rem;
 }
 
 .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.footer-links a {
-  color: white;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
+.footer-links a { /* Usado no footer do index.html */
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* margin-top: 1rem; Pode ser adicionado se precisar de espaçamento extra */
 }
 
-.footer-link {
-  color: white !important;
-  text-decoration: underline !important;
+.footer-link { /* Usado no footer do covid_historico.html */
+    color: white !important;
+    text-decoration: underline !important;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .header-text h1 {
-    font-size: 2rem;
-  }
-  
-  .subtitle {
-    font-size: 1rem;
-  }
-  
-  .main-nav ul {
-    flex-wrap: wrap;
-  }
-  
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* --- Línguas --- */
+/* --- Estilos do Language Switcher --- */
 .language-switcher {
-    position: absolute; /* Posição absoluta em relação ao seu elemento pai posicionado */
+    position: absolute;
     top: 20px;
     right: 20px;
     display: flex;
     gap: 10px;
-    z-index: 1000; /* Garante que ele esteja acima de outros elementos */
+    z-index: 1000;
 }
 
-/* Os estilos para .language-btn, .language-btn:hover e .language-btn.active já estão ótimos! */
 .language-btn {
     background: rgba(11, 61, 145, 0.1);
     border: 1px solid rgba(11, 61, 145, 0.3);
@@ -318,23 +383,57 @@ footer {
     border-color: #0B3D91;
 }
 
-/* Adicionar responsividade para telas menores, se desejar */
-@media (max-width: 600px) {
+/* GIF */
+.tenor-gif-embed {
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-text h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+    }
+    
+    /* Ajuste para links do header em telas menores (do seu index.html) */
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .links a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Ajuste para projetos em grid em telas menores */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajuste do language switcher */
     .language-switcher {
         top: 10px;
         right: 10px;
-        gap: 5px; /* Reduz o espaço entre os botões */
+        gap: 5px;
     }
     .language-btn {
-        padding: 3px 10px; /* Reduz o padding dos botões */
-        font-size: 0.85rem; /* Ajusta o tamanho da fonte */
+        padding: 3px 10px;
+        font-size: 0.85rem;
     }
 }
-/* GIF */
-.tenor-gif-embed {
-  max-width: 400px;
-  margin: 20px auto;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+/* Pode adicionar media queries adicionais se necessário */
+@media (max-width: 600px) {
+    /* Ajustes específicos para telas muito pequenas */
 }
