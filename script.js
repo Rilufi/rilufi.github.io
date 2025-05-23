@@ -1,7 +1,7 @@
 /**
  * script.js - Language control and main functionalities
- * @version 1.6
- * @description Manages language switching and user preferences for all pages
+ * @version 1.7
+ * @description Manages language switching for all pages (without preference storage)
  */
 
 // Supported language configuration for all pages
@@ -16,7 +16,7 @@ const languageConfig = {
       'clima': '/clima.html',
       'triand': '/triand.html'
     },
-    storageKey: 'preferredLanguage'
+    // storageKey: 'preferredLanguage' // Removido
   },
   'en': {
     path: {
@@ -28,7 +28,7 @@ const languageConfig = {
       'clima': '/en/clima.html',
       'triand': '/en/triand.html'
     },
-    storageKey: 'preferredLanguage'
+    // storageKey: 'preferredLanguage' // Removido
   }
 };
 
@@ -38,10 +38,8 @@ const languageConfig = {
  */
 function getCurrentPageIdentifier() {
   const path = window.location.pathname;
-  // Remove leading/trailing slashes and potential '/en/' prefix
   const cleanPath = path.replace(/^\/(en\/)?|\/$/g, '');
 
-  // Map of file names (without extension) to identifiers
   const pageMap = {
     'index': 'home',
     'petbot': 'petbot',
@@ -53,8 +51,6 @@ function getCurrentPageIdentifier() {
   };
 
   for (const [fileName, identifier] of Object.entries(pageMap)) {
-    // Check if the cleanPath ends with the fileName (e.g., 'index' for 'index.html')
-    // or if it's the home page (empty cleanPath or 'index.html')
     if (cleanPath.endsWith(fileName + '.html') || (fileName === 'index' && (cleanPath === '' || cleanPath === 'index.html'))) {
       return identifier;
     }
@@ -72,51 +68,28 @@ function getCurrentLanguage() {
 }
 
 /**
- * Switches between languages and stores preference
+ * Switches between languages
  * @param {string} lang - Language code (pt/en)
  */
 function switchLanguage(lang) {
   if (languageConfig[lang]) {
-    // Store preference
-    localStorage.setItem(languageConfig[lang].storageKey, lang);
-
-    // Get current page identifier
+    // A linha 'localStorage.setItem()' foi removida daqui!
+    
     const currentPage = getCurrentPageIdentifier();
     const currentLanguage = getCurrentLanguage();
 
     // Only redirect if changing to a different language
     if (lang !== currentLanguage) {
-      // Redirect to the selected language version
       if (languageConfig[lang].path[currentPage]) {
         window.location.href = languageConfig[lang].path[currentPage];
       } else {
-        // Fallback to home if page not found in config
         window.location.href = languageConfig[lang].path['home'];
       }
     }
   }
 }
 
-/**
- * Applies user's preferred language on initial load.
- * This function only redirects if the current page's language
- * does not match the preferred language.
- */
-function applyPreferredLanguage() {
-  const preferredLanguage = localStorage.getItem('preferredLanguage');
-  if (!preferredLanguage) {
-    return; // No preferred language set
-  }
-
-  const currentLanguage = getCurrentLanguage();
-  const currentPage = getCurrentPageIdentifier();
-
-  // If preferred language is different from current page's language, redirect
-  if (preferredLanguage !== currentLanguage) {
-    const targetPath = languageConfig[preferredLanguage].path[currentPage] || languageConfig[preferredLanguage].path['home'];
-    window.location.href = targetPath;
-  }
-}
+// A função applyPreferredLanguage() foi completamente removida!
 
 /**
  * Activates the current language button
@@ -140,10 +113,9 @@ function setActiveLanguageButton() {
  */
 function init() {
   try {
-    // Apply preferred language only if not already on the correct language page
-    applyPreferredLanguage();
+    // applyPreferredLanguage() foi removido daqui!
     setActiveLanguageButton();
-
+    
     // Event listeners for language buttons
     document.querySelectorAll('.language-btn').forEach(button => {
       button.addEventListener('click', function() {
