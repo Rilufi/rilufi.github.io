@@ -1,7 +1,7 @@
 /**
  * script.js - Language control and main functionalities
- * @version 1.5
- * @description Manages language switching and user preferences for all pages, with added debugging
+ * @version 1.6
+ * @description Manages language switching and user preferences for all pages
  */
 
 // Supported language configuration for all pages
@@ -56,11 +56,9 @@ function getCurrentPageIdentifier() {
     // Check if the cleanPath ends with the fileName (e.g., 'index' for 'index.html')
     // or if it's the home page (empty cleanPath or 'index.html')
     if (cleanPath.endsWith(fileName + '.html') || (fileName === 'index' && (cleanPath === '' || cleanPath === 'index.html'))) {
-      console.log(`DEBUG: getCurrentPageIdentifier detected: ${identifier} for cleanPath: "${cleanPath}"`);
       return identifier;
     }
   }
-  console.log(`DEBUG: getCurrentPageIdentifier returning 'home' as default for cleanPath: "${cleanPath}"`);
   return 'home'; // Default to home if no match
 }
 
@@ -70,7 +68,6 @@ function getCurrentPageIdentifier() {
  */
 function getCurrentLanguage() {
   const currentLang = window.location.pathname.includes('/en/') ? 'en' : 'pt';
-  console.log(`DEBUG: getCurrentLanguage detected: ${currentLang}`);
   return currentLang;
 }
 
@@ -82,7 +79,6 @@ function switchLanguage(lang) {
   if (languageConfig[lang]) {
     // Store preference
     localStorage.setItem(languageConfig[lang].storageKey, lang);
-    console.log(`DEBUG: Preferred language set to: ${lang} in localStorage.`);
 
     // Get current page identifier
     const currentPage = getCurrentPageIdentifier();
@@ -92,17 +88,11 @@ function switchLanguage(lang) {
     if (lang !== currentLanguage) {
       // Redirect to the selected language version
       if (languageConfig[lang].path[currentPage]) {
-        const targetUrl = languageConfig[lang].path[currentPage];
-        console.log(`DEBUG: Redirecting from ${currentLanguage} to ${lang} page: ${targetUrl}`);
-        window.location.href = targetUrl;
+        window.location.href = languageConfig[lang].path[currentPage];
       } else {
         // Fallback to home if page not found in config
-        const targetUrl = languageConfig[lang].path['home'];
-        console.log(`DEBUG: Page not found in config for ${lang}/${currentPage}, falling back to home: ${targetUrl}`);
-        window.location.href = targetUrl;
+        window.location.href = languageConfig[lang].path['home'];
       }
-    } else {
-      console.log(`DEBUG: Already on ${lang} page, no redirect needed.`);
     }
   }
 }
@@ -114,10 +104,7 @@ function switchLanguage(lang) {
  */
 function applyPreferredLanguage() {
   const preferredLanguage = localStorage.getItem('preferredLanguage');
-  console.log(`DEBUG: applyPreferredLanguage - Preferred language from localStorage: ${preferredLanguage}`);
-
   if (!preferredLanguage) {
-    console.log('DEBUG: No preferred language set in localStorage. Skipping redirection.');
     return; // No preferred language set
   }
 
@@ -127,10 +114,7 @@ function applyPreferredLanguage() {
   // If preferred language is different from current page's language, redirect
   if (preferredLanguage !== currentLanguage) {
     const targetPath = languageConfig[preferredLanguage].path[currentPage] || languageConfig[preferredLanguage].path['home'];
-    console.log(`DEBUG: Mismatch detected! Preferred: ${preferredLanguage}, Current: ${currentLanguage}. Redirecting to: ${targetPath}`);
     window.location.href = targetPath;
-  } else {
-    console.log(`DEBUG: Preferred language (${preferredLanguage}) matches current page language (${currentLanguage}). No redirection needed.`);
   }
 }
 
@@ -140,7 +124,6 @@ function applyPreferredLanguage() {
 function setActiveLanguageButton() {
   const currentLanguage = getCurrentLanguage();
   const languageButtons = document.querySelectorAll('.language-btn');
-  console.log(`DEBUG: Setting active button for language: ${currentLanguage}`);
 
   languageButtons.forEach(button => {
     button.classList.remove('active');
@@ -148,7 +131,6 @@ function setActiveLanguageButton() {
 
     if (buttonLang === currentLanguage) {
       button.classList.add('active');
-      console.log(`DEBUG: Activated button for: ${buttonLang}`);
     }
   });
 }
@@ -158,7 +140,6 @@ function setActiveLanguageButton() {
  */
 function init() {
   try {
-    console.log('DEBUG: init() called. DOMContentLoaded event fired.');
     // Apply preferred language only if not already on the correct language page
     applyPreferredLanguage();
     setActiveLanguageButton();
@@ -167,7 +148,6 @@ function init() {
     document.querySelectorAll('.language-btn').forEach(button => {
       button.addEventListener('click', function() {
         const lang = this.textContent.trim().toLowerCase();
-        console.log(`DEBUG: Language button clicked: ${lang}`);
         switchLanguage(lang);
       });
     });
