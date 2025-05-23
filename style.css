@@ -286,22 +286,23 @@ footer {
   }
 }
 
-/* Línguas */
+/* --- Línguas --- */
 .language-switcher {
-    position: absolute;
+    position: absolute; /* Posição absoluta em relação ao seu elemento pai posicionado */
     top: 20px;
     right: 20px;
     display: flex;
     gap: 10px;
-    z-index: 1000; /* Ensures it stays above other elements */
+    z-index: 1000; /* Garante que ele esteja acima de outros elementos */
 }
 
+/* Os estilos para .language-btn, .language-btn:hover e .language-btn.active já estão ótimos! */
 .language-btn {
-    background: rgba(11, 61, 145, 0.1); /* Light blue background */
-    border: 1px solid rgba(11, 61, 145, 0.3); /* Subtle border */
-    color: #0B3D91; /* Dark blue text */
+    background: rgba(11, 61, 145, 0.1);
+    border: 1px solid rgba(11, 61, 145, 0.3);
+    color: #0B3D91;
     padding: 5px 15px;
-    border-radius: 20px; /* Pill shape */
+    border-radius: 20px;
     cursor: pointer;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -312,11 +313,23 @@ footer {
 }
 
 .language-btn.active {
-    background: #0B3D91; /* Dark blue */
+    background: #0B3D91;
     color: white;
     border-color: #0B3D91;
 }
 
+/* Adicionar responsividade para telas menores, se desejar */
+@media (max-width: 600px) {
+    .language-switcher {
+        top: 10px;
+        right: 10px;
+        gap: 5px; /* Reduz o espaço entre os botões */
+    }
+    .language-btn {
+        padding: 3px 10px; /* Reduz o padding dos botões */
+        font-size: 0.85rem; /* Ajusta o tamanho da fonte */
+    }
+}
 /* GIF */
 .tenor-gif-embed {
   max-width: 400px;
