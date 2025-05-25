@@ -259,6 +259,9 @@ h2::after { /* Se você quiser o sublinhado centralizado, use uma classe como h2
     margin-bottom: 20px;
     font-weight: 600;
 }
+.navbar-brand {
+    font-weight: 600;
+}
 .btn { /* Se você tem um botão genérico para algo diferente de links de projeto */
     display: inline-flex;
     align-items: center;
