@@ -38,6 +38,6 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: "Automated: Atualização diária da APOD"
-        file_pattern: "data/apod_today.json assets/imgs/apod_image.jpg"
+        file_pattern: "data/apod_today.json static/assets/imgs/apod_image.jpg"
         commit_author: "GitHub Actions <actions@github.com>"
         skip_fetch: true
