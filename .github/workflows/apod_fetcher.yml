@@ -7,7 +7,9 @@ on:
 
 jobs:
   update-apod-data:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
+    permissions: # Adicione esta seção
+      contents: write # Permite escrita no repositório
     steps:
     - name: Checkout repository 
       uses: actions/checkout@v4
