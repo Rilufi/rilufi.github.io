@@ -665,3 +665,42 @@ body {
 .metric-card:nth-child(3) { /* Para o terceiro card (Letalidade) */
     border-bottom-color: #fd7e14; /* Cor laranja */
 }
+
+/* Estilos para as seções de figuras */
+.figure {
+    background-color: #f8f8f8; /* Fundo leve para a seção */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra suave */
+    text-align: center; /* Centraliza a imagem e a legenda */
+}
+
+.figure img.figure-img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço extra abaixo da imagem */
+    margin: 0 auto 15px auto; /* Centraliza a imagem e adiciona margem inferior */
+    border-radius: 5px; /* Leve arredondamento nas bordas da imagem */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil para a imagem */
+}
+
+.figure figcaption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+/* Opcional: Para telas muito pequenas, garantir que o texto não fique apertado */
+@media (max-width: 768px) {
+    .figure {
+        padding: 15px;
+    }
+    .figure img.figure-img {
+        margin-bottom: 10px;
+    }
+    .figure figcaption {
+        font-size: 0.85em;
+    }
+}
