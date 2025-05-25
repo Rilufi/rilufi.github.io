@@ -194,20 +194,20 @@
       <a href="../index.html" class="footer-link">Back to home</a>
   </footer>
   
-  <script>
-      // Loads APOD data from the JSON file
-      fetch('../data/apod_today.json')
-          .then(response => response.json())
-          .then(data => {
-              document.getElementById('apod-image-title-en').textContent = data.title; 
-              // VERIFIQUE ESTA LINHA COM A ESTRUTURA DO SEU JSON
-              document.getElementById('apod-explanation-en').textContent = data.explanation['en-US'] || data.explanation || "Translation not available";
-          })
-          .catch(error => {
-              console.error('Error loading APOD data:', error);
-              document.getElementById('apod-image-title-en').textContent = "Could not load title.";
-              document.getElementById('apod-explanation-en').textContent = "Could not load explanation.";
-          });
-  </script>
+   <script>
+        // Loads APOD data from the JSON file
+        fetch('../data/apod_today.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('apod-image-title-en').textContent = data.title; 
+                // CORRIGIDO: Alterado 'en-US' para 'en' para corresponder ao JSON
+                document.getElementById('apod-explanation-en').textContent = data.explanation['en'] || "Translation not available";
+            })
+            .catch(error => {
+                console.error('Error loading APOD data:', error);
+                document.getElementById('apod-image-title-en').textContent = "Could not load title.";
+                document.getElementById('apod-explanation-en').textContent = "Could not load explanation.";
+            });
+   </script>
 </body>
 </html>
