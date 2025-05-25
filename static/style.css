@@ -237,14 +237,6 @@ h2::after { /* Se você quiser o sublinhado centralizado, use uma classe como h2
 }
 
 /* Estilos de gráficos/metodologia (do covid_historico.html) */
-.graph-container {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 25px;
-    margin-bottom: 30px;
-    transition: transform 0.3s ease;
-}
 .graph-container:hover {
     transform: translateY(-5px);
 }
@@ -692,15 +684,29 @@ body {
     line-height: 1.4;
 }
 
-/* Opcional: Para telas muito pequenas, garantir que o texto não fique apertado */
-@media (max-width: 768px) {
-    .figure {
-        padding: 15px;
-    }
-    .figure img.figure-img {
-        margin-bottom: 10px;
-    }
-    .figure figcaption {
-        font-size: 0.85em;
-    }
+/* Estilos para as imagens de gráficos */
+.graph-container {
+    text-align: center; /* Centraliza o conteúdo dentro do container */
+    margin-bottom: 2rem;
+    padding: 15px;
+    background-color: #f8f8f8; /* Um leve fundo para destacar o gráfico */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.graph-container img.graph-example {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço extra abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    border-radius: 5px; /* Leve arredondamento nas bordas da imagem */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil para a imagem */
+}
+
+/* Estilo opcional para a legenda do gráfico, se houver */
+.graph-container p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.4;
 }
