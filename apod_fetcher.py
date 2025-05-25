@@ -18,7 +18,7 @@ genai.configure(api_key=GOOGLE_API_KEY)
 MODEL = genai.GenerativeModel('gemini-1.5-flash')
 
 # Diretórios
-ASSETS_DIR = "assets/img"
+ASSETS_DIR = "assets/imgs"
 DATA_DIR = "data"
 os.makedirs(ASSETS_DIR, exist_ok=True)
 os.makedirs(DATA_DIR, exist_ok=True)
