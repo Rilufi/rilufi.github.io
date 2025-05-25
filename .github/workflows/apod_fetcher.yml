@@ -1,0 +1,41 @@
+name: Daily APOD Update # 
+
+on:
+  schedule:
+    - cron: '0 10 * * *' 
+  workflow_dispatch: 
+
+jobs:
+  update-covid-data:
+    runs-on: ubuntu-latest 
+    steps:
+    - name: Checkout repository 
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }} 
+        fetch-depth: 0 
+
+    - name: Set up Python # Configura o ambiente Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x' 
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install google.generativeai pillow instagrapi
+
+    - name: Run APOD data update script
+      env:
+          API_KEY: ${{ secrets.API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      run: |
+          python apod_fetcher.py
+
+    - name: Commit and Push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Automated: Atualização diária da APOD"
+        file_pattern: "data/apod_today.json"
+        commit_author: "GitHub Actions <actions@github.com>"
+        skip_fetch: true
