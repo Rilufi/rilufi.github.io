@@ -20,28 +20,29 @@
 <body>
   <header class="apod-page-header">
     <div class="language-switcher">
-      <button class="language-btn">PT</button>
-      <button class="language-btn">EN</button>
+      <a href="../pt/apod.html" class="language-btn">PT</a>
+      <a href="index.html" class="language-btn active">EN</a>
     </div>
     <h1>APOD Bots - Automated Astronomy</h1>
     <p>Automated projects that publish NASA's Astronomy Picture of the Day on different social media networks</p>
     
     <div class="button-container">
-        <a href="https://instagram.com/apodinsta" class="social-button instagram">
+        <a href="https://instagram.com/apodinsta" class="social-button instagram" target="_blank">
             <i class="fab fa-instagram social-icon"></i> @apodinsta
         </a>
-        <a href="https://twitter.com/nasapod" class="social-button twitter">
+        <a href="https://twitter.com/nasapod" class="social-button twitter" target="_blank">
             <i class="fab fa-twitter social-icon"></i> @nasapod
         </a>
-        <a href="https://bsky.app/profile/nasapodsky.bsky.social" class="social-button bluesky">
+        <a href="https://bsky.app/profile/nasapodsky.bsky.social" class="social-button bluesky" target="_blank">
             <i class="fas fa-cloud social-icon"></i> @nasapodsky.bsky.social
         </a>
     </div>
     
     <div class="apod-container">
         <h2 class="apod-title">Astronomy Picture of the Day</h2>
-        <img src="..static/assets/imgs/apod_image.jpg" alt="Astronomy picture of the day" class="apod-image">
-        <h3 class="apod-image-title" id="apod-image-title-en"></h3> <div class="apod-explanation">
+        <img src="../static/assets/imgs/apod_image.jpg" alt="Astronomy picture of the day" class="apod-image">
+        <h3 class="apod-image-title" id="apod-image-title-en"></h3> 
+        <div class="apod-explanation">
             <p id="apod-explanation-en">Loading explanation in English...</p>
         </div>
         <p><small>Source: NASA Astronomy Picture of the Day</small></p>
@@ -49,7 +50,7 @@
   </header>
   
   <section>
-      <p>I developed two automated systems that daily publish the <strong>Astronomy Picture of the Day (APOD)</strong> from NASA on different social media networks, each adapted to the technical specifications and best practices of each platform.</p>
+      <p>I developed two automated systems that daily publish the **Astronomy Picture of the Day (APOD)** from NASA on different social media networks, each adapted to the technical specifications and best practices of each platform.</p>
   </section>
   
   <div class="bot-card">
@@ -89,7 +90,7 @@
       <span class="tech-badge">NASA API</span>
       
       <div class="button-container">
-          <a href="https://instagram.com/apodinsta" class="social-button instagram">
+          <a href="https://instagram.com/apodinsta" class="social-button instagram" target="_blank">
               <i class="fab fa-instagram social-icon"></i> View on Instagram
           </a>
       </div>
@@ -144,10 +145,10 @@
       <span class="tech-badge">NASA API</span>
       
       <div class="button-container">
-          <a href="https://twitter.com/nasapod" class="social-button twitter">
+          <a href="https://twitter.com/nasapod" class="social-button twitter" target="_blank">
               <i class="fab fa-twitter social-icon"></i> View on Twitter/X
           </a>
-          <a href="https://bsky.app/profile/nasapodsky.bsky.social" class="social-button bluesky">
+          <a href="https://bsky.app/profile/nasapodsky.bsky.social" class="social-button bluesky" target="_blank">
               <i class="fas fa-cloud social-icon"></i> View on Bluesky
           </a>
       </div>
@@ -181,8 +182,8 @@
            data-share-method="host" 
            data-aspect-ratio="1.57233" 
            data-width="100%">
-           <a href="https://tenor.com/view/starttrek-space-enterprise-gif-5507180">Starttrek Space GIF</a> from 
-           <a href="https://tenor.com/search/starttrek-gifs">Starttrek GIFs</a>
+           <a href="https://tenor.com/view/starttrek-space-enterprise-gif-5507180" target="_blank">Starttrek Space GIF</a> from 
+           <a href="https://tenor.com/search/starttrek-gifs" target="_blank">Starttrek GIFs</a>
       </div> 
       <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
   </div>
@@ -190,7 +191,7 @@
   <footer class="apod-page-footer">
       <p>These automated systems ensure that astronomy enthusiasts receive daily APOD content, beautifully formatted across multiple platforms, with accessibility features and appropriate presentation for each social network.</p>
       <p>© 2025 - Developed by Yuri Abuchaim</p>
-      <a href="index.html" class="footer-link">Back to home</a>
+      <a href="../index.html" class="footer-link">Back to home</a>
   </footer>
   
   <script>
@@ -199,7 +200,8 @@
           .then(response => response.json())
           .then(data => {
               document.getElementById('apod-image-title-en').textContent = data.title; 
-              document.getElementById('apod-explanation-en').textContent = data.explanation['en-US'] || "Translation not available";
+              // VERIFIQUE ESTA LINHA COM A ESTRUTURA DO SEU JSON
+              document.getElementById('apod-explanation-en').textContent = data.explanation['en-US'] || data.explanation || "Translation not available";
           })
           .catch(error => {
               console.error('Error loading APOD data:', error);
