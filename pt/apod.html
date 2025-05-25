@@ -10,6 +10,11 @@
         .apod-explanation p {
             color: #333; /* Cor escura para o texto da explicação */
         }
+        .apod-image-title {
+            color: #0a1a35; /* Cor do título da imagem */
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -34,10 +39,10 @@
     </div>
     
     <!-- Seção APOD -->
-    <div class="apod-container">
+       <div class="apod-container">
         <h2 class="apod-title">Astronomy Picture of the Day</h2>
         <img src="../static/assets/imgs/apod_image.jpg" alt="Imagem astronômica do dia" class="apod-image">
-        <div class="apod-explanation">
+        <h3 class="apod-image-title" id="apod-image-title-pt"></h3> <div class="apod-explanation">
             <p id="apod-explanation-pt">Carregando explicação em português...</p>
         </div>
         <p><small>Fonte: NASA Astronomy Picture of the Day</small></p>
@@ -190,18 +195,19 @@
       <a href="../index.html" class="footer-link">Voltar ao início</a>
   </footer>
   
-  <script>
-      // Carrega os dados da APOD do arquivo JSON
-      fetch('../data/apod_today.json')
-          .then(response => response.json())
-          .then(data => {
-              document.getElementById('apod-explanation-pt').textContent = data.explanation['pt-BR'] || "Tradução não disponível";
-          })
-          .catch(error => {
-              console.error('Erro ao carregar dados da APOD:', error);
-              document.getElementById('apod-explanation-en').textContent = "Não foi possível carregar a explicação.";
-              document.getElementById('apod-explanation-pt').textContent = "Não foi possível carregar a tradução.";
-          });
-  </script>
+   <script>
+        // Carrega os dados da APOD do arquivo JSON
+        fetch('../data/apod_today.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('apod-image-title-pt').textContent = data.title; // Adiciona o título
+                document.getElementById('apod-explanation-pt').textContent = data.explanation['pt-BR'] || "Tradução não disponível";
+            })
+            .catch(error => {
+                console.error('Erro ao carregar dados da APOD:', error);
+                document.getElementById('apod-image-title-pt').textContent = "Erro ao carregar o título.";
+                document.getElementById('apod-explanation-pt').textContent = "Não foi possível carregar a explicação.";
+            });
+   </script>
 </body>
 </html>
