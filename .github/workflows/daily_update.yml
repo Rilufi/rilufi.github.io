@@ -37,7 +37,7 @@ jobs:
         pip install pandas requests
 
     - name: Run COVID data update script # Executa o seu script Python
-      run: python update_covid_data.py
+      run: python scripts/update_covid_data.py
 
     - name: Commit and Push changes # Comita e envia o arquivo JSON atualizado de volta para o repositório
       uses: stefanzweifel/git-auto-commit-action@v5
