@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         .apod-explanation p {
-            color: #333; /* Cor escura para o texto da explicação */
+            color: #333;
+        }
+        .apod-image-title {
+            color: #0a1a35;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -36,7 +41,7 @@
     <div class="apod-container">
         <h2 class="apod-title">Astronomy Picture of the Day</h2>
         <img src="..static/assets/imgs/apod_image.jpg" alt="Astronomy picture of the day" class="apod-image">
-        <div class="apod-explanation">
+        <h3 class="apod-image-title" id="apod-image-title-en"></h3> <div class="apod-explanation">
             <p id="apod-explanation-en">Loading explanation in English...</p>
         </div>
         <p><small>Source: NASA Astronomy Picture of the Day</small></p>
@@ -193,12 +198,13 @@
       fetch('../data/apod_today.json')
           .then(response => response.json())
           .then(data => {
+              document.getElementById('apod-image-title-en').textContent = data.title; 
               document.getElementById('apod-explanation-en').textContent = data.explanation['en-US'] || "Translation not available";
           })
           .catch(error => {
               console.error('Error loading APOD data:', error);
+              document.getElementById('apod-image-title-en').textContent = "Could not load title.";
               document.getElementById('apod-explanation-en').textContent = "Could not load explanation.";
-              document.getElementById('apod-explanation-pt').textContent = "Could not load translation.";
           });
   </script>
 </body>
