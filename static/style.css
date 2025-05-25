@@ -13,6 +13,10 @@
     --astronomy: #6a5acd;
     --pet: #ff69b4;
     --weather: #1e90ff;
+
+    /* Cores adicionais para páginas específicas como APOD */
+    --apod-primary: #0B3D91;
+    --apod-accent: #FC3D21;
 }
 
 body {
@@ -21,7 +25,11 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 0;
-    background-color: var(--light-color); /* Usando variável para consistência */
+    background-color: var(--light-color);
+    /* Estas regras foram movidas para cá do bloco "Estilos da Página APOD" para serem globais */
+    max-width: 900px; /* Largura máxima para o conteúdo principal */
+    margin: 0 auto; /* Centraliza o body na tela */
+    padding: 20px; /* Padding interno */
 }
 
 a {
@@ -40,7 +48,7 @@ header {
     color: white;
     text-align: center;
     padding: 2rem 1rem;
-    position: relative; /* **CRUCIAL** para o language-switcher se posicionar corretamente */
+    position: relative; /* CRUCIAL para o language-switcher se posicionar corretamente */
 }
 
 .header-content {
@@ -86,12 +94,12 @@ header {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    transition: all 0.3s ease; /* Adicionado para uma transição suave ao hover */
+    transition: all 0.3s ease;
 }
 
 .links a:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px); /* Efeito sutil de levantar ao hover */
+    transform: translateY(-2px);
 }
 
 /* Navegação (se presente em outras páginas) */
@@ -127,47 +135,59 @@ header {
 }
 
 /* Seções */
-/* Ajustado para usar a estrutura main/section dos seus HTMLs */
 main {
-    max-width: 800px; /* Consistente com seu index.html */
+    max-width: 800px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
 section {
-    margin-bottom: 3rem; /* Consistente com seu index.html */
+    margin-bottom: 3rem;
 }
 
-/* O estilo h2 abaixo substituirá o .section h2 e .section h2::after */
 h2 {
     color: var(--primary-color);
     border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
-    text-align: left; /* Padrão do index.html */
-    position: relative; /* Mantido se você tiver ::after em algum h2 */
+    text-align: left;
+    position: relative;
 }
 
-h2::after { /* Se você quiser o sublinhado centralizado, use uma classe como h2.centered */
+/* H2 com sublinhado centralizado (adicione .centered no HTML para usar) */
+h2.centered::after {
     content: '';
     display: block;
     width: 80px;
     height: 3px;
     background-color: var(--secondary-color);
-    margin: 0.5rem auto 0; /* Ajustado para espaçamento */
-    /* Este estilo só será aplicado se o h2 tiver a classe 'centered' no HTML */
+    margin: 0.5rem auto 0;
 }
 
+/* Títulos específicos para a página APOD, sobrescrevendo h2 geral */
+/* Se você usar um h2 com a classe .apod-title-h2 na página APOD */
+.apod-page-header h1 {
+    color: var(--apod-primary); /* Cor da APOD */
+    font-size: 2.5em;
+}
+
+.content-h2 { /* Este deve ser usado se o h2 da seção APOD precisa de uma cor diferente */
+    color: var(--apod-accent); /* Cor da APOD */
+    margin-top: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+
 /* Projetos */
-/* Renomeado de .project-card para .project para combinar com seu HTML */
 .project {
-    background-color: white; /* Era 'background: white;' */
+    background-color: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ajustado para ser mais leve como seu index.html */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     padding: 1.5rem;
-    margin-bottom: 1.5rem; /* Do seu index.html */
+    margin-bottom: 1.5rem;
 }
 
 .project:hover {
@@ -185,9 +205,9 @@ h2::after { /* Se você quiser o sublinhado centralizado, use uma classe como h2
 
 .project-links {
     display: flex;
-    gap: 0.8rem; /* Consistente com seu index.html */
-    margin-top: 1rem; /* Consistente com seu index.html */
-    flex-wrap: wrap; /* Para quebrar linhas em telas menores */
+    gap: 0.8rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .project-links a {
@@ -206,7 +226,7 @@ h2::after { /* Se você quiser o sublinhado centralizado, use uma classe como h2
     text-decoration: none;
 }
 
-/* Cores específicas de projeto (muito bom mantê-las!) */
+/* Cores específicas de projeto */
 .project-links a.covid {
     background-color: rgba(231, 76, 60, 0.1);
     color: var(--accent-color);
@@ -237,9 +257,13 @@ h2::after { /* Se você quiser o sublinhado centralizado, use uma classe como h2
 }
 
 /* Estilos de gráficos/metodologia (do covid_historico.html) */
-.graph-container:hover {
+/* .graph-container:hover está duplicado, mas a imagem principal já tem :hover na outra regra. */
+/* Removendo a regra de hover do container para evitar conflitos ou duplicações desnecessárias,
+   já que o efeito de elevação é melhor na imagem diretamente, como em .project:hover */
+/* .graph-container:hover {
     transform: translateY(-5px);
-}
+} */
+
 .methodology-box {
     background-color: #f8f9fa;
     border-left: 5px solid #0d6efd;
@@ -251,10 +275,10 @@ h2::after { /* Se você quiser o sublinhado centralizado, use uma classe como h2
     margin-bottom: 20px;
     font-weight: 600;
 }
-.navbar-brand {
+.navbar-brand { /* Se esta classe se refere a um link de navbar, pode ser que você precise de um estilo mais específico */
     font-weight: 600;
 }
-.btn { /* Se você tem um botão genérico para algo diferente de links de projeto */
+.btn {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -263,6 +287,7 @@ h2::after { /* Se você quiser o sublinhado centralizado, use uma classe como h2
     color: white;
     border-radius: 5px;
     font-size: 0.9rem;
+    transition: all 0.3s ease; /* Adicionado transição para hover */
 }
 
 .btn:hover {
@@ -271,7 +296,7 @@ h2::after { /* Se você quiser o sublinhado centralizado, use uma classe como h2
 }
 
 
-/* Habilidades (se você tiver uma seção de habilidades separada) */
+/* Habilidades */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -316,7 +341,7 @@ h2::after { /* Se você quiser o sublinhado centralizado, use uma classe como h2
     margin-top: 1.5rem;
 }
 
-.contact-btn { /* Se o botão de contato tiver padding diferente do .btn */
+.contact-btn {
     padding: 0.75rem 1.5rem;
 }
 
@@ -325,7 +350,7 @@ footer {
     background-color: var(--dark-color);
     color: white;
     text-align: center;
-    padding: 1.5rem; /* Consistente com seu index.html */
+    padding: 1.5rem;
     margin-top: 2rem;
 }
 
@@ -334,15 +359,14 @@ footer {
     margin: 0 auto;
 }
 
-.footer-links a { /* Usado no footer do index.html */
+.footer-links a {
     color: white;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    /* margin-top: 1rem; Pode ser adicionado se precisar de espaçamento extra */
 }
 
-.footer-link { /* Usado no footer do covid_historico.html */
+.footer-link {
     color: white !important;
     text-decoration: underline !important;
 }
@@ -387,97 +411,39 @@ footer {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .header-text h1 {
-        font-size: 2rem;
-    }
-    
-    .subtitle {
-        font-size: 1rem;
-    }
-    
-    .main-nav ul {
-        flex-wrap: wrap;
-    }
-    
-    /* Ajuste para links do header em telas menores (do seu index.html) */
-    .links {
-        flex-direction: column;
-        align-items: center;
-    }
-    .links a {
-        width: 100%;
-        justify-content: center;
-    }
-
-    /* Ajuste para projetos em grid em telas menores */
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Ajuste do language switcher */
-    .language-switcher {
-        top: 10px;
-        right: 10px;
-        gap: 5px;
-    }
-    .language-btn {
-        padding: 3px 10px;
-        font-size: 0.85rem;
-    }
-}
-
-/* Pode adicionar media queries adicionais se necessário */
-@media (max-width: 600px) {
-    /* Ajustes específicos para telas muito pequenas */
-}
-
-/* --- Estilos da Página APOD --- */
-
-/* Ajustes no body para a página APOD (se for o layout padrão desejado para todas as páginas) */
-/* ATENÇÃO: Essas regras de body podem afetar outras páginas se não houver um seletor mais específico */
-body {
-    /* Mantém os estilos existentes */
-    /* font-family, line-height, color */
-    max-width: 900px; /* Do apod.html */
-    margin: 0 auto; /* Do apod.html */
-    padding: 20px; /* Do apod.html */
-    background-color: #f9f9f9; /* Do apod.html, ou use var(--light-color) se preferir a variável do tema */
-}
-
-/* Estilos específicos para o cabeçalho da página APOD */
-.apod-page-header {
-    text-align: center;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #0B3D91; /* Cor da APOD */
-    /* Remove background, color, padding-top/left/right de 'header' se você não quiser o gradiente */
-    /* Se você quiser o fundo gradiente do header geral, remova esta classe e ajuste os outros estilos */
-}
-
-/* Estilos para o h1 dentro do cabeçalho da página APOD */
-.apod-page-header h1 {
-    color: #0B3D91; /* Cor da APOD */
-    font-size: 2.5em; /* Do apod.html */
-}
-
-/* Estilos para os títulos de seção genéricos na página APOD (ex: "APOD no Instagram") */
-.content-h2 {
-    color: #FC3D21; /* Cor da APOD */
-    margin-top: 30px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-}
-
-/* Estilos do card dos bots */
-.bot-card {
+/* --- Estilos de Cards de Conteúdo (genéricos) --- */
+/* Esta classe pode ser usada para bot-card e apod-container se o estilo base for o mesmo */
+.content-card {
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 25px;
     margin-bottom: 30px;
 }
+
+/* Estilos do card dos bots (reaproveita content-card) */
+.bot-card {
+    /* Herda de .content-card, adicione estilos específicos se houver */
+    /* background: white; - Já definido em .content-card */
+    /* border-radius: 8px; - Já definido em .content-card */
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); - Já definido em .content-card */
+    /* padding: 25px; - Já definido em .content-card */
+    /* margin-bottom: 30px; - Já definido em .content-card */
+}
+
+/* Estilos do container da APOD do dia (reaproveita content-card) */
+.apod-container {
+    /* Herda de .content-card, adicione estilos específicos se houver */
+    margin: 30px auto; /* Mantém este estilo específico */
+    max-width: 800px; /* Mantém este estilo específico */
+    /* background: white; - Já definido em .content-card */
+    /* padding: 20px; - Diferente de .content-card, então manter aqui */
+    /* border-radius: 8px; - Já definido em .content-card */
+    /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); - Diferente de .content-card, então manter aqui */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
 
 /* Estilos da lista de funcionalidades */
 .features {
@@ -538,7 +504,7 @@ body {
 /* Estilos para os "tech-badges" */
 .tech-badge {
     display: inline-block;
-    background: #0B3D91; /* Cor da APOD */
+    background: var(--apod-primary); /* Usando variável de cor da APOD */
     color: white;
     padding: 3px 8px;
     border-radius: 4px;
@@ -547,26 +513,19 @@ body {
     margin-bottom: 5px;
 }
 
-/* Estilos específicos para o rodapé da página APOD */
+/* Estilos específicos para o rodapé da página APOD (se o footer principal não for usado) */
+/* Idealmente, adicione uma classe ao footer do HTML (ex: <footer class="main-footer apod-footer">)
+   e sobrescreva apenas as regras específicas que divergem do footer geral. */
 .apod-page-footer {
     text-align: center;
-    margin-top: 50px; /* Mais espaçamento que o rodapé geral */
-    padding-top: 20px; /* Padding diferente do rodapé geral */
+    margin-top: 50px;
+    padding-top: 20px;
     border-top: 1px solid #ddd;
-    color: #666; /* Cor específica para o rodapé da APOD, se ele não tiver o fundo escuro */
-    /* Se você quiser o fundo escuro do footer geral, remova esta classe e ajuste os outros estilos */
+    color: #666;
+    /* Se o footer principal for usado, remova o background-color e margin-top do footer principal aqui */
+    /* Ou, se a página APOD tiver um footer completamente diferente, então mantenha este */
 }
 
-
-/* Estilos do container da APOD do dia */
-.apod-container {
-    margin: 30px auto;
-    max-width: 800px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
 
 /* Estilos da imagem da APOD */
 .apod-image {
@@ -579,7 +538,7 @@ body {
 /* Estilos do título da APOD */
 .apod-title {
     font-size: 1.5em;
-    color: #0B3D91; /* Cor da APOD */
+    color: var(--apod-primary);
     margin-bottom: 10px;
 }
 
@@ -591,39 +550,41 @@ body {
 
 /* Estilos para os cartões de métricas (metric-card) */
 .metric-card {
-    background-color: #fff; /* Fundo branco */
-    border-radius: 8px; /* Cantos arredondados */
-    border-bottom: 5px solid; /* Borda inferior para destaque */
-    margin-bottom: 1.5rem; /* Espaçamento entre os cards */
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transição suave */
+    background-color: #fff;
+    border-radius: 8px;
+    border-bottom: 5px solid;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    padding: 15px; /* Adicionado padding para o conteúdo do card */
+    text-align: center; /* Centraliza conteúdo para ícones e valores */
 }
 
 .metric-card:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .metric-value {
-    font-size: 2.5rem; /* Tamanho grande para o número */
-    font-weight: bold; /* Negrito */
-    color: #0a1a35; /* Cor principal para os valores */
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
 .metric-label {
-    font-size: 1.1rem; /* Tamanho para o label */
-    color: #555; /* Cor mais suave para o label */
-    text-transform: uppercase; /* Texto em maiúsculas */
-    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    font-size: 1.1rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 /* Estilos para os ícones de métricas */
 .metric-icon {
-    font-size: 2.2rem; /* Tamanho do ícone */
+    font-size: 2.2rem;
     margin-bottom: 0.8rem;
     padding: 10px;
-    border-radius: 50%; /* Ícone redondo */
-    color: #fff; /* Cor do ícone */
+    border-radius: 50%;
+    color: #fff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -631,50 +592,54 @@ body {
 
 /* Cores específicas para cada tipo de métrica */
 .metric-card .cases {
-    background-color: #0d6efd; /* Azul para casos */
-    border-color: #0d6efd; /* Borda inferior azul */
+    background-color: #0d6efd;
+    border-color: #0d6efd;
 }
 
 .metric-card .deaths {
-    background-color: #dc3545; /* Vermelho para óbitos */
-    border-color: #dc3545; /* Borda inferior vermelha */
+    background-color: #dc3545;
+    border-color: #dc3545;
 }
 
 .metric-card .lethality {
-    background-color: #fd7e14; /* Laranja para letalidade */
-    border-color: #fd7e14; /* Borda inferior laranja */
+    background-color: #fd7e14;
+    border-color: #fd7e14;
 }
 
 /* Cores da borda inferior dos cards (quando o ícone não é usado para isso) */
+/* Estas regras podem ser redundantes se .metric-card .cases/deaths/lethality já definem border-color */
+/* Se a borda inferior é SEMPRE baseada na cor do ícone, estas 3 regras abaixo podem ser removidas. */
 .metric-card:nth-child(1) { /* Para o primeiro card (Casos) */
-    border-bottom-color: #0d6efd; /* Cor azul */
+    /* border-bottom-color: #0d6efd; */
 }
 
 .metric-card:nth-child(2) { /* Para o segundo card (Óbitos) */
-    border-bottom-color: #dc3545; /* Cor vermelha */
+    /* border-bottom-color: #dc3545; */
 }
 
 .metric-card:nth-child(3) { /* Para o terceiro card (Letalidade) */
-    border-bottom-color: #fd7e14; /* Cor laranja */
+    /* border-bottom-color: #fd7e14; */
 }
 
-/* Estilos para as seções de figuras */
+/* --- Estilos para Seções com Figuras e Gráficos --- */
+
+/* Estilos para as seções de figuras (genérico para covid_historico.html) */
 .figure {
-    background-color: #f8f8f8; /* Fundo leve para a seção */
+    background-color: #f8f8f8;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra suave */
-    text-align: center; /* Centraliza a imagem e a legenda */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: center;
 }
 
 .figure img.figure-img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaço extra abaixo da imagem */
-    margin: 0 auto 15px auto; /* Centraliza a imagem e adiciona margem inferior */
-    border-radius: 5px; /* Leve arredondamento nas bordas da imagem */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil para a imagem */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .figure figcaption {
@@ -684,23 +649,23 @@ body {
     line-height: 1.4;
 }
 
-/* Estilos para as imagens de gráficos */
+/* Estilos para as imagens de gráficos (genérico para clima.html) */
 .graph-container {
-    text-align: center; /* Centraliza o conteúdo dentro do container */
+    text-align: center;
     margin-bottom: 2rem;
     padding: 15px;
-    background-color: #f8f8f8; /* Um leve fundo para destacar o gráfico */
+    background-color: #f8f8f8;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .graph-container img.graph-example {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaço extra abaixo da imagem */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
-    border-radius: 5px; /* Leve arredondamento nas bordas da imagem */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil para a imagem */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Estilo opcional para a legenda do gráfico, se houver */
@@ -709,4 +674,47 @@ body {
     color: #666;
     margin-top: 10px;
     line-height: 1.4;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-text h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+    }
+    
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .links a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .language-switcher {
+        top: 10px;
+        right: 10px;
+        gap: 5px;
+    }
+    .language-btn {
+        padding: 3px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Pode adicionar media queries adicionais se necessário */
+@media (max-width: 600px) {
+    /* Ajustes específicos para telas muito pequenas */
 }
