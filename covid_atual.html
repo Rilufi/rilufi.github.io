@@ -7,14 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
     <header class="dashboard-header">
         <div class="language-switcher">
-          <button class="language-btn">PT</button>
-          <button class="language-btn">EN</button>
-        </div> 
+          <a href="../pt/covid.html" class="language-btn active">PT</a>
+          <a href="../en/covid.html" class="language-btn">EN</a>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -65,7 +65,7 @@
             <div class="col-lg-12">
                 <div class="graph-card">
                     <h3 class="graph-title">Casos Diários com Média Móvel (7 dias)</h3>
-                    <img src="https://raw.githubusercontent.com/rilufi/pythovid/main/imgs/brasil_casos_diarios_mm7.png" class="img-fluid" alt="Casos diários com média móvel">
+                    <img src="../static/assets/imgs/brasil_casos_diarios_mm7.png" class="img-fluid" alt="Casos diários com média móvel">
                     <p class="mt-3">Acompanhamento diário dos novos casos confirmados de COVID-19 no Brasil. A linha azul mais escura representa a média móvel de 7 dias, que ajuda a identificar tendências eliminando variações diárias.</p>
                 </div>
             </div>
@@ -73,7 +73,7 @@
             <div class="col-lg-12">
                 <div class="graph-card">
                     <h3 class="graph-title">Óbitos Diários com Média Móvel (7 dias)</h3>
-                    <img src="https://raw.githubusercontent.com/rilufi/pythovid/main/imgs/brasil_mortes_diarias_mm7.png" class="img-fluid" alt="Óbitos diários com média móvel">
+                    <img src="../static/assets/imgs/brasil_mortes_diarias_mm7.png" class="img-fluid" alt="Óbitos diários com média móvel">
                     <p class="mt-3">Registro diário de óbitos por COVID-19. A média móvel (linha vermelha) suaviza os dados e permite visualizar melhor a direção da curva epidemiológica.</p>
                 </div>
             </div>
@@ -81,11 +81,11 @@
             <div class="col-lg-12">
                 <div class="graph-card">
                     <h3 class="graph-title">Taxa de Letalidade Diária</h3>
-                    <img src="https://raw.githubusercontent.com/rilufi/pythovid/main/imgs/brasil_letalidade_diaria.png" class="img-fluid" alt="Taxa de letalidade diária">
+                    <img src="../static/assets/imgs/brasil_letalidade_diaria.png" class="img-fluid" alt="Taxa de letalidade diária">
                     <p class="mt-3">Porcentagem de casos confirmados que resultam em óbitos. Variações nesta taxa podem indicar mudanças na testagem, na virulência das variantes ou na eficácia dos tratamentos.</p>
                 </div>
             </div>
-
+        </div>
 
         <div class="row mt-4">
             <div class="col-lg-12">
@@ -124,7 +124,7 @@
                 <div class="col-lg-12 text-center">
                     <p class="mb-0">© 2025 Yuri Abuchaim | Portfólio de Ciência de Dados</p>
                     <p class="text-muted small">Dados provenientes da Organização Mundial da Saúde (OMS)</p>
-                    <a href="index.html" class="footer-link">Voltar ao início</a>
+                    <a href="../index.html" class="footer-link">Voltar ao início</a>
                 </div>
             </div>
         </div>
@@ -135,9 +135,8 @@
         // Função para buscar e exibir os dados reais
         async function loadCovidMetrics() {
             try {
-                // O caminho para o JSON agora é 'data/covid_metrics.json'
-                // pois o script Python o salvou na pasta 'data'
-                const response = await fetch('/data/covid_metrics.json');
+                // O caminho para o JSON agora é '../../data/covid_metrics.json' para acessar da pasta pt/
+                const response = await fetch('../../data/covid_metrics.json');
                 
                 // Verifica se a resposta HTTP foi bem-sucedida
                 if (!response.ok) {
@@ -166,6 +165,6 @@
         // Chama a função para carregar os dados quando a página for carregada
         loadCovidMetrics();
     </script>
-    <script src="/script.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>
