@@ -175,7 +175,6 @@
         <h2 class="apod-title">Astronomy Picture of the Day</h2>
         <img src="assets/img/apod_image.jpg" alt="Imagem astronômica do dia" class="apod-image">
         <div class="apod-explanation">
-            <p id="apod-explanation-en">Carregando explicação em inglês...</p>
             <p id="apod-explanation-pt">Carregando explicação em português...</p>
         </div>
         <p><small>Fonte: NASA Astronomy Picture of the Day</small></p>
@@ -333,7 +332,6 @@
       fetch('data/apod_today.json')
           .then(response => response.json())
           .then(data => {
-              document.getElementById('apod-explanation-en').textContent = data.explanation.en;
               document.getElementById('apod-explanation-pt').textContent = data.explanation['pt-BR'] || "Tradução não disponível";
           })
           .catch(error => {
