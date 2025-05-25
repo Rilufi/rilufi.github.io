@@ -40,35 +40,44 @@ def get_apod_data(date=None):
     return response.json()
 
 def download_media(apod_data):
-    """Baixa a mídia (imagem ou thumbnail do vídeo)"""
+    """Baixa a mídia (imagem ou thumbnail do vídeo) e converte para JPG se necessário"""
     media_type = apod_data.get('media_type')
     url = apod_data.get('url')
     thumbs = apod_data.get('thumbnail_url')
     
     if media_type == 'image':
         media_url = url
-#        ext = os.path.splitext(media_url)[1].lower()
-#        filename = f"apod{ext}"
-         filename = "apod_image.jpg"
+        filename = "apod_image.jpg"
     elif media_type == 'video':
         media_url = thumbs
         filename = "apod_image.jpg"
     else:
         raise ValueError("Tipo de mídia não suportado")
     
-    # Baixa a mídia
-    filepath = os.path.join(ASSETS_DIR, filename)
-    urllib.request.urlretrieve(media_url, filepath)
+    # Baixa a mídia para um arquivo temporário
+    temp_file = os.path.join(ASSETS_DIR, "temp_media")
+    urllib.request.urlretrieve(media_url, temp_file)
     
-    # Se for imagem, verifica e converte se necessário
-    if media_type == 'image':
-        try:
-            img = Image.open(filepath)
-            if img.mode == 'P':
-                img = img.convert('RGB')
-                img.save(filepath)
-        except Exception as e:
-            print(f"Erro ao processar imagem: {e}")
+    # Processa a imagem e converte para JPG
+    final_path = os.path.join(ASSETS_DIR, filename)
+    try:
+        img = Image.open(temp_file)
+        
+        # Converte para RGB se necessário (para PNG com transparência, etc)
+        if img.mode in ('RGBA', 'P', 'LA'):
+            img = img.convert('RGB')
+        
+        # Salva como JPG
+        img.save(final_path, 'JPEG', quality=95)
+        
+    except Exception as e:
+        print(f"Erro ao processar imagem: {e}")
+        # Se não conseguir processar como imagem, apenas renomeia o arquivo
+        os.rename(temp_file, final_path)
+    finally:
+        # Remove o arquivo temporário se ele ainda existir
+        if os.path.exists(temp_file):
+            os.remove(temp_file)
     
     return filename
 
@@ -101,9 +110,7 @@ def save_apod_info(apod_data, translated_explanation):
         "copyright": apod_data.get('copyright', '')
     }
     
-    # Formata o nome do arquivo com a data
-#    date_str = apod_data.get('date').replace('-', '')
-    filename = f"apod_today.json"
+    filename = "apod_today.json"
     filepath = os.path.join(DATA_DIR, filename)
     
     with open(filepath, 'w', encoding='utf-8') as f:
