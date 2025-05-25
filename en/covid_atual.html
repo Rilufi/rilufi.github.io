@@ -11,8 +11,8 @@
 </head>
 <body>
     <div class="language-switcher">
-      <a href="../pt/covid.html" class="language-btn">PT</a>
-      <a href="../en/covid.html" class="language-btn active">EN</a>
+      <button class="language-btn">PT</button>
+      <button class="language-btn">EN</button>
     </div>
     <header class="dashboard-header">
         <div class="container">
@@ -42,19 +42,22 @@
 
         <div class="row mb-4">
             <div class="col-md-4">
-                <div class="metric-card">
+                <div class="metric-card p-3 shadow-sm text-center">
+                    <i class="bi bi-person-fill metric-icon cases"></i>
                     <div class="metric-value" id="total-cases">-</div>
                     <div class="metric-label">Total Cases</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="metric-card">
+                <div class="metric-card p-3 shadow-sm text-center">
+                    <i class="bi bi-file-earmark-medical-fill metric-icon deaths"></i>
                     <div class="metric-value" id="total-deaths">-</div>
                     <div class="metric-label">Total Deaths</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="metric-card">
+                <div class="metric-card p-3 shadow-sm text-center">
+                    <i class="bi bi-activity metric-icon lethality"></i>
                     <div class="metric-value" id="lethality-rate">-</div>
                     <div class="metric-label">Lethality Rate</div>
                 </div>
