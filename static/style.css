@@ -596,3 +596,72 @@ body {
     margin-bottom: 15px;
     line-height: 1.6;
 }
+
+/* Estilos para os cartões de métricas (metric-card) */
+.metric-card {
+    background-color: #fff; /* Fundo branco */
+    border-radius: 8px; /* Cantos arredondados */
+    border-bottom: 5px solid; /* Borda inferior para destaque */
+    margin-bottom: 1.5rem; /* Espaçamento entre os cards */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transição suave */
+}
+
+.metric-card:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+}
+
+.metric-value {
+    font-size: 2.5rem; /* Tamanho grande para o número */
+    font-weight: bold; /* Negrito */
+    color: #0a1a35; /* Cor principal para os valores */
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    font-size: 1.1rem; /* Tamanho para o label */
+    color: #555; /* Cor mais suave para o label */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+
+/* Estilos para os ícones de métricas */
+.metric-icon {
+    font-size: 2.2rem; /* Tamanho do ícone */
+    margin-bottom: 0.8rem;
+    padding: 10px;
+    border-radius: 50%; /* Ícone redondo */
+    color: #fff; /* Cor do ícone */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cores específicas para cada tipo de métrica */
+.metric-card .cases {
+    background-color: #0d6efd; /* Azul para casos */
+    border-color: #0d6efd; /* Borda inferior azul */
+}
+
+.metric-card .deaths {
+    background-color: #dc3545; /* Vermelho para óbitos */
+    border-color: #dc3545; /* Borda inferior vermelha */
+}
+
+.metric-card .lethality {
+    background-color: #fd7e14; /* Laranja para letalidade */
+    border-color: #fd7e14; /* Borda inferior laranja */
+}
+
+/* Cores da borda inferior dos cards (quando o ícone não é usado para isso) */
+.metric-card:nth-child(1) { /* Para o primeiro card (Casos) */
+    border-bottom-color: #0d6efd; /* Cor azul */
+}
+
+.metric-card:nth-child(2) { /* Para o segundo card (Óbitos) */
+    border-bottom-color: #dc3545; /* Cor vermelha */
+}
+
+.metric-card:nth-child(3) { /* Para o terceiro card (Letalidade) */
+    border-bottom-color: #fd7e14; /* Cor laranja */
+}
