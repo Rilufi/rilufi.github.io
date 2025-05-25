@@ -9,12 +9,12 @@ const languageConfig = {
   'pt': {
     path: {
       'home': '/index.html',
-      'petbot': '/petbot.html',
-      'apod': '/apod.html',
-      'covid_atual': '/covid_atual.html',
-      'covid_historico': '/covid_historico.html',
-      'clima': '/clima.html',
-      'triand': '/triand.html'
+      'petbot': '/pt/petbot.html',
+      'apod': '/pt/apod.html',
+      'covid_atual': '/pt/covid_atual.html',
+      'covid_historico': '/pt/covid_historico.html',
+      'clima': '/pt/clima.html',
+      'triand': '/pt/triand.html'
     },
     // storageKey: 'preferredLanguage' // Removido
   },
