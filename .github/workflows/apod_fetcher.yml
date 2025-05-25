@@ -6,7 +6,7 @@ on:
   workflow_dispatch: 
 
 jobs:
-  update-covid-data:
+  update-apod-data:
     runs-on: ubuntu-latest 
     steps:
     - name: Checkout repository 
@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install google.generativeai pillow instagrapi
+        pip install google.generativeai pillow instagrapi pytube
 
     - name: Run APOD data update script
       env:
