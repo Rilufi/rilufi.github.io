@@ -4,161 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetBots - Automated Cats and Dogs</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #FF6B6B;
-        }
-        
-        h1 {
-            color: #FF6B6B;
-            font-size: 2.5em;
-        }
-        
-        h2 {
-            color: #4ECDC4;
-            margin-top: 30px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-        
-        .bot-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            padding: 25px;
-            margin-bottom: 30px;
-        }
-        
-        .features {
-            margin-left: 20px;
-        }
-        
-        .features li {
-            margin-bottom: 8px;
-        }
-        
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 30px 0;
-            flex-wrap: wrap;
-        }
-        
-        .social-button {
-            display: inline-flex;
-            align-items: center;
-            padding: 12px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        
-        .social-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        
-        .instagram {
-            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-            color: white;
-        }
-        
-        .twitter {
-            background: #000000;
-            color: white;
-        }
-        
-        .bluesky {
-            background: #1185FE;
-            color: white;
-        }
-        
-        .social-icon {
-            margin-right: 10px;
-            font-size: 1.2em;
-        }
-        
-        code {
-            background: #f0f0f0;
-            padding: 2px 5px;
-            border-radius: 3px;
-            font-family: monospace;
-        }
-        
-        .tech-badge {
-            display: inline-block;
-            background: #4ECDC4;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            margin-right: 5px;
-            margin-bottom: 5px;
-        }
-        
-        .cat-badge {
-            background: #FF6B6B;
-        }
-        
-        .dog-badge {
-            background: #4ECDC4;
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #666;
-        }
-        
-        .pet-image {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 8px;
-            margin: 20px auto;
-            display: block;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../../static/style.css">
 </head>
 <body>
     <div class="language-switcher">
-      <button class="language-btn">PT</button>
-      <button class="language-btn">EN</button>
+      <a href="../pt/petbot.html" class="language-btn">PT</a>
+      <a href="index.html" class="language-btn active">EN</a>
     </div>
     <header>
         <h1>PetBots - Automated Cats and Dogs</h1>
         <p>Bots that daily post cute pet pictures on social media</p>
         
         <div class="button-container">
-            <a href="https://instagram.com/boturinsta" class="social-button instagram">
+            <a href="https://instagram.com/boturinsta" target="_blank" class="social-button instagram">
                 <i class="fab fa-instagram social-icon"></i> @boturinsta
             </a>
-            <a href="https://instagram.com/doglufi" class="social-button instagram">
+            <a href="https://instagram.com/doglufi" target="_blank" class="social-button instagram">
                 <i class="fab fa-instagram social-icon"></i> @doglufi
             </a>
-            <a href="https://twitter.com/boturitter" class="social-button twitter">
+            <a href="https://twitter.com/boturitter" target="_blank" class="social-button twitter">
                 <i class="fab fa-twitter social-icon"></i> @boturitter
             </a>
-            <a href="https://bsky.app/profile/catdogsky.bsky.social" class="social-button bluesky">
+            <a href="https://bsky.app/profile/catdogsky.bsky.social" target="_blank" class="social-button bluesky">
                 <i class="fas fa-cloud social-icon"></i> @catdogsky.bsky.social
             </a>
         </div>
@@ -209,10 +77,10 @@
         <span class="tech-badge cat-badge">The Cat API</span>
         
         <div class="button-container">
-            <a href="https://twitter.com/boturitter" class="social-button twitter">
+            <a href="https://twitter.com/boturitter" target="_blank" class="social-button twitter">
                 <i class="fab fa-twitter social-icon"></i> View on Twitter/X
             </a>
-            <a href="https://bsky.app/profile/catdogsky.bsky.social" class="social-button bluesky">
+            <a href="https://bsky.app/profile/catdogsky.bsky.social" target="_blank" class="social-button bluesky">
                 <i class="fas fa-cloud social-icon"></i> View on Bluesky
             </a>
         </div>
@@ -255,7 +123,7 @@
         <span class="tech-badge cat-badge">Telegram Bot</span>
         
         <div class="button-container">
-            <a href="https://instagram.com/boturinsta" class="social-button instagram">
+            <a href="https://instagram.com/boturinsta" target="_blank" class="social-button instagram">
                 <i class="fab fa-instagram social-icon"></i> View on Instagram
             </a>
         </div>
@@ -298,7 +166,7 @@
         <span class="tech-badge dog-badge">Telegram Bot</span>
         
         <div class="button-container">
-            <a href="https://instagram.com/doglufi" class="social-button instagram">
+            <a href="https://instagram.com/doglufi" target="_blank" class="social-button instagram">
                 <i class="fab fa-instagram social-icon"></i> View on Instagram
             </a>
         </div>
@@ -332,6 +200,6 @@
         <p>© 2025 - Developed by Yuri Abuchaim</p>
         <a href="index.html" class="footer-link">Back to home</a>
     </footer>
-    <script src="/script.js"></script>
+    <script src="../../scripts/script.js"></script>
 </body>
 </html>
