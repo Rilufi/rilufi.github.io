@@ -7,7 +7,7 @@ CLIENT_ID = os.getenv("BLIZZARD_CLIENT_ID")
 CLIENT_SECRET = os.getenv("BLIZZARD_CLIENT_SECRET")
 REGION = "us"
 REALM = "stormrage"
-LOCALE = "pt_BR"
+LOCALE = "en_US"
 NAMESPACE = "profile-us"
 
 CHARACTERS = [
