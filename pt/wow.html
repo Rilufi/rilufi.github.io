@@ -68,7 +68,7 @@
     async function loadCharacters() {
       const section = document.getElementById("character-section");
       try {
-        const res = await fetch("data/wow_pt.json");
+        const res = await fetch("../data/wow_pt.json");
         const characters = await res.json();
 
         section.innerHTML = "";
