@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World of Warcraft | Yuri Abuchaim</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .wow-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .character {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1rem;
+    }
+    .character img {
+      border-radius: 8px;
+      max-width: 120px;
+    }
+    .character-info h2 {
+      margin: 0 0 0.3rem;
+      font-size: 1.4rem;
+    }
+    .character-info p {
+      margin: 0.2rem 0;
+    }
+    .error {
+      color: red;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="language-switcher">
+      <a href="../wow.html" class="language-btn">PT</a>
+      <a href="wow.html" class="language-btn active">EN</a>
+    </div>
+    <h1>World of Warcraft</h1>
+    <p class="subtitle">Meet my favorite characters from Azeroth!</p>
+  </header>
+
+  <main class="wow-container" id="character-section">
+    <p>Loading character data...</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Yuri Abuchaim</p>
+    <p><a href="mailto:yuri.abuchaim@gmail.com" style="color: white;"><i class="fas fa-envelope"></i> Contact</a></p>
+  </footer>
+
+  <script>
+    function formatDate(timestamp) {
+      if (!timestamp) return "Unknown";
+      const date = new Date(timestamp);
+      return date.toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" });
+    }
+
+    async function loadCharacters() {
+      const section = document.getElementById("character-section");
+      try {
+        const res = await fetch("https://rilufi.github.io/data/wow.json");
+        const characters = await res.json();
+
+        section.innerHTML = "";
+        characters.forEach(char => {
+          const ilvl = char.equipped_item_level ?? "N/A";
+          const ilvlAvg = char.average_item_level ?? "N/A";
+          const login = formatDate(char.last_login_timestamp);
+          const title = char.active_title?.replace("{name}", char.name) ?? char.name;
+
+          section.innerHTML += `
+            <div class="character">
+              <img src="${char.media}" alt="Image of ${char.name}">
+              <div class="character-info">
+                <h2>${title} (Lv. ${char.level})</h2>
+                <p>Race: ${char.race}</p>
+                <p>Class: ${char.class}${char.spec ? " - " + char.spec : ""}</p>
+                <p>Faction: ${char.faction} | Gender: ${char.gender}</p>
+                <p>Item Level: ${ilvl} (Avg: ${ilvlAvg})</p>
+                <p>Achievements: ${char.achievement_points ?? 0}</p>
+                <p>Last Login: ${login}</p>
+              </div>
+            </div>
+          `;
+        });
+      } catch (e) {
+        console.error(e);
+        section.innerHTML = "<p class='error'>Failed to load character data.</p>";
+      }
+    }
+
+    loadCharacters();
+  </script>
+</body>
+</html>
