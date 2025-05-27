@@ -57,7 +57,7 @@ def save_data(locale_code, token):
         for name in CHARACTERS
     ]
     characters.sort(key=lambda c: c["average_item_level"] or 0, reverse=True)
-    with open(f"../data/wow{'_pt' if locale_code == 'pt' else ''}.json", "w", encoding="utf-8") as f:
+    with open(f"data/wow{'_pt' if locale_code == 'pt' else ''}.json", "w", encoding="utf-8") as f:
         json.dump(characters, f, indent=2, ensure_ascii=False)
 
 def main():
