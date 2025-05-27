@@ -19,8 +19,8 @@ CHARACTERS = [
     "Rilufito"
 ]
 
-CLIENT_ID = os.getenv("BLIZZARD_CLIENT_ID")
-CLIENT_SECRET = os.getenv("BLIZZARD_CLIENT_SECRET")
+CLIENT_ID = "SEU_CLIENT_ID_AQUI"
+CLIENT_SECRET = "SEU_CLIENT_SECRET_AQUI"
 
 def get_access_token():
     url = f"https://{REGION}.battle.net/oauth/token"
@@ -30,17 +30,18 @@ def get_access_token():
     return resp.json()["access_token"]
 
 def get_character_profile(name, token, locale="en_US"):
-    base_url = f"https://{REGION}.api.blizzard.com/profile/wow/character/{REALM.lower()}/{name.lower()}"
+    base_url = f"https://{REGION}.api.blizzard.com/profile/wow/character/{REALM}/{name.lower()}"
     headers = {"Authorization": f"Bearer {token}"}
     params = {"namespace": NAMESPACE, "locale": locale}
 
     profile = requests.get(base_url, headers=headers, params=params).json()
     media_data = requests.get(f"{base_url}/character-media", headers=headers, params=params).json()
 
-    media_url = next(
-        (item.get("value") for item in media_data.get("assets", []) if item.get("key") == "main"),
-        None
-    )
+    media_url = None
+    for asset in media_data.get("assets", []):
+        if asset.get("key") == "main":
+            media_url = asset.get("value")
+            break
 
     return {
         "name": profile.get("name"),
@@ -48,15 +49,14 @@ def get_character_profile(name, token, locale="en_US"):
         "level": profile.get("level"),
         "race": profile.get("race", {}).get("name"),
         "class": profile.get("character_class", {}).get("name"),
-        "spec": profile.get("active_spec", {}).get("name", ""),
+        "spec": profile.get("active_spec", {}).get("name") if profile.get("active_spec") else "",
         "faction": profile.get("faction", {}).get("name"),
         "gender": profile.get("gender", {}).get("name"),
-        "guild": profile.get("guild", {}).get("name"),
         "media": media_url,
-        "average_item_level": profile.get("average_item_level"),
         "equipped_item_level": profile.get("equipped_item_level"),
+        "average_item_level": profile.get("average_item_level"),
+        "guild": profile.get("guild", {}).get("name") if profile.get("guild") else None,
         "achievement_points": profile.get("achievement_points"),
-        # Sem título e sem last_login
     }
 
 def save_characters(locale, filename):
@@ -72,7 +72,7 @@ def save_characters(locale, filename):
         except Exception as e:
             print(f"Erro com {name}: {e}")
 
-    # Ordena por average_item_level decrescente
+    # Ordenar pelo average_item_level decrescente
     data.sort(key=lambda c: c.get("average_item_level") or 0, reverse=True)
 
     os.makedirs("data", exist_ok=True)
@@ -83,4 +83,3 @@ def save_characters(locale, filename):
 if __name__ == "__main__":
     save_characters("en_US", "wow.json")
     save_characters("pt_BR", "wow_pt.json")
-
