@@ -91,7 +91,7 @@
     async function loadCharacters() {
       const section = document.getElementById("character-section");
       try {
-        const res = await fetch("https://rilufi.github.io/api/wow.json");
+        const res = await fetch("https://rilufi.github.io/data/wow.json");
         const characters = await res.json();
 
         section.innerHTML = "";
