@@ -61,5 +61,19 @@ def main():
     with open("data/wow.json", "w", encoding="utf-8") as f:
         json.dump(all_data, f, ensure_ascii=False, indent=2)
 
+    LOCALE = "pt_BR"
+    
+    for name in CHARACTERS:
+        try:
+            data = get_character_profile(name, token)
+            all_data.append(data)
+            sleep(1)  # Evita rate limiting
+        except Exception as e:
+            print(f"Erro ao buscar {name}: {e}")
+
+    with open("data/wow_pt.json", "w", encoding="utf-8") as f:
+        json.dump(all_data, f, ensure_ascii=False, indent=2)
+
+
 if __name__ == "__main__":
     main()
