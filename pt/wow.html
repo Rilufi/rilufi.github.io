@@ -91,7 +91,7 @@
     async function loadCharacters() {
       const section = document.getElementById("character-section");
       try {
-        const res = await fetch("https://rilufi.github.io/data/wow.json");
+        const res = await fetch("https://rilufi.github.io/data/wow_pt.json");
         const characters = await res.json();
 
         section.innerHTML = "";
@@ -103,7 +103,7 @@
               <p>${char.race} ${char.class}${char.spec ? " - " + char.spec : ""}</p>
               <p><strong>Facção:</strong> ${char.faction}</p>
               <p><strong>Gênero:</strong> ${char.gender}</p>
-              <p><strong>Item Level:</strong> ${char.equipped_item_level}</p>
+              <p><strong>Item Level:</strong> ${char.average_item_level}</p>
             </div>
           `;
         });
