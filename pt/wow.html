@@ -15,13 +15,13 @@
 </head>
 <body>
 
-<h1>Personagens do Realm Stormrage</h1>
+<h1>Meus personagens do World of Warcraft</h1>
 <section id="characters"></section>
 
 <script>
 async function loadCharacters() {
   try {
-    const response = await fetch('data/wow_pt.json');  // ou wow.json para inglês
+    const response = await fetch('../data/wow_pt.json');  // ou wow.json para inglês
     const characters = await response.json();
     const section = document.getElementById('characters');
     section.innerHTML = '';
