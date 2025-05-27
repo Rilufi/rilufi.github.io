@@ -27,4 +27,130 @@
     </header>
     
     <div class="graph-container">
-        <img src="https://github.com/Rilufi/botoronga/blob/main/imagens/clima_sp.png?raw
+        <img src="https://github.com/Rilufi/botoronga/blob/main/imagens/clima_sp.png?raw=true" alt="Gráfico de temperatura em São Paulo" class="graph-example">
+        <p><em>Temperatura em SP de hoje com dados disponíveis atualizados até o momento</em></p>
+    </div>
+    
+    <div class="bot-card">
+        <h2>Sobre o Botoronga</h2>
+        
+        <p>O Botoronga é um sistema automatizado que monitora e publica diariamente a variação de temperatura na cidade de São Paulo, com gráficos informativos e interações com a comunidade.</p>
+        
+        <h3>Principais Funcionalidades:</h3>
+        <ul class="features">
+            <li><strong>Coleta de Dados Meteorológicos</strong>:
+                <ul>
+                    <li>Captura dados de temperatura de fontes confiáveis</li>
+                    <li>Processa informações horárias</li>
+                    <li>Converte unidades e aplica filtros para melhor visualização</li>
+                </ul>
+            </li>
+            <li><strong>Geração de Gráficos</strong>:
+                <ul>
+                    <li>Cria visualizações claras da variação de temperatura</li>
+                    <li>Aplica suavização para melhor legibilidade</li>
+                    <li>Inclui marcações e legendas informativas</li>
+                </ul>
+            </li>
+            <li><strong>Publicação Automatizada</strong>:
+                <ul>
+                    <li>Posta gráficos diários no Twitter/X e Bluesky</li>
+                    <li>Inclui a temperatura atual no momento da postagem</li>
+                    <li>Formatação específica para cada plataforma</li>
+                </ul>
+            </li>
+            <li><strong>Interação com a Comunidade</strong>:
+                <ul>
+                    <li>Identifica e interage com posts sobre temperatura em SP</li>
+                    <li>Curtir e repostar conteúdo relevante</li>
+                    <li>Respeita limites de taxa das APIs</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>Tecnologias Utilizadas:</h3>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Selenium</span>
+        <span class="tech-badge">Matplotlib</span>
+        <span class="tech-badge">Tweepy</span>
+        <span class="tech-badge">Bluesky API</span>
+        <span class="tech-badge data-badge">OpenWeatherMap API</span>
+    </div>
+    
+    <div class="bot-card">
+        <h2>Como Funciona</h2>
+        
+        <h3>Fluxo de Coleta e Processamento:</h3>
+        <ol class="features">
+            <li><strong>Coleta de Dados</strong>: Acessa fontes meteorológicas para obter dados históricos de temperatura</li>
+            <li><strong>Processamento</strong>:
+                <ul>
+                    <li>Converte temperaturas de Fahrenheit para Celsius</li>
+                    <li>Agrupa dados por hora</li>
+                    <li>Aplica filtro de suavização para melhor visualização</li>
+                </ul>
+            </li>
+            <li><strong>Geração do Gráfico</strong>: Cria visualização com Matplotlib incluindo:
+                <ul>
+                    <li>Título com data atual</li>
+                    <li>Eixos claramente marcados</li>
+                    <li>Grade para fácil leitura</li>
+                </ul>
+            </li>
+            <li><strong>Temperatura Atual</strong>: Consulta API do OpenWeatherMap para obter a temperatura no momento da postagem</li>
+            <li><strong>Publicação</strong>: Envia o gráfico e informações para Twitter/X e Bluesky</li>
+        </ol>
+        
+        <h3>Interação Automatizada:</h3>
+        <ul class="features">
+            <li>Busca posts com hashtags relacionadas a temperatura em SP</li>
+            <li>Filtra conteúdo inapropriado ou de contas suspeitas</li>
+            <li>Registra interações para evitar duplicações</li>
+            <li>Respeita limites de taxa das APIs com backoff exponencial</li>
+        </ul>
+    </div>
+    
+    <div class="bot-card">
+        <h2>Exemplo de Saída</h2>
+        
+        <div class="graph-container">
+            <img src="../static/assets/imgs/clima1.png" alt="Exemplo de gráfico" class="graph-example">
+            <p><em>Gráfico de variação de temperatura de um dia inteiro de São Paulo com dados suavizados</em></p>
+        </div>
+        
+        <h3>Postagem Típica:</h3>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; margin: 20px 0;">
+            <p><strong>Temperatura atual em São Paulo: 22.5°C</strong></p>
+            <p>Variação da temperatura ao longo do dia:</p>
+            <p>#TemperaturaSP #Clima #SãoPaulo</p>
+        </div>
+    </div>
+    
+    <section>
+        <h2>Monitoramento e Controle</h2>
+        <p>O Botoronga inclui sistemas avançados para garantir operação contínua e dentro dos limites das plataformas:</p>
+        <ul>
+            <li><strong>Registro de Interações</strong>: Armazena todas as ações para evitar duplicações</li>
+            <li><strong>Limites de Taxa</strong>: Respeita os rate limits das APIs com contagem precisa</li>
+            <li><strong>Backoff Exponencial</strong>: Pausas inteligentes quando limites são atingidos</li>
+            <li><strong>Notificações</strong>: Sistema de alerta para problemas operacionais</li>
+        </ul>
+    </section>
+    
+    <div class="button-container">
+        <a href="https://twitter.com/botoronga2" class="social-button twitter" target="_blank">
+            <i class="fab fa-twitter social-icon"></i> Ver no Twitter/X
+        </a>
+        <a href="https://bsky.app/profile/botoronga.bsky.social" class="social-button bluesky" target="_blank">
+            <i class="fas fa-cloud social-icon"></i> Ver no Bluesky
+        </a>
+    </div>
+    
+    <footer>
+        <p>O Botoronga fornece informações meteorológicas claras e acessíveis para os habitantes de São Paulo.</p>
+        <p>© 2025 - Desenvolvido por Yuri Abuchaim</p>
+        <a href="../index.html" class="footer-link">Voltar ao início</a>
+    </footer>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
