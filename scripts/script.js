@@ -14,7 +14,8 @@ const languageConfig = {
       'covid_atual': '/pt/covid_atual.html',
       'covid_historico': '/pt/covid_historico.html',
       'clima': '/pt/clima.html',
-      'triand': '/pt/triand.html'
+      'triand': '/pt/triand.html',
+      'wow': '/pt/wow.html'
     },
     // storageKey: 'preferredLanguage' // Removido
   },
@@ -26,7 +27,8 @@ const languageConfig = {
       'covid_atual': '/en/covid_atual.html',
       'covid_historico': '/en/covid_historico.html',
       'clima': '/en/clima.html',
-      'triand': '/en/triand.html'
+      'triand': '/en/triand.html',
+      'wow': '/en/wow.html'
     },
     // storageKey: 'preferredLanguage' // Removido
   }
