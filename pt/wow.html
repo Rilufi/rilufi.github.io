@@ -5,78 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>World of Warcraft | Yuri Abuchaim</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    .wow-container {
-      max-width: 1000px;
-      margin: 2rem auto;
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .character-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
       padding: 1rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease;
     }
-    .character {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 1rem;
+
+    .character-card:hover {
+      transform: translateY(-4px);
     }
-    .character img {
-      border-radius: 8px;
-      max-width: 120px;
+
+    .character-card img {
+      width: 100%;
+      max-height: 220px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 1rem;
     }
-    .character-info h2 {
-      margin: 0 0 0.3rem;
+
+    .character-card h2 {
+      margin: 0.5rem 0 0.3rem;
       font-size: 1.4rem;
+      color: var(--primary-color);
     }
-    .character-info p {
+
+    .character-card p {
       margin: 0.2rem 0;
+      font-size: 0.95rem;
+      color: #555;
     }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 2rem;
+      color: var(--primary-color);
+    }
+
     .error {
       color: red;
       text-align: center;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
+  <div class="language-switcher">
+    <button class="language-btn active" onclick="switchLanguage('pt')">PT</button>
+    <button class="language-btn" onclick="switchLanguage('en')">EN</button>
+  </div>
+
   <header>
-    <div class="language-switcher">
-      <a href="wow.html" class="language-btn active">PT</a>
-      <a href="en/wow.html" class="language-btn">EN</a>
-    </div>
     <h1>World of Warcraft</h1>
-    <p class="subtitle">Conheça meus personagens favoritos em Azeroth!</p>
+    <p class="subtitle">Conheça meus personagens favoritos em Azeroth</p>
   </header>
 
-  <main class="wow-container" id="character-section">
-    <p>Carregando dados dos personagens...</p>
-  </main>
+  <section class="section">
+    <h2>Meus Personagens</h2>
+    <div id="character-section" class="character-grid">
+      <p style="grid-column: 1 / -1; text-align:center;">Carregando personagens...</p>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Yuri Abuchaim</p>
     <p><a href="mailto:yuri.abuchaim@gmail.com" style="color: white;"><i class="fas fa-envelope"></i> Contato</a></p>
+    <a href="index.html" class="footer-link">Voltar ao início</a>
   </footer>
 
+  <script src="scripts/script.js"></script>
   <script>
     async function loadCharacters() {
       const section = document.getElementById("character-section");
       try {
-        const res = await fetch("https://rilufi.github.io/data/wow.json");
+        const res = await fetch("https://rilufi.github.io/api/wow.json");
         const characters = await res.json();
 
         section.innerHTML = "";
         characters.forEach(char => {
           section.innerHTML += `
-            <div class="character">
+            <div class="character-card">
               <img src="${char.media}" alt="Imagem de ${char.name}">
-              <div class="character-info">
-                <h2>${char.name} (${char.level})</h2>
-                <p>${char.race} ${char.class}${char.spec ? " - " + char.spec : ""}</p>
-                <p>Facção: ${char.faction} | Gênero: ${char.gender}</p>
-                <p>Item Level: ${char.equipped_item_level}</p>
-              </div>
+              <h2>${char.name} <span style="font-weight: normal;">(${char.level})</span></h2>
+              <p>${char.race} ${char.class}${char.spec ? " - " + char.spec : ""}</p>
+              <p><strong>Facção:</strong> ${char.faction}</p>
+              <p><strong>Gênero:</strong> ${char.gender}</p>
+              <p><strong>Item Level:</strong> ${char.equipped_item_level}</p>
             </div>
           `;
         });
