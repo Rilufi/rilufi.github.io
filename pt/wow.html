@@ -1,101 +1,53 @@
-<!-- wow.html (Português) -->
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>World of Warcraft | Yuri Abuchaim</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    .wow-container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .character {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 1rem;
-    }
-    .character img {
-      border-radius: 8px;
-      max-width: 120px;
-    }
-    .character-info h2 {
-      margin: 0 0 0.3rem;
-      font-size: 1.4rem;
-    }
-    .character-info p {
-      margin: 0.2rem 0;
-    }
-    .character-info .highlight {
-      font-weight: bold;
-      color: #2c3e50;
-    }
-    .error {
-      color: red;
-      text-align: center;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Personagens WoW</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #121212; color: #eee; }
+  .character { display: flex; margin-bottom: 20px; background: #222; border-radius: 8px; overflow: hidden; }
+  .character img { width: 150px; height: 150px; object-fit: cover; }
+  .character-info { padding: 15px; }
+  .character-info h2 { margin: 0 0 10px; }
+  .highlight { color: #4caf50; font-weight: bold; }
+</style>
 </head>
 <body>
-  <header>
-    <div class="language-switcher">
-      <a href="wow.html" class="language-btn active">PT</a>
-      <a href="en/wow.html" class="language-btn">EN</a>
-    </div>
-    <h1>World of Warcraft</h1>
-    <p class="subtitle">Conheça meus personagens favoritos em Azeroth!</p>
-  </header>
 
-  <main class="wow-container" id="character-section">
-    <p>Carregando dados dos personagens...</p>
-  </main>
+<h1>Personagens do Realm Stormrage</h1>
+<section id="characters"></section>
 
-  <footer>
-    <p>&copy; 2025 Yuri Abuchaim</p>
-    <p><a href="mailto:yuri.abuchaim@gmail.com" style="color: white;"><i class="fas fa-envelope"></i> Contato</a></p>
-  </footer>
+<script>
+async function loadCharacters() {
+  try {
+    const response = await fetch('data/wow_pt.json');  // ou wow.json para inglês
+    const characters = await response.json();
+    const section = document.getElementById('characters');
+    section.innerHTML = '';
 
-  <script>
-    async function loadCharacters() {
-      const section = document.getElementById("character-section");
-      try {
-        const res = await fetch("../data/wow_pt.json");
-        const characters = await res.json();
+    characters.forEach(char => {
+      section.innerHTML += `
+        <div class="character">
+          <img src="${char.media}" alt="Imagem de ${char.name}" />
+          <div class="character-info">
+            <h2>${char.name} (Nv. ${char.level})</h2>
+            <p><span class="highlight">Raça:</span> ${char.race}</p>
+            <p><span class="highlight">Classe:</span> ${char.class}${char.spec ? " - " + char.spec : ""}</p>
+            <p><span class="highlight">Facção:</span> ${char.faction} | <span class="highlight">Gênero:</span> ${char.gender}</p>
+            <p><span class="highlight">Guilda:</span> ${char.guild || "-"}</p>
+            <p><span class="highlight">Item Level:</span> ${char.average_item_level || "N/A"}</p>
+            <p><span class="highlight">Conquistas:</span> ${char.achievement_points || 0}</p>
+          </div>
+        </div>`;
+    });
+  } catch (error) {
+    console.error("Erro ao carregar personagens:", error);
+  }
+}
 
-        section.innerHTML = "";
-        characters.forEach(char => {
-          section.innerHTML += `
-            <div class="character">
-              <img src="${char.media}" alt="Imagem de ${char.name}">
-              <div class="character-info">
-                <h2>${char.title ? char.title.replace("{name}", char.name) : char.name} (Nv. ${char.level})</h2>
-                <p><span class="highlight">Raça:</span> ${char.race}</p>
-                <p><span class="highlight">Classe:</span> ${char.class}${char.spec ? " - " + char.spec : ""}</p>
-                <p><span class="highlight">Facção:</span> ${char.faction} | <span class="highlight">Gênero:</span> ${char.gender}</p>
-                <p><span class="highlight">Guilda:</span> ${char.guild || "-"}</p>
-                <p><span class="highlight">Item Level Equipado:</span> ${char.equipped_item_level || "N/A"} (${char.average_item_level || "N/A"} médio)</p>
-                <p><span class="highlight">Conquistas:</span> ${char.achievement_points || 0}</p>
-                <p><span class="highlight">Último login:</span> ${char.last_login || "N/A"}</p>
-              </div>
-            </div>
-          `;
-        });
-      } catch (e) {
-        console.error(e);
-        section.innerHTML = "<p class='error'>Erro ao carregar os dados dos personagens.</p>";
-      }
-    }
+loadCharacters();
+</script>
 
-    loadCharacters();
-  </script>
 </body>
 </html>
