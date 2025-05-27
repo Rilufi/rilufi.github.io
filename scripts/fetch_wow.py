@@ -78,4 +78,12 @@ def fetch_and_save(locale, filename):
             results.append(data)
         sleep(1)
 
-    with open(f"data/{filename
+    with open(f"data/{filename}", "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
+
+def main():
+    fetch_and_save("en_US", "wow.json")
+    fetch_and_save("pt_BR", "wow_pt.json")
+
+if __name__ == "__main__":
+    main()
