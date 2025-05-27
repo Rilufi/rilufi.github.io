@@ -7,86 +7,94 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    .character-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+    .wow-header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: linear-gradient(135deg, #0a1a35, #212529);
+      color: white;
+      position: relative;
+    }
+
+    .wow-header h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    .wow-header .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .wow-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
     }
 
     .character-card {
+      display: flex;
+      flex-wrap: wrap;
       background-color: white;
+      margin-bottom: 2rem;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       padding: 1rem;
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-
-    .character-card:hover {
-      transform: translateY(-4px);
+      gap: 1rem;
     }
 
     .character-card img {
-      width: 100%;
-      max-height: 220px;
-      object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 1rem;
+      width: 120px;
+      height: auto;
+      border-radius: 8px;
     }
 
-    .character-card h2 {
-      margin: 0.5rem 0 0.3rem;
+    .character-info {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .character-info h2 {
+      margin: 0;
       font-size: 1.4rem;
-      color: var(--primary-color);
+      color: #0a1a35;
     }
 
-    .character-card p {
-      margin: 0.2rem 0;
-      font-size: 0.95rem;
+    .character-info p {
+      margin: 0.3rem 0;
+    }
+
+    .character-info .label {
+      font-weight: bold;
       color: #555;
     }
 
-    .section h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-top: 2rem;
-      color: var(--primary-color);
-    }
-
     .error {
-      color: red;
       text-align: center;
-      margin-top: 2rem;
+      color: red;
     }
   </style>
 </head>
 <body>
   <div class="language-switcher">
-    <button class="language-btn active" onclick="switchLanguage('pt')">PT</button>
+    <button class="language-btn" onclick="switchLanguage('pt')">PT</button>
     <button class="language-btn" onclick="switchLanguage('en')">EN</button>
   </div>
 
-  <header>
+  <header class="wow-header">
     <h1>World of Warcraft</h1>
-    <p class="subtitle">Conheça meus personagens favoritos em Azeroth</p>
+    <p class="subtitle">Conheça meus personagens favoritos em Azeroth!</p>
   </header>
 
-  <section class="section">
-    <h2>Meus Personagens</h2>
-    <div id="character-section" class="character-grid">
-      <p style="grid-column: 1 / -1; text-align:center;">Carregando personagens...</p>
-    </div>
-  </section>
+  <main class="wow-container" id="character-section">
+    <p>Carregando dados dos personagens...</p>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Yuri Abuchaim</p>
+    <p>© 2025 Yuri Abuchaim</p>
     <p><a href="mailto:yuri.abuchaim@gmail.com" style="color: white;"><i class="fas fa-envelope"></i> Contato</a></p>
-    <a href="index.html" class="footer-link">Voltar ao início</a>
   </footer>
 
-  <script src="scripts/script.js"></script>
+  <script src="script.js"></script>
   <script>
     async function loadCharacters() {
       const section = document.getElementById("character-section");
@@ -99,11 +107,16 @@
           section.innerHTML += `
             <div class="character-card">
               <img src="${char.media}" alt="Imagem de ${char.name}">
-              <h2>${char.name} <span style="font-weight: normal;">(${char.level})</span></h2>
-              <p>${char.race} ${char.class}${char.spec ? " - " + char.spec : ""}</p>
-              <p><strong>Facção:</strong> ${char.faction}</p>
-              <p><strong>Gênero:</strong> ${char.gender}</p>
-              <p><strong>Item Level:</strong> ${char.average_item_level}</p>
+              <div class="character-info">
+                <h2>${char.title ? char.title + " " + char.name : char.name} (${char.level})</h2>
+                <p><span class="label">Raça:</span> ${char.race}</p>
+                <p><span class="label">Classe:</span> ${char.class}${char.spec ? " - " + char.spec : ""}</p>
+                <p><span class="label">Facção:</span> ${char.faction} | <span class="label">Gênero:</span> ${char.gender}</p>
+                ${char.guild ? `<p><span class="label">Guilda:</span> ${char.guild}</p>` : ""}
+                <p><span class="label">Item Level:</span> ${char.equipped_item_level ?? "N/A"} (${char.average_item_level ?? "N/A"} médio)</p>
+                <p><span class="label">Conquistas:</span> ${char.achievement_points ?? 0}</p>
+                <p><span class="label">Último login:</span> ${char.last_login}</p>
+              </div>
             </div>
           `;
         });
