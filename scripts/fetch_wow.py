@@ -1,33 +1,23 @@
 import os
-import requests
 import json
-from time import sleep
+import requests
+from datetime import datetime
 
+# Configurações principais
 REGION = "us"
-NAMESPACE = "profile-us"
 REALM = "stormrage"
+NAMESPACE = f"profile-{REGION}"
+LOCALES = {"en": "en_US", "pt": "pt_BR"}
 CHARACTERS = [
-    "Rilufi",
-    "Draconyrith",
-    "Kunglufi",
-    "Thulduk",
-    "Rotpelt",
-    "Rilufix",
-    "Shamil",
-    "Lythendre",
-    "Zarknall",
-    "Rilufito"
+    "Rilufi", "Draconyrith", "Kunglufi", "Thulduk", "Rotpelt",
+    "Rilufix", "Shamil", "Lythendre", "Zarknall", "Rilufito"
 ]
 
-CLIENT_ID = os.getenv("BLIZZARD_CLIENT_ID")
-CLIENT_SECRET = os.getenv("BLIZZARD_CLIENT_SECRET")
-
-def get_access_token():
+def get_token(client_id, client_secret):
     url = f"https://{REGION}.battle.net/oauth/token"
     data = {"grant_type": "client_credentials"}
-    resp = requests.post(url, data=data, auth=(CLIENT_ID, CLIENT_SECRET))
-    resp.raise_for_status()
-    return resp.json()["access_token"]
+    response = requests.post(url, data=data, auth=(client_id, client_secret))
+    return response.json()["access_token"]
 
 def get_character_profile(name, token, locale="en_US"):
     base_url = f"https://{REGION}.api.blizzard.com/profile/wow/character/{REALM}/{name.lower()}"
@@ -38,10 +28,11 @@ def get_character_profile(name, token, locale="en_US"):
     media_data = requests.get(f"{base_url}/character-media", headers=headers, params=params).json()
 
     media_url = None
-    for asset in media_data.get("assets", []):
-        if asset.get("key") == "main":
-            media_url = asset.get("value")
-            break
+    if "assets" in media_data:
+        for asset in media_data["assets"]:
+            if asset.get("key") in ["main", "render", "avatar"]:
+                media_url = asset.get("value")
+                break
 
     return {
         "name": profile.get("name"),
@@ -59,27 +50,22 @@ def get_character_profile(name, token, locale="en_US"):
         "achievement_points": profile.get("achievement_points"),
     }
 
-def save_characters(locale, filename):
-    token = get_access_token()
-    data = []
+def save_data(locale_code, token):
+    locale = LOCALES[locale_code]
+    characters = [
+        get_character_profile(name, token, locale)
+        for name in CHARACTERS
+    ]
+    characters.sort(key=lambda c: c["average_item_level"] or 0, reverse=True)
+    with open(f"api/wow{'_pt' if locale_code == 'pt' else ''}.json", "w", encoding="utf-8") as f:
+        json.dump(characters, f, indent=2, ensure_ascii=False)
 
-    for name in CHARACTERS:
-        try:
-            print(f"Buscando {name} ({locale})...")
-            char_data = get_character_profile(name, token, locale)
-            data.append(char_data)
-            sleep(1)
-        except Exception as e:
-            print(f"Erro com {name}: {e}")
-
-    # Ordenar pelo average_item_level decrescente
-    data.sort(key=lambda c: c.get("average_item_level") or 0, reverse=True)
-
-    os.makedirs("data", exist_ok=True)
-    with open(f"data/{filename}", "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"Salvo em data/{filename}")
+def main():
+    client_id = os.getenv("BLIZZARD_CLIENT_ID")
+    client_secret = os.getenv("BLIZZARD_CLIENT_SECRET")
+    token = get_token(client_id, client_secret)
+    save_data("en", token)
+    save_data("pt", token)
 
 if __name__ == "__main__":
-    save_characters("en_US", "wow.json")
-    save_characters("pt_BR", "wow_pt.json")
+    main()
