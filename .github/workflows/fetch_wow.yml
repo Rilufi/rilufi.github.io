@@ -1,0 +1,38 @@
+name: Fetch WoW Character Data
+
+on:
+  schedule:
+    - cron: "0 10 * * *"  # Todos os dias às 7h da manhã
+  workflow_dispatch:
+
+jobs:
+  fetch-wow:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repositório
+      uses: actions/checkout@v3
+
+    - name: Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Instalar dependências
+      run: pip install requests
+
+    - name: Executar script de coleta
+      env:
+        BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
+        BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
+      run: |
+        mkdir -p data
+        python scripts/fetch_wow.py
+
+    - name: Commit e push do JSON gerado
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@users.noreply.github.com"
+        git add data/wow.json
+        git commit -m "Update WoW character data [auto]" || echo "Nada para commitar"
+        git push
