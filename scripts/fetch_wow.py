@@ -19,8 +19,8 @@ CHARACTERS = [
     "Rilufito"
 ]
 
-CLIENT_ID = "SEU_CLIENT_ID_AQUI"
-CLIENT_SECRET = "SEU_CLIENT_SECRET_AQUI"
+CLIENT_ID = os.getenv("BLIZZARD_CLIENT_ID")
+CLIENT_SECRET = os.getenv("BLIZZARD_CLIENT_SECRET")
 
 def get_access_token():
     url = f"https://{REGION}.battle.net/oauth/token"
