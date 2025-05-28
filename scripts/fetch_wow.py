@@ -12,10 +12,8 @@ CHARACTERS = [
     "Rilufi", "Draconyrith", "Kunglufi", "Thulduk", "Rotpelt",
     "Rilufix", "Shamil", "Lythendre", "Zarknall", "Rilufito"
 ]
-raider_key = os.getenv("RAIDER_IO_API_KEY")
 
 def get_token(client_id, client_secret):
-    """Obtém token de acesso da API Blizzard"""
     url = f"https://{REGION}.battle.net/oauth/token"
     data = {"grant_type": "client_credentials"}
     response = requests.post(url, data=data, auth=(client_id, client_secret))
@@ -23,27 +21,24 @@ def get_token(client_id, client_secret):
     return response.json()["access_token"]
 
 def get_character_media(name, token, locale="en_US"):
-    """Obtém URLs de mídia do personagem em diferentes qualidades"""
     url = f"https://{REGION}.api.blizzard.com/profile/wow/character/{REALM}/{name.lower()}/character-media"
     headers = {"Authorization": f"Bearer {token}"}
     params = {"namespace": NAMESPACE, "locale": locale}
-    
+
     try:
         response = requests.get(url, headers=headers, params=params)
         response.raise_for_status()
         media_data = response.json()
-        
-        # Prioridade: main-raw > main > avatar
+
         media_url = None
         if "assets" in media_data:
             for asset in media_data["assets"]:
                 if asset.get("key") == "main-raw":
-                    return asset["value"]  # Retorna imediatamente a melhor qualidade
+                    return asset["value"]
                 elif asset.get("key") == "main" and not media_url:
                     media_url = asset["value"]
                 elif asset.get("key") == "avatar" and not media_url:
                     media_url = asset["value"]
-        
         return media_url
     except requests.exceptions.RequestException as e:
         print(f"Erro ao obter mídia para {name}: {e}")
@@ -56,12 +51,11 @@ def get_raider_io_data(name, realm=REALM, region=REGION):
         "region": region,
         "realm": realm.lower(),
         "name": name.lower(),
-        "fields": "mythic_plus_scores,mythic_plus_best_runs,mythic_plus_alternate_runs"
+        "fields": "mythic_plus_scores_by_season:current,mythic_plus_best_runs:all,mythic_plus_alternate_runs:all"
     }
-    headers = {"Authorization": f"Bearer {raider_key}"}
-    
+
     try:
-        response = requests.get(url, params=params, headers=headers)
+        response = requests.get(url, params=params)
         response.raise_for_status()
         return response.json()
     except requests.exceptions.RequestException as e:
@@ -69,35 +63,29 @@ def get_raider_io_data(name, realm=REALM, region=REGION):
         return None
 
 def get_character_profile(name, token, locale="en_US"):
-    """Obtém dados completos do personagem"""
     base_url = f"https://{REGION}.api.blizzard.com/profile/wow/character/{REALM}/{name.lower()}"
     headers = {"Authorization": f"Bearer {token}"}
     params = {"namespace": NAMESPACE, "locale": locale}
 
     try:
-        # Obtém perfil básico
         profile_response = requests.get(base_url, headers=headers, params=params)
         profile_response.raise_for_status()
         profile = profile_response.json()
 
-        # Obtém mídia
         media_url = get_character_media(name, token, locale)
-
-        # Obtém equipamentos
         equipment_response = requests.get(f"{base_url}/equipment", headers=headers, params=params)
         equipment_data = equipment_response.json() if equipment_response.status_code == 200 else {}
 
-        # Obtém dados do Raider.IO
         rio_data = get_raider_io_data(name)
-        
-        # Processa dados do Mythic+
+
         mythic_plus = {}
         if rio_data:
+            season_data = rio_data.get("mythic_plus_scores_by_season", [{}])[0]
             mythic_plus = {
-                "score": rio_data.get("mythic_plus_scores", {}).get("all"),
+                "score": season_data.get("scores", {}).get("all"),
                 "best_runs": rio_data.get("mythic_plus_best_runs", []),
                 "alternate_runs": rio_data.get("mythic_plus_alternate_runs", []),
-                "season": rio_data.get("mythic_plus_season")
+                "season": season_data.get("season")
             }
 
         return {
@@ -124,34 +112,30 @@ def get_character_profile(name, token, locale="en_US"):
         return None
 
 def save_data(locale_code, token):
-    """Salva dados dos personagens em arquivo JSON"""
     locale = LOCALES[locale_code]
     characters = []
-    
+
     for name in CHARACTERS:
         char_data = get_character_profile(name, token, locale)
         if char_data:
             characters.append(char_data)
-    
-    # Ordena por item level (maior primeiro)
+
     characters.sort(key=lambda c: c["average_item_level"] or 0, reverse=True)
-    
     filename = f"data/wow{'_pt' if locale_code == 'pt' else ''}.json"
     os.makedirs(os.path.dirname(filename), exist_ok=True)
-    
+
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(characters, f, indent=2, ensure_ascii=False)
     print(f"Dados salvos em {filename}")
 
 def main():
-    """Função principal"""
     try:
         client_id = os.getenv("BLIZZARD_CLIENT_ID")
         client_secret = os.getenv("BLIZZARD_CLIENT_SECRET")
-        
+
         if not client_id or not client_secret:
             raise ValueError("BLIZZARD_CLIENT_ID e BLIZZARD_CLIENT_SECRET devem estar definidos")
-        
+
         token = get_token(client_id, client_secret)
         save_data("en", token)
         save_data("pt", token)
