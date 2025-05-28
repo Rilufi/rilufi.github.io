@@ -15,8 +15,278 @@
     "average_item_level": 663,
     "guild": "Frost Wolf Clan",
     "achievement_points": 8795,
-    "mythic_plus": null,
-    "last_updated": "2025-05-28T03:23:28.578280Z"
+    "mythic_plus": {
+      "score": 2075,
+      "best_runs": [
+        {
+          "dungeon": "Mechagon Workshop",
+          "short_name": "WORK",
+          "mythic_level": 8,
+          "completed_at": "2025-05-20T02:56:01.000Z",
+          "clear_time_ms": 1358163,
+          "keystone_run_id": 16376257,
+          "par_time_ms": 1920999,
+          "num_keystone_upgrades": 2,
+          "map_challenge_mode_id": 370,
+          "zone_id": 800002,
+          "zone_expansion_id": 7,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/achievement_boss_mechagon.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion7/base/operation-mechagon-workshop.jpg",
+          "score": 286,
+          "affixes": [
+            {
+              "id": 158,
+              "name": "Xal'atath's Bargain: Voidbound",
+              "description": "While in combat, Xal'atath summons a Void Emissary that empowers nearby enemies.",
+              "icon": "inv_cosmicvoid_buff",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_cosmicvoid_buff.jpg",
+              "wowhead_url": "https://wowhead.com/affix=158"
+            },
+            {
+              "id": 9,
+              "name": "Tyrannical",
+              "description": "Bosses have 25% more health. Bosses and their minions inflict up to 15% increased damage.",
+              "icon": "achievement_boss_archaedas",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/achievement_boss_archaedas.jpg",
+              "wowhead_url": "https://wowhead.com/affix=9"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/16376257-8-operation-mechagon-workshop"
+        },
+        {
+          "dungeon": "The MOTHERLODE!!",
+          "short_name": "ML",
+          "mythic_level": 8,
+          "completed_at": "2025-05-20T02:22:17.000Z",
+          "clear_time_ms": 1569723,
+          "keystone_run_id": 16376181,
+          "par_time_ms": 1980999,
+          "num_keystone_upgrades": 2,
+          "map_challenge_mode_id": 247,
+          "zone_id": 8064,
+          "zone_expansion_id": 7,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/achievement_dungeon_kezan.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion7/base/the-motherlode.jpg",
+          "score": 282.8,
+          "affixes": [
+            {
+              "id": 158,
+              "name": "Xal'atath's Bargain: Voidbound",
+              "description": "While in combat, Xal'atath summons a Void Emissary that empowers nearby enemies.",
+              "icon": "inv_cosmicvoid_buff",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_cosmicvoid_buff.jpg",
+              "wowhead_url": "https://wowhead.com/affix=158"
+            },
+            {
+              "id": 9,
+              "name": "Tyrannical",
+              "description": "Bosses have 25% more health. Bosses and their minions inflict up to 15% increased damage.",
+              "icon": "achievement_boss_archaedas",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/achievement_boss_archaedas.jpg",
+              "wowhead_url": "https://wowhead.com/affix=9"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/16376181-8-the-motherlode"
+        },
+        {
+          "dungeon": "Theater of Pain",
+          "short_name": "TOP",
+          "mythic_level": 8,
+          "completed_at": "2025-05-13T02:39:06.000Z",
+          "clear_time_ms": 1704410,
+          "keystone_run_id": 14932838,
+          "par_time_ms": 2040999,
+          "num_keystone_upgrades": 1,
+          "map_challenge_mode_id": 382,
+          "zone_id": 12841,
+          "zone_expansion_id": 8,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/achievement_dungeon_theatreofpain.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion8/base/theater-of-pain.jpg",
+          "score": 281.2,
+          "affixes": [
+            {
+              "id": 162,
+              "name": "Xal'atath's Bargain: Pulsar",
+              "description": "While in combat, Xal'atath summons pulsars that orbit players.",
+              "icon": "inv_cosmicvoid_nova",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_cosmicvoid_nova.jpg",
+              "wowhead_url": "https://wowhead.com/affix=162"
+            },
+            {
+              "id": 10,
+              "name": "Fortified",
+              "description": "Non-boss enemies have 20% more health and inflict up to 20% increased damage.",
+              "icon": "ability_toughness",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/ability_toughness.jpg",
+              "wowhead_url": "https://wowhead.com/affix=10"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/14932838-8-theater-of-pain"
+        },
+        {
+          "dungeon": "The Rookery",
+          "short_name": "ROOK",
+          "mythic_level": 7,
+          "completed_at": "2025-05-26T03:02:35.000Z",
+          "clear_time_ms": 1224084,
+          "keystone_run_id": 17389932,
+          "par_time_ms": 1740999,
+          "num_keystone_upgrades": 2,
+          "map_challenge_mode_id": 500,
+          "zone_id": 14938,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_rookery.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/the-rookery.jpg",
+          "score": 271.1,
+          "affixes": [
+            {
+              "id": 160,
+              "name": "Xal'atath's Bargain: Devour",
+              "description": "While in combat, Xal'atath tears open rifts that devour the essence of players.",
+              "icon": "inv_ability_voidweaverpriest_entropicrift",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_ability_voidweaverpriest_entropicrift.jpg",
+              "wowhead_url": "https://wowhead.com/affix=160"
+            },
+            {
+              "id": 10,
+              "name": "Fortified",
+              "description": "Non-boss enemies have 20% more health and inflict up to 20% increased damage.",
+              "icon": "ability_toughness",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/ability_toughness.jpg",
+              "wowhead_url": "https://wowhead.com/affix=10"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/17389932-7-the-rookery"
+        },
+        {
+          "dungeon": "Priory of the Sacred Flame",
+          "short_name": "PSF",
+          "mythic_level": 7,
+          "completed_at": "2025-05-13T03:25:47.000Z",
+          "clear_time_ms": 1801834,
+          "keystone_run_id": 15013647,
+          "par_time_ms": 1950999,
+          "num_keystone_upgrades": 1,
+          "map_challenge_mode_id": 499,
+          "zone_id": 14954,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_prioryofthesacredflame.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/priory-of-the-sacred-flame.jpg",
+          "score": 262.9,
+          "affixes": [
+            {
+              "id": 162,
+              "name": "Xal'atath's Bargain: Pulsar",
+              "description": "While in combat, Xal'atath summons pulsars that orbit players.",
+              "icon": "inv_cosmicvoid_nova",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_cosmicvoid_nova.jpg",
+              "wowhead_url": "https://wowhead.com/affix=162"
+            },
+            {
+              "id": 10,
+              "name": "Fortified",
+              "description": "Non-boss enemies have 20% more health and inflict up to 20% increased damage.",
+              "icon": "ability_toughness",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/ability_toughness.jpg",
+              "wowhead_url": "https://wowhead.com/affix=10"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/15013647-7-priory-of-the-sacred-flame"
+        },
+        {
+          "dungeon": "Cinderbrew Meadery",
+          "short_name": "BREW",
+          "mythic_level": 7,
+          "completed_at": "2025-05-09T03:30:42.000Z",
+          "clear_time_ms": 2111925,
+          "keystone_run_id": 14345852,
+          "par_time_ms": 1980999,
+          "num_keystone_upgrades": 0,
+          "map_challenge_mode_id": 506,
+          "zone_id": 15103,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_cinderbrewmeadery.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/cinderbrew-meadery.jpg",
+          "score": 242.5,
+          "affixes": [
+            {
+              "id": 162,
+              "name": "Xal'atath's Bargain: Pulsar",
+              "description": "While in combat, Xal'atath summons pulsars that orbit players.",
+              "icon": "inv_cosmicvoid_nova",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_cosmicvoid_nova.jpg",
+              "wowhead_url": "https://wowhead.com/affix=162"
+            },
+            {
+              "id": 10,
+              "name": "Fortified",
+              "description": "Non-boss enemies have 20% more health and inflict up to 20% increased damage.",
+              "icon": "ability_toughness",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/ability_toughness.jpg",
+              "wowhead_url": "https://wowhead.com/affix=10"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/14345852-7-cinderbrew-meadery"
+        },
+        {
+          "dungeon": "Darkflame Cleft",
+          "short_name": "DFC",
+          "mythic_level": 6,
+          "completed_at": "2025-04-30T03:01:43.000Z",
+          "clear_time_ms": 1289606,
+          "keystone_run_id": 12909010,
+          "par_time_ms": 1860999,
+          "num_keystone_upgrades": 2,
+          "map_challenge_mode_id": 504,
+          "zone_id": 14882,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_darkflamecleft.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/darkflame-cleft.jpg",
+          "score": 241.5,
+          "affixes": [
+            {
+              "id": 148,
+              "name": "Xal'atath's Bargain: Ascendant",
+              "description": "While in combat, Xal'atath rains down orbs of cosmic energy that empower enemies or players.",
+              "icon": "inv_nullstone_cosmicvoid",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_nullstone_cosmicvoid.jpg",
+              "wowhead_url": "https://wowhead.com/affix=148"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/12909010-6-darkflame-cleft"
+        },
+        {
+          "dungeon": "Operation: Floodgate",
+          "short_name": "FLOOD",
+          "mythic_level": 4,
+          "completed_at": "2025-04-28T02:27:12.000Z",
+          "clear_time_ms": 1608682,
+          "keystone_run_id": 12597083,
+          "par_time_ms": 1980999,
+          "num_keystone_upgrades": 1,
+          "map_challenge_mode_id": 525,
+          "zone_id": 15452,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_waterworks.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/operation-floodgate.jpg",
+          "score": 207,
+          "affixes": [
+            {
+              "id": 160,
+              "name": "Xal'atath's Bargain: Devour",
+              "description": "While in combat, Xal'atath tears open rifts that devour the essence of players.",
+              "icon": "inv_ability_voidweaverpriest_entropicrift",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_ability_voidweaverpriest_entropicrift.jpg",
+              "wowhead_url": "https://wowhead.com/affix=160"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/12597083-4-operation-floodgate"
+        }
+      ],
+      "alternate_runs": [],
+      "season": "season-tww-2"
+    },
+    "last_updated": "2025-05-28T03:46:49.627818Z"
   },
   {
     "name": "Kunglufi",
@@ -35,7 +305,7 @@
     "guild": "Jimmys Funnel Factory",
     "achievement_points": 8700,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:23:30.305333Z"
+    "last_updated": "2025-05-28T03:46:51.991480Z"
   },
   {
     "name": "Draconyrith",
@@ -53,8 +323,86 @@
     "average_item_level": 653,
     "guild": "Frost Wolf Clan",
     "achievement_points": 8820,
-    "mythic_plus": null,
-    "last_updated": "2025-05-28T03:23:29.427155Z"
+    "mythic_plus": {
+      "score": 635.2,
+      "best_runs": [
+        {
+          "dungeon": "Theater of Pain",
+          "short_name": "TOP",
+          "mythic_level": 3,
+          "completed_at": "2025-05-23T02:18:14.000Z",
+          "clear_time_ms": 1770308,
+          "keystone_run_id": 16841825,
+          "par_time_ms": 2040999,
+          "num_keystone_upgrades": 1,
+          "map_challenge_mode_id": 382,
+          "zone_id": 12841,
+          "zone_expansion_id": 8,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/achievement_dungeon_theatreofpain.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion8/base/theater-of-pain.jpg",
+          "score": 175,
+          "affixes": [],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/16841825-3-theater-of-pain"
+        },
+        {
+          "dungeon": "Priory of the Sacred Flame",
+          "short_name": "PSF",
+          "mythic_level": 2,
+          "completed_at": "2025-05-23T03:03:04.000Z",
+          "clear_time_ms": 1455769,
+          "keystone_run_id": 16841195,
+          "par_time_ms": 1950999,
+          "num_keystone_upgrades": 2,
+          "map_challenge_mode_id": 499,
+          "zone_id": 14954,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_prioryofthesacredflame.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/priory-of-the-sacred-flame.jpg",
+          "score": 164.5,
+          "affixes": [],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/16841195-2-priory-of-the-sacred-flame"
+        },
+        {
+          "dungeon": "The MOTHERLODE!!",
+          "short_name": "ML",
+          "mythic_level": 2,
+          "completed_at": "2025-05-22T02:15:06.000Z",
+          "clear_time_ms": 1854996,
+          "keystone_run_id": 16680779,
+          "par_time_ms": 1980999,
+          "num_keystone_upgrades": 1,
+          "map_challenge_mode_id": 247,
+          "zone_id": 8064,
+          "zone_expansion_id": 7,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/achievement_dungeon_kezan.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion7/base/the-motherlode.jpg",
+          "score": 157.4,
+          "affixes": [],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/16680779-2-the-motherlode"
+        },
+        {
+          "dungeon": "Mechagon Workshop",
+          "short_name": "WORK",
+          "mythic_level": 2,
+          "completed_at": "2025-05-23T19:18:10.000Z",
+          "clear_time_ms": 2005994,
+          "keystone_run_id": 16934357,
+          "par_time_ms": 1920999,
+          "num_keystone_upgrades": 0,
+          "map_challenge_mode_id": 370,
+          "zone_id": 800002,
+          "zone_expansion_id": 7,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/achievement_boss_mechagon.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion7/base/operation-mechagon-workshop.jpg",
+          "score": 138.3,
+          "affixes": [],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/16934357-2-operation-mechagon-workshop"
+        }
+      ],
+      "alternate_runs": [],
+      "season": "season-tww-2"
+    },
+    "last_updated": "2025-05-28T03:46:50.766802Z"
   },
   {
     "name": "Shamil",
@@ -72,8 +420,50 @@
     "average_item_level": 645,
     "guild": "Frostwolf Clån",
     "achievement_points": 8765,
-    "mythic_plus": null,
-    "last_updated": "2025-05-28T03:23:33.891466Z"
+    "mythic_plus": {
+      "score": 325.1,
+      "best_runs": [
+        {
+          "dungeon": "The MOTHERLODE!!",
+          "short_name": "ML",
+          "mythic_level": 2,
+          "completed_at": "2025-04-14T02:43:28.000Z",
+          "clear_time_ms": 1384810,
+          "keystone_run_id": 10041635,
+          "par_time_ms": 1980999,
+          "num_keystone_upgrades": 2,
+          "map_challenge_mode_id": 247,
+          "zone_id": 8064,
+          "zone_expansion_id": 7,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/achievement_dungeon_kezan.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion7/base/the-motherlode.jpg",
+          "score": 166.3,
+          "affixes": [],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/10041635-2-the-motherlode"
+        },
+        {
+          "dungeon": "The Rookery",
+          "short_name": "ROOK",
+          "mythic_level": 2,
+          "completed_at": "2025-05-19T03:15:45.000Z",
+          "clear_time_ms": 1566149,
+          "keystone_run_id": 16224000,
+          "par_time_ms": 1740999,
+          "num_keystone_upgrades": 1,
+          "map_challenge_mode_id": 500,
+          "zone_id": 14938,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_rookery.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/the-rookery.jpg",
+          "score": 158.8,
+          "affixes": [],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/16224000-2-the-rookery"
+        }
+      ],
+      "alternate_runs": [],
+      "season": "season-tww-2"
+    },
+    "last_updated": "2025-05-28T03:46:57.061135Z"
   },
   {
     "name": "Rotpelt",
@@ -92,7 +482,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8730,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:23:32.110902Z"
+    "last_updated": "2025-05-28T03:46:54.499718Z"
   },
   {
     "name": "Rilufito",
@@ -111,7 +501,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:23:36.672735Z"
+    "last_updated": "2025-05-28T03:47:00.676575Z"
   },
   {
     "name": "Rilufix",
@@ -130,7 +520,7 @@
     "guild": "Gear Gold Glory",
     "achievement_points": 8720,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:23:33.002365Z"
+    "last_updated": "2025-05-28T03:46:55.824953Z"
   },
   {
     "name": "Thulduk",
@@ -149,7 +539,7 @@
     "guild": null,
     "achievement_points": 8720,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:23:31.178523Z"
+    "last_updated": "2025-05-28T03:46:53.331072Z"
   },
   {
     "name": "Lythendre",
@@ -168,7 +558,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:23:34.829946Z"
+    "last_updated": "2025-05-28T03:46:58.272329Z"
   },
   {
     "name": "Zarknall",
@@ -187,6 +577,6 @@
     "guild": "Eterniam",
     "achievement_points": 7790,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:23:35.692777Z"
+    "last_updated": "2025-05-28T03:46:59.503710Z"
   }
 ]
