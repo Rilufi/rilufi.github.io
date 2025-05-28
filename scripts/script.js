@@ -49,7 +49,8 @@ function getCurrentPageIdentifier() {
     'covid_atual': 'covid_atual',
     'covid_historico': 'covid_historico',
     'clima': 'clima',
-    'triand': 'triand'
+    'triand': 'triand',
+    'wow': 'wow'
   };
 
   for (const [fileName, identifier] of Object.entries(pageMap)) {
