@@ -8,11 +8,14 @@
     "spec": "Havoc",
     "faction": "Alliance",
     "gender": "Male",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/127/249524863-avatar.jpg",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/127/249524863-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/127/249524863-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/127/249524863-main-raw.png",
     "equipped_item_level": 663,
     "average_item_level": 663,
     "guild": "Frost Wolf Clan",
-    "achievement_points": 8795
+    "achievement_points": 8795,
+    "last_updated": "2025-05-28T00:25:20.493012Z"
   },
   {
     "name": "Kunglufi",
@@ -23,11 +26,14 @@
     "spec": "Mistweaver",
     "faction": "Alliance",
     "gender": "Male",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-avatar.jpg",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
     "equipped_item_level": 655,
     "average_item_level": 655,
     "guild": "Jimmys Funnel Factory",
-    "achievement_points": 8700
+    "achievement_points": 8700,
+    "last_updated": "2025-05-28T00:25:22.310775Z"
   },
   {
     "name": "Draconyrith",
@@ -38,11 +44,14 @@
     "spec": "Devastation",
     "faction": "Alliance",
     "gender": "Male",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/148/257130132-avatar.jpg",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/148/257130132-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/148/257130132-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/148/257130132-main-raw.png",
     "equipped_item_level": 653,
     "average_item_level": 653,
     "guild": "Frost Wolf Clan",
-    "achievement_points": 8800
+    "achievement_points": 8800,
+    "last_updated": "2025-05-28T00:25:21.351946Z"
   },
   {
     "name": "Shamil",
@@ -53,11 +62,14 @@
     "spec": "Elemental",
     "faction": "Alliance",
     "gender": "Male",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/1/257138433-avatar.jpg",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/1/257138433-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/1/257138433-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/1/257138433-main-raw.png",
     "equipped_item_level": 645,
     "average_item_level": 645,
     "guild": "Frostwolf Clån",
-    "achievement_points": 8765
+    "achievement_points": 8765,
+    "last_updated": "2025-05-28T00:25:26.106311Z"
   },
   {
     "name": "Rotpelt",
@@ -68,11 +80,14 @@
     "spec": "Unholy",
     "faction": "Alliance",
     "gender": "Male",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/214/257151190-avatar.jpg",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/214/257151190-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/214/257151190-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/214/257151190-main-raw.png",
     "equipped_item_level": 623,
     "average_item_level": 623,
     "guild": "SolØ Leveling",
-    "achievement_points": 8730
+    "achievement_points": 8730,
+    "last_updated": "2025-05-28T00:25:24.194587Z"
   },
   {
     "name": "Rilufito",
@@ -83,11 +98,14 @@
     "spec": "Holy",
     "faction": "Alliance",
     "gender": "Male",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/205/263047373-avatar.jpg",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/205/263047373-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/205/263047373-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/205/263047373-main-raw.png",
     "equipped_item_level": 568,
     "average_item_level": 620,
     "guild": "Alliance Vanguard",
-    "achievement_points": 8385
+    "achievement_points": 8385,
+    "last_updated": "2025-05-28T00:25:28.524321Z"
   },
   {
     "name": "Rilufix",
@@ -98,11 +116,14 @@
     "spec": "Restoration",
     "faction": "Alliance",
     "gender": "Male",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-avatar.jpg",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
     "equipped_item_level": 613,
     "average_item_level": 616,
     "guild": "Gear Gold Glory",
-    "achievement_points": 8720
+    "achievement_points": 8720,
+    "last_updated": "2025-05-28T00:25:25.152893Z"
   },
   {
     "name": "Thulduk",
@@ -113,11 +134,14 @@
     "spec": "Demonology",
     "faction": "Alliance",
     "gender": "Male",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/75/257064011-avatar.jpg",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/75/257064011-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/75/257064011-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/75/257064011-main-raw.png",
     "equipped_item_level": 601,
     "average_item_level": 601,
     "guild": null,
-    "achievement_points": 8720
+    "achievement_points": 8720,
+    "last_updated": "2025-05-28T00:25:23.252995Z"
   },
   {
     "name": "Lythendre",
@@ -128,11 +152,14 @@
     "spec": "Discipline",
     "faction": "Alliance",
     "gender": "Female",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/240/258266864-avatar.jpg",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/240/258266864-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/240/258266864-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/240/258266864-main-raw.png",
     "equipped_item_level": 586,
     "average_item_level": 595,
     "guild": "Prog Deez Nutz",
-    "achievement_points": 7995
+    "achievement_points": 7995,
+    "last_updated": "2025-05-28T00:25:26.864852Z"
   },
   {
     "name": "Zarknall",
@@ -143,10 +170,13 @@
     "spec": "Retribution",
     "faction": "Alliance",
     "gender": "Male",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/4/258449156-avatar.jpg",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/4/258449156-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/4/258449156-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/4/258449156-main-raw.png",
     "equipped_item_level": 571,
     "average_item_level": 574,
     "guild": "Eterniam",
-    "achievement_points": 7790
+    "achievement_points": 7790,
+    "last_updated": "2025-05-28T00:25:27.697386Z"
   }
 ]
