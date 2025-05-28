@@ -25,6 +25,7 @@ jobs:
       env:
         BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
         BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
+        RAIDER_IO_API_KEY: ${{ secrets.RAIDER_IO_API_KEY }}
       run: |
         mkdir -p data
         python scripts/fetch_wow.py
