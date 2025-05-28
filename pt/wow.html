@@ -241,69 +241,57 @@ async function loadCharacters() {
     section.innerHTML = '';
 
     characters.forEach(char => {
-      const factionClass = char.faction.toLowerCase().includes('horda') ? 'horde' : 'alliance';
-      
-      // Construir seção de Mythic+ se existir
-      let mythicPlusSection = '';
-      if (char.mythic_plus) {
-            let bestRuns = '';  // ✅ Só essa linha aqui fora é suficiente
-          
-            if (Array.isArray(char.mythic_plus.best_runs) && char.mythic_plus.best_runs.length) {
-              char.mythic_plus.best_runs.slice(0, 4).forEach(run => {
-                bestRuns += `
+  const factionClass = char.faction.toLowerCase().includes('horda') ? 'horde' : 'alliance';
+
+        // Construir seção de Mythic+
+        let mythicPlusSection = '';
+        if (char.mythic_plus) {
+          mythicPlusSection = `
+            <div class="mythic-section">
+              <p><span class="highlight">Mythic+ Score:</span> <span class="mythic-score">${char.mythic_plus.score?.toFixed(0) || 0}</span></p>
+              <p><span class="highlight">Melhores Runs:</span></p>
+              <div class="mythic-runs" id="runs-${char.name}">
+                ${char.mythic_plus.best_runs.slice(0, 4).map(run => `
                   <div class="mythic-run">
                     <div class="dungeon-name">${run.dungeon || 'Desconhecido'}</div>
                     <div class="dungeon-level">Nível ${run.mythic_level}</div>
                     <div>Pontos: ${run.score?.toFixed(1) || '0'}</div>
-                  </div>`;
-              });
-            }
-          
-               mythicPlusSection = `
-                 <div class="mythic-section">
-                   <p><span class="highlight">Mythic+ Score:</span> <span class="mythic-score">${char.mythic_plus.score?.toFixed(0) || 0}</span></p>
-                   <p><span class="highlight">Melhores Runs:</span></p>
-                   <div class="mythic-runs" id="runs-${char.name}">
-                     ${char.mythic_plus.best_runs.slice(0, 4).map(run => `
-                       <div class="mythic-run">
-                         <div class="dungeon-name">${run.dungeon || 'Desconhecido'}</div>
-                         <div class="dungeon-level">Nível ${run.mythic_level}</div>
-                         <div>Pontos: ${run.score?.toFixed(1) || '0'}</div>
-                       </div>`).join('')}
-                     <div class="extra-runs" style="display: none;">
-                       ${char.mythic_plus.best_runs.slice(4).map(run => `
-                         <div class="mythic-run">
-                           <div class="dungeon-name">${run.dungeon || 'Desconhecido'}</div>
-                           <div class="dungeon-level">Nível ${run.mythic_level}</div>
-                           <div>Pontos: ${run.score?.toFixed(1) || '0'}</div>
-                         </div>`).join('')}
-                     </div>
-                   </div>
-                   ${char.mythic_plus.best_runs.length > 4 ? 
-                     `<button class="language-btn toggle-btn" onclick="toggleRuns('${char.name}')">Ver mais</button>` : ''}
-                 </div>`;
-
-
+                  </div>`).join('')}
+                <div class="extra-runs" style="display: none;">
+                  ${char.mythic_plus.best_runs.slice(4).map(run => `
+                    <div class="mythic-run">
+                      <div class="dungeon-name">${run.dungeon || 'Desconhecido'}</div>
+                      <div class="dungeon-level">Nível ${run.mythic_level}</div>
+                      <div>Pontos: ${run.score?.toFixed(1) || '0'}</div>
+                    </div>`).join('')}
+                </div>
+              </div>
+              ${char.mythic_plus.best_runs.length > 4 ? 
+                `<button class="language-btn toggle-btn" onclick="toggleRuns('${char.name}')">Ver mais</button>` : ''}
+            </div>`;
+        }
       
-      section.innerHTML += `
-        <div class="character ${factionClass}">
-          <img class="character-image" src="${char.media}" alt="Imagem de ${char.name}" />
-          <div class="character-info">
-            <h2 class="character-name">${char.name}<span class="level-badge">${char.level}</span></h2>
-            <div class="character-details">
-              <p class="detail-item"><span class="highlight">Raça:</span> ${char.race}</p>
-              <p class="detail-item"><span class="highlight">Classe:</span> ${char.class}</p>
-              <p class="detail-item"><span class="highlight">Especialização:</span> ${char.spec || "-"}</p>
-              <p class="detail-item"><span class="highlight">Gênero:</span> ${char.gender}</p>
-              <p class="detail-item"><span class="highlight">Guilda:</span> ${char.guild || "-"}</p>
-              <p class="detail-item"><span class="highlight">Item Level:</span> ${char.average_item_level || "N/A"}</p>
-              <p class="detail-item"><span class="highlight">Facção:</span> ${char.faction}</p>
-              <p class="detail-item"><span class="highlight">Reino:</span> ${char.realm || "-"}</p>
+        // ✅ Isso aqui DEVE estar fora do if (char.mythic_plus)
+        section.innerHTML += `
+          <div class="character ${factionClass}">
+            <img class="character-image" src="${char.media}" alt="Imagem de ${char.name}" />
+            <div class="character-info">
+              <h2 class="character-name">${char.name}<span class="level-badge">${char.level}</span></h2>
+              <div class="character-details">
+                <p class="detail-item"><span class="highlight">Raça:</span> ${char.race}</p>
+                <p class="detail-item"><span class="highlight">Classe:</span> ${char.class}</p>
+                <p class="detail-item"><span class="highlight">Especialização:</span> ${char.spec || "-"}</p>
+                <p class="detail-item"><span class="highlight">Gênero:</span> ${char.gender}</p>
+                <p class="detail-item"><span class="highlight">Guilda:</span> ${char.guild || "-"}</p>
+                <p class="detail-item"><span class="highlight">Item Level:</span> ${char.average_item_level || "N/A"}</p>
+                <p class="detail-item"><span class="highlight">Facção:</span> ${char.faction}</p>
+                <p class="detail-item"><span class="highlight">Reino:</span> ${char.realm || "-"}</p>
+              </div>
+              ${mythicPlusSection}
             </div>
-            ${mythicPlusSection}
-          </div>
-        </div>`;
-    });
+          </div>`;
+      });
+
   } catch (error) {
     console.error("Erro ao carregar personagens:", error);
     document.getElementById('characters').innerHTML = `
