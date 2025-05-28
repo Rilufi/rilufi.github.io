@@ -1,233 +1,231 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Personagens WoW</title>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../static/style.css">
-<style>
-      html, body {
-       width: 100%;
-       height: 100%;
-       margin: 0;
-       padding: 0;
-     }
-     *, *::before, *::after {
-       box-sizing: border-box;
-     }
-
-     .language-switcher {
-       max-width: calc(100% - 20px); /* evita estouro lateral */
-       position: absolute;
-       top: 10px;
-       right: 10px;
-       display: flex;
-       gap: 10px;
-       z-index: 10;
-     }
-     
-     .language-btn {
-       background-color: var(--gold);
-       color: var(--dark-bg);
-       border: none;
-       padding: 6px 10px;
-       border-radius: 5px;
-       font-weight: bold;
-       cursor: pointer;
-       transition: background 0.2s ease;
-     }
-     
-     .language-btn:hover {
-       background-color: var(--keystone-orange);
-     }
-
-
-  :root {
-    --alliance-blue: #0078ff;
-    --horde-red: #c41f3b;
-    --gold: #e4c780;
-    --dark-bg: #0a0a0a;
-    --paper-bg: #1e1e1e;
-    --border-gold: #5a4a30;
-    --mythic-purple: #a335ee;
-    --keystone-orange: #ff8000;
-  }
-  
-  body { 
-    font-family: 'Marcellus SC', serif;
-    background: url('https://images.blz-contentstack.com/v3/assets/blt3452e3b114fab0cd/blt1f9e5a5d6c9e0e9c/5f4fac1a1b7e6d0aa1a5c5e3/panel-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: var(--gold);
-    margin: 0;
-    padding: 20px;
-  }
-  
-  .container {
-    width: 100%;
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: rgba(10, 10, 10, 0.85);
-    border: 2px solid var(--border-gold);
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    padding: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    color: var(--gold);
-    text-shadow: 2px 2px 4px #000;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    border-bottom: 2px solid var(--border-gold);
-    padding-bottom: 10px;
-  }
-  
-  .character-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    gap: 20px;
-  }
-  
-  .character {
-    display: flex;
-    background: url('https://images.blz-contentstack.com/v3/assets/blt3452e3b114fab0cd/blt1f9e5a5d6c9e0e9c/5f4fac1a1b7e6d0aa1a5c5e3/panel-bg.jpg') no-repeat center center;
-    background-size: cover;
-    border: 2px solid var(--border-gold);
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s;
-  }
-  
-  .character:hover {
-    transform: scale(1.02);
-  }
-  
-  .character-image {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-right: 2px solid var(--border-gold);
-  }
-  
-  .character-info {
-    padding: 15px;
-    flex: 1;
-    background: rgba(10, 10, 10, 0.7);
-  }
-  
-  .character-name {
-    margin: 0 0 10px;
-    color: var(--gold);
-    font-size: 1.5em;
-    text-shadow: 1px 1px 2px #000;
-    border-bottom: 1px solid var(--border-gold);
-    padding-bottom: 5px;
-  }
-  
-  .character-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-  
-  .detail-item {
-    margin: 0;
-    font-size: 0.9em;
-  }
-  
-  .highlight {
-    color: var(--gold);
-    font-weight: bold;
-  }
-  
-  .alliance {
-    border-left: 4px solid var(--alliance-blue);
-  }
-  
-  .horde {
-    border-left: 4px solid var(--horde-red);
-  }
-  
-  .level-badge {
-    display: inline-block;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-size: 0.8em;
-    margin-left: 5px;
-    border: 1px solid var(--gold);
-  }
-  
-  .mythic-section {
-    grid-column: 1 / -1;
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid var(--border-gold);
-  }
-  
-  .mythic-score {
-    color: var(--mythic-purple);
-    font-weight: bold;
-    font-size: 1.1em;
-  }
-  
-  .mythic-runs {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 8px;
-    margin-top: 8px;
-  }
-  
-  .mythic-run {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    border-radius: 4px;
-    border-left: 3px solid var(--keystone-orange);
-  }
-  
-  .dungeon-name {
-    font-weight: bold;
-    color: var(--keystone-orange);
-  }
-  
-  .dungeon-level {
-    color: white;
-  }
-  
-  @media (max-width: 600px) {
-    .character-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .character {
-      flex-direction: column;
-    }
-    
-    .character-image {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personagens WoW</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+  <style>
+    html, body {
       width: 100%;
-      height: 200px;
-      border-right: none;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --alliance-blue: #0078ff;
+      --horde-red: #c41f3b;
+      --gold: #e4c780;
+      --dark-bg: #0a0a0a;
+      --paper-bg: #1e1e1e;
+      --border-gold: #5a4a30;
+      --mythic-purple: #a335ee;
+      --keystone-orange: #ff8000;
+    }
+
+    body {
+      font-family: 'Marcellus SC', serif;
+      background: url('https://images.blz-contentstack.com/v3/assets/blt3452e3b114fab0cd/blt1f9e5a5d6c9e0e9c/5f4fac1a1b7e6d0aa1a5c5e3/panel-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--gold);
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: none;
+      margin: 0 auto;
+      background-color: rgba(10, 10, 10, 0.85);
+      border: 2px solid var(--border-gold);
+      border-radius: 5px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      padding: 20px 40px;
+      position: relative;
+    }
+
+    .language-switcher {
+      max-width: calc(100% - 20px);
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .language-btn {
+      background-color: var(--gold);
+      color: var(--dark-bg);
+      border: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .language-btn:hover {
+      background-color: var(--keystone-orange);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--gold);
+      text-shadow: 2px 2px 4px #000;
+      font-size: 2.5em;
+      margin-bottom: 30px;
       border-bottom: 2px solid var(--border-gold);
+      padding-bottom: 10px;
     }
-    
+
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+    }
+
+    .character {
+      display: flex;
+      background: url('https://images.blz-contentstack.com/v3/assets/blt3452e3b114fab0cd/blt1f9e5a5d6c9e0e9c/5f4fac1a1b7e6d0aa1a5c5e3/panel-bg.jpg') no-repeat center center;
+      background-size: cover;
+      border: 2px solid var(--border-gold);
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s;
+    }
+
+    .character:hover {
+      transform: scale(1.02);
+    }
+
+    .character-image {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-right: 2px solid var(--border-gold);
+    }
+
+    .character-info {
+      padding: 15px;
+      flex: 1;
+      background: rgba(10, 10, 10, 0.7);
+    }
+
+    .character-name {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-size: 1.5em;
+      text-shadow: 1px 1px 2px #000;
+      border-bottom: 1px solid var(--border-gold);
+      padding-bottom: 5px;
+    }
+
+    .character-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .detail-item {
+      margin: 0;
+      font-size: 0.9em;
+    }
+
+    .highlight {
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    .alliance {
+      border-left: 4px solid var(--alliance-blue);
+    }
+
+    .horde {
+      border-left: 4px solid var(--horde-red);
+    }
+
+    .level-badge {
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 0.8em;
+      margin-left: 5px;
+      border: 1px solid var(--gold);
+    }
+
+    .mythic-section {
+      grid-column: 1 / -1;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-gold);
+    }
+
+    .mythic-score {
+      color: var(--mythic-purple);
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
     .mythic-runs {
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 8px;
+      margin-top: 8px;
     }
-  }
-</style>
+
+    .mythic-run {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      border-radius: 4px;
+      border-left: 3px solid var(--keystone-orange);
+    }
+
+    .dungeon-name {
+      font-weight: bold;
+      color: var(--keystone-orange);
+    }
+
+    .dungeon-level {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .character-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .character {
+        flex-direction: column;
+      }
+
+      .character-image {
+        width: 100%;
+        height: 200px;
+        border-right: none;
+        border-bottom: 2px solid var(--border-gold);
+      }
+
+      .mythic-runs {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-
 <div class="container">
   <div class="language-switcher">
-      <button class="language-btn">PT</button>
-      <button class="language-btn">EN</button>
+    <button class="language-btn">PT</button>
+    <button class="language-btn">EN</button>
   </div>
   <h1>MEUS PERSONAGENS DE AZEROTH</h1>
   <section id="characters" class="character-grid"></section>
@@ -242,57 +240,54 @@ async function loadCharacters() {
     section.innerHTML = '';
 
     characters.forEach(char => {
-  const factionClass = char.faction.toLowerCase().includes('horda') ? 'horde' : 'alliance';
+      const factionClass = char.faction.toLowerCase().includes('horda') ? 'horde' : 'alliance';
 
-        // Construir seção de Mythic+
-        let mythicPlusSection = '';
-        if (char.mythic_plus) {
-          mythicPlusSection = `
-            <div class="mythic-section">
-              <p><span class="highlight">Mythic+ Score:</span> <span class="mythic-score">${char.mythic_plus.score?.toFixed(0) || 0}</span></p>
-              <p><span class="highlight">Melhores Runs:</span></p>
-              <div class="mythic-runs" id="runs-${char.name}">
-                ${char.mythic_plus.best_runs.slice(0, 4).map(run => `
+      let mythicPlusSection = '';
+      if (char.mythic_plus) {
+        mythicPlusSection = `
+          <div class="mythic-section">
+            <p><span class="highlight">Mythic+ Score:</span> <span class="mythic-score">${char.mythic_plus.score?.toFixed(0) || 0}</span></p>
+            <p><span class="highlight">Melhores Runs:</span></p>
+            <div class="mythic-runs" id="runs-${char.name}">
+              ${char.mythic_plus.best_runs.slice(0, 4).map(run => `
+                <div class="mythic-run">
+                  <div class="dungeon-name">${run.dungeon || 'Desconhecido'}</div>
+                  <div class="dungeon-level">Nível ${run.mythic_level}</div>
+                  <div>Pontos: ${run.score?.toFixed(1) || '0'}</div>
+                </div>`).join('')}
+              <div class="extra-runs mythic-runs" style="display: none;">
+                ${char.mythic_plus.best_runs.slice(4).map(run => `
                   <div class="mythic-run">
                     <div class="dungeon-name">${run.dungeon || 'Desconhecido'}</div>
                     <div class="dungeon-level">Nível ${run.mythic_level}</div>
                     <div>Pontos: ${run.score?.toFixed(1) || '0'}</div>
                   </div>`).join('')}
-                <div class="extra-runs" style="display: none;">
-                  ${char.mythic_plus.best_runs.slice(4).map(run => `
-                    <div class="mythic-run">
-                      <div class="dungeon-name">${run.dungeon || 'Desconhecido'}</div>
-                      <div class="dungeon-level">Nível ${run.mythic_level}</div>
-                      <div>Pontos: ${run.score?.toFixed(1) || '0'}</div>
-                    </div>`).join('')}
-                </div>
               </div>
-              ${char.mythic_plus.best_runs.length > 4 ? 
-                `<button class="language-btn toggle-btn" onclick="toggleRuns('${char.name}')">Ver mais</button>` : ''}
-            </div>`;
-        }
-      
-        // ✅ Isso aqui DEVE estar fora do if (char.mythic_plus)
-        section.innerHTML += `
-          <div class="character ${factionClass}">
-            <img class="character-image" src="${char.media}" alt="Imagem de ${char.name}" />
-            <div class="character-info">
-              <h2 class="character-name">${char.name}<span class="level-badge">${char.level}</span></h2>
-              <div class="character-details">
-                <p class="detail-item"><span class="highlight">Raça:</span> ${char.race}</p>
-                <p class="detail-item"><span class="highlight">Classe:</span> ${char.class}</p>
-                <p class="detail-item"><span class="highlight">Especialização:</span> ${char.spec || "-"}</p>
-                <p class="detail-item"><span class="highlight">Gênero:</span> ${char.gender}</p>
-                <p class="detail-item"><span class="highlight">Guilda:</span> ${char.guild || "-"}</p>
-                <p class="detail-item"><span class="highlight">Item Level:</span> ${char.average_item_level || "N/A"}</p>
-                <p class="detail-item"><span class="highlight">Facção:</span> ${char.faction}</p>
-                <p class="detail-item"><span class="highlight">Reino:</span> ${char.realm || "-"}</p>
-              </div>
-              ${mythicPlusSection}
             </div>
+            ${char.mythic_plus.best_runs.length > 4 ? 
+              `<button class="language-btn toggle-btn" onclick="toggleRuns('${char.name}')">Ver mais</button>` : ''}
           </div>`;
-      });
+      }
 
+      section.innerHTML += `
+        <div class="character ${factionClass}">
+          <img class="character-image" src="${char.media}" alt="Imagem de ${char.name}" />
+          <div class="character-info">
+            <h2 class="character-name">${char.name}<span class="level-badge">${char.level}</span></h2>
+            <div class="character-details">
+              <p class="detail-item"><span class="highlight">Raça:</span> ${char.race}</p>
+              <p class="detail-item"><span class="highlight">Classe:</span> ${char.class}</p>
+              <p class="detail-item"><span class="highlight">Especialização:</span> ${char.spec || "-"}</p>
+              <p class="detail-item"><span class="highlight">Gênero:</span> ${char.gender}</p>
+              <p class="detail-item"><span class="highlight">Guilda:</span> ${char.guild || "-"}</p>
+              <p class="detail-item"><span class="highlight">Item Level:</span> ${char.average_item_level || "N/A"}</p>
+              <p class="detail-item"><span class="highlight">Facção:</span> ${char.faction}</p>
+              <p class="detail-item"><span class="highlight">Reino:</span> ${char.realm || "-"}</p>
+            </div>
+            ${mythicPlusSection}
+          </div>
+        </div>`;
+    });
   } catch (error) {
     console.error("Erro ao carregar personagens:", error);
     document.getElementById('characters').innerHTML = `
@@ -302,23 +297,23 @@ async function loadCharacters() {
   }
 }
 
+function toggleRuns(charName) {
+  const runsContainer = document.querySelector(`#runs-${charName} .extra-runs`);
+  const button = document.querySelector(`#runs-${charName} ~ .toggle-btn`);
+  const showing = runsContainer.style.display === "block";
+  runsContainer.style.display = showing ? "none" : "block";
+  button.textContent = showing ? "Ver mais" : "Ver menos";
+}
+
 loadCharacters();
 </script>
-     <script>
-     function toggleRuns(charName) {
-       const runsContainer = document.querySelector(`#runs-${charName} .extra-runs`);
-       const button = document.querySelector(`#runs-${charName} ~ .toggle-btn`);
-       const showing = runsContainer.style.display === "block";
-       runsContainer.style.display = showing ? "none" : "block";
-       button.textContent = showing ? "Ver mais" : "Ver menos";
-     }
-     </script>
 
-    <footer>
-        <p>Site para mapear e organizar meus personagens do WoW</p>
-        <p>© 2025 - Desenvolvido por Yuri Abuchaim</p>
-        <a href="../index.html" class="footer-link">Voltar ao início</a>
-    </footer>
-    <script src="../scripts/script.js"></script>
+<footer>
+  <p>Site para mapear e organizar meus personagens do WoW</p>
+  <p>© 2025 - Desenvolvido por Yuri Abuchaim</p>
+  <a href="../index.html" class="footer-link">Voltar ao início</a>
+</footer>
+
+<script src="../scripts/script.js"></script>
 </body>
 </html>
