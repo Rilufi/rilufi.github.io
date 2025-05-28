@@ -12,6 +12,7 @@ CHARACTERS = [
     "Rilufi", "Draconyrith", "Kunglufi", "Thulduk", "Rotpelt",
     "Rilufix", "Shamil", "Lythendre", "Zarknall", "Rilufito"
 ]
+raider_key = os.getenv("RAIDER_IO_API_KEY")
 
 def get_token(client_id, client_secret):
     """Obtém token de acesso da API Blizzard"""
@@ -48,8 +49,27 @@ def get_character_media(name, token, locale="en_US"):
         print(f"Erro ao obter mídia para {name}: {e}")
         return None
 
+def get_raider_io_data(name, realm=REALM, region=REGION):
+    """Obtém dados do Raider.IO para personagem"""
+    url = f"https://raider.io/api/v1/characters/profile"
+    params = {
+        "region": region,
+        "realm": realm.lower(),
+        "name": name.lower(),
+        "fields": "mythic_plus_scores,mythic_plus_best_runs,mythic_plus_alternate_runs"
+    }
+    headers = {"Authorization": f"Bearer {raider_key}"}
+    
+    try:
+        response = requests.get(url, params=params, headers=headers)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Erro ao obter dados do Raider.IO para {name}: {e}")
+        return None
+
 def get_character_profile(name, token, locale="en_US"):
-    """Obtém dados completos do personagem incluindo mídia em alta resolução"""
+    """Obtém dados completos do personagem"""
     base_url = f"https://{REGION}.api.blizzard.com/profile/wow/character/{REALM}/{name.lower()}"
     headers = {"Authorization": f"Bearer {token}"}
     params = {"namespace": NAMESPACE, "locale": locale}
@@ -60,12 +80,25 @@ def get_character_profile(name, token, locale="en_US"):
         profile_response.raise_for_status()
         profile = profile_response.json()
 
-        # Obtém mídia em alta resolução
+        # Obtém mídia
         media_url = get_character_media(name, token, locale)
 
-        # Obtém equipamentos (para item level)
+        # Obtém equipamentos
         equipment_response = requests.get(f"{base_url}/equipment", headers=headers, params=params)
         equipment_data = equipment_response.json() if equipment_response.status_code == 200 else {}
+
+        # Obtém dados do Raider.IO
+        rio_data = get_raider_io_data(name)
+        
+        # Processa dados do Mythic+
+        mythic_plus = {}
+        if rio_data:
+            mythic_plus = {
+                "score": rio_data.get("mythic_plus_scores", {}).get("all"),
+                "best_runs": rio_data.get("mythic_plus_best_runs", []),
+                "alternate_runs": rio_data.get("mythic_plus_alternate_runs", []),
+                "season": rio_data.get("mythic_plus_season")
+            }
 
         return {
             "name": profile.get("name"),
@@ -77,12 +110,13 @@ def get_character_profile(name, token, locale="en_US"):
             "faction": profile.get("faction", {}).get("name"),
             "gender": profile.get("gender", {}).get("name"),
             "media": media_url,
-            "media_main": media_url,  # Mantém compatibilidade com versão anterior
-            "media_main_raw": media_url,  # Nova propriedade para alta resolução
+            "media_main": media_url,
+            "media_main_raw": media_url,
             "equipped_item_level": profile.get("equipped_item_level"),
             "average_item_level": profile.get("average_item_level"),
             "guild": profile.get("guild", {}).get("name") if profile.get("guild") else None,
             "achievement_points": profile.get("achievement_points"),
+            "mythic_plus": mythic_plus if mythic_plus.get("score") else None,
             "last_updated": datetime.utcnow().isoformat() + "Z"
         }
     except requests.exceptions.RequestException as e:
@@ -124,6 +158,5 @@ def main():
     except Exception as e:
         print(f"Erro durante execução: {e}")
 
-# Esta linha deve estar no início da linha, sem espaços antes
 if __name__ == "__main__":
     main()
