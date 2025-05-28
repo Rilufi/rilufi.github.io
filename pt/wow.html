@@ -7,11 +7,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../static/style.css">
 <style>
-    .language-switcher {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 10px;
-  }
+     .language-switcher {
+      display: flex;
+      justify-content: flex-end;
+      background-color: rgba(30, 30, 30, 0.7); /* mesma vibe do container */
+      padding: 8px 10px;
+      margin: -20px -20px 20px -20px; /* anula padding lateral do .container */
+      border-bottom: 2px solid var(--border-gold);
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+
   
   .language-btn {
     background-color: var(--gold);
