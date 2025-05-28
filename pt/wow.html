@@ -7,7 +7,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../static/style.css">
 <style>
+      html, body {
+       width: 100%;
+       height: 100%;
+       margin: 0;
+       padding: 0;
+     }
+     *, *::before, *::after {
+       box-sizing: border-box;
+     }
+
      .language-switcher {
+       max-width: calc(100% - 20px); /* evita estouro lateral */
        position: absolute;
        top: 10px;
        right: 10px;
@@ -248,17 +259,30 @@ async function loadCharacters() {
               });
             }
           
-            mythicPlusSection = `
-              <div class="mythic-section">
-                <p><span class="highlight">Mythic+ Score:</span> <span class="mythic-score">${char.mythic_plus.score?.toFixed(0) || 0}</span></p>
-                <p><span class="highlight">Melhores Runs:</span></p>
-                <div class="mythic-runs">
-                  ${bestRuns}
-                </div>
-                ${char.mythic_plus.best_runs?.length > 4 ? 
-                  `<p class="detail-item">+${char.mythic_plus.best_runs.length - 4} outras runs</p>` : ''}
-              </div>`;
-          }
+               mythicPlusSection = `
+                 <div class="mythic-section">
+                   <p><span class="highlight">Mythic+ Score:</span> <span class="mythic-score">${char.mythic_plus.score?.toFixed(0) || 0}</span></p>
+                   <p><span class="highlight">Melhores Runs:</span></p>
+                   <div class="mythic-runs" id="runs-${char.name}">
+                     ${char.mythic_plus.best_runs.slice(0, 4).map(run => `
+                       <div class="mythic-run">
+                         <div class="dungeon-name">${run.dungeon || 'Desconhecido'}</div>
+                         <div class="dungeon-level">Nível ${run.mythic_level}</div>
+                         <div>Pontos: ${run.score?.toFixed(1) || '0'}</div>
+                       </div>`).join('')}
+                     <div class="extra-runs" style="display: none;">
+                       ${char.mythic_plus.best_runs.slice(4).map(run => `
+                         <div class="mythic-run">
+                           <div class="dungeon-name">${run.dungeon || 'Desconhecido'}</div>
+                           <div class="dungeon-level">Nível ${run.mythic_level}</div>
+                           <div>Pontos: ${run.score?.toFixed(1) || '0'}</div>
+                         </div>`).join('')}
+                     </div>
+                   </div>
+                   ${char.mythic_plus.best_runs.length > 4 ? 
+                     `<button class="language-btn toggle-btn" onclick="toggleRuns('${char.name}')">Ver mais</button>` : ''}
+                 </div>`;
+
 
       
       section.innerHTML += `
@@ -291,6 +315,16 @@ async function loadCharacters() {
 
 loadCharacters();
 </script>
+     <script>
+     function toggleRuns(charName) {
+       const runsContainer = document.querySelector(`#runs-${charName} .extra-runs`);
+       const button = document.querySelector(`#runs-${charName} ~ .toggle-btn`);
+       const showing = runsContainer.style.display === "block";
+       runsContainer.style.display = showing ? "none" : "block";
+       button.textContent = showing ? "Ver mais" : "Ver menos";
+     }
+     </script>
+
     <footer>
         <p>Site para mapear e organizar meus personagens do WoW</p>
         <p>© 2025 - Desenvolvido por Yuri Abuchaim</p>
