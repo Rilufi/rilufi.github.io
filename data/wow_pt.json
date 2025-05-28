@@ -286,7 +286,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-28T03:46:49.627818Z"
+    "last_updated": "2025-05-28T10:14:07.119180Z"
   },
   {
     "name": "Kunglufi",
@@ -305,7 +305,7 @@
     "guild": "Jimmys Funnel Factory",
     "achievement_points": 8700,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:46:51.991480Z"
+    "last_updated": "2025-05-28T10:14:09.855139Z"
   },
   {
     "name": "Draconyrith",
@@ -324,8 +324,35 @@
     "guild": "Frost Wolf Clan",
     "achievement_points": 8820,
     "mythic_plus": {
-      "score": 635.2,
+      "score": 817.3,
       "best_runs": [
+        {
+          "dungeon": "Operation: Floodgate",
+          "short_name": "FLOOD",
+          "mythic_level": 4,
+          "completed_at": "2025-05-28T03:14:45.000Z",
+          "clear_time_ms": 2137588,
+          "keystone_run_id": 17730169,
+          "par_time_ms": 1980999,
+          "num_keystone_upgrades": 0,
+          "map_challenge_mode_id": 525,
+          "zone_id": 15452,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_waterworks.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/operation-floodgate.jpg",
+          "score": 182,
+          "affixes": [
+            {
+              "id": 162,
+              "name": "Xal'atath's Bargain: Pulsar",
+              "description": "While in combat, Xal'atath summons pulsars that orbit players.",
+              "icon": "inv_cosmicvoid_nova",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_cosmicvoid_nova.jpg",
+              "wowhead_url": "https://wowhead.com/affix=162"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/17730169-4-operation-floodgate"
+        },
         {
           "dungeon": "Theater of Pain",
           "short_name": "TOP",
@@ -402,7 +429,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-28T03:46:50.766802Z"
+    "last_updated": "2025-05-28T10:14:08.543860Z"
   },
   {
     "name": "Shamil",
@@ -463,7 +490,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-28T03:46:57.061135Z"
+    "last_updated": "2025-05-28T10:14:14.720695Z"
   },
   {
     "name": "Rotpelt",
@@ -482,7 +509,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8730,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:46:54.499718Z"
+    "last_updated": "2025-05-28T10:14:12.213538Z"
   },
   {
     "name": "Rilufito",
@@ -501,7 +528,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:47:00.676575Z"
+    "last_updated": "2025-05-28T10:14:18.256662Z"
   },
   {
     "name": "Rilufix",
@@ -520,7 +547,7 @@
     "guild": "Gear Gold Glory",
     "achievement_points": 8720,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:46:55.824953Z"
+    "last_updated": "2025-05-28T10:14:13.453829Z"
   },
   {
     "name": "Thulduk",
@@ -539,7 +566,7 @@
     "guild": null,
     "achievement_points": 8720,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:46:53.331072Z"
+    "last_updated": "2025-05-28T10:14:10.988675Z"
   },
   {
     "name": "Lythendre",
@@ -558,7 +585,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:46:58.272329Z"
+    "last_updated": "2025-05-28T10:14:15.930512Z"
   },
   {
     "name": "Zarknall",
@@ -577,6 +604,6 @@
     "guild": "Eterniam",
     "achievement_points": 7790,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T03:46:59.503710Z"
+    "last_updated": "2025-05-28T10:14:17.121412Z"
   }
 ]
