@@ -1,4 +1,3 @@
-   main()
 import os
 import json
 import requests
@@ -125,5 +124,6 @@ def main():
     except Exception as e:
         print(f"Erro durante execução: {e}")
 
+# Esta linha deve estar no início da linha, sem espaços antes
 if __name__ == "__main__":
     main()
