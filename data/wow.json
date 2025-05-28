@@ -15,7 +15,8 @@
     "average_item_level": 663,
     "guild": "Frost Wolf Clan",
     "achievement_points": 8795,
-    "last_updated": "2025-05-28T00:25:20.493012Z"
+    "mythic_plus": null,
+    "last_updated": "2025-05-28T03:23:15.682753Z"
   },
   {
     "name": "Kunglufi",
@@ -33,7 +34,8 @@
     "average_item_level": 655,
     "guild": "Jimmys Funnel Factory",
     "achievement_points": 8700,
-    "last_updated": "2025-05-28T00:25:22.310775Z"
+    "mythic_plus": null,
+    "last_updated": "2025-05-28T03:23:19.118593Z"
   },
   {
     "name": "Draconyrith",
@@ -50,8 +52,9 @@
     "equipped_item_level": 653,
     "average_item_level": 653,
     "guild": "Frost Wolf Clan",
-    "achievement_points": 8800,
-    "last_updated": "2025-05-28T00:25:21.351946Z"
+    "achievement_points": 8820,
+    "mythic_plus": null,
+    "last_updated": "2025-05-28T03:23:17.859517Z"
   },
   {
     "name": "Shamil",
@@ -69,7 +72,8 @@
     "average_item_level": 645,
     "guild": "Frostwolf Clån",
     "achievement_points": 8765,
-    "last_updated": "2025-05-28T00:25:26.106311Z"
+    "mythic_plus": null,
+    "last_updated": "2025-05-28T03:23:24.369901Z"
   },
   {
     "name": "Rotpelt",
@@ -87,7 +91,8 @@
     "average_item_level": 623,
     "guild": "SolØ Leveling",
     "achievement_points": 8730,
-    "last_updated": "2025-05-28T00:25:24.194587Z"
+    "mythic_plus": null,
+    "last_updated": "2025-05-28T03:23:21.814411Z"
   },
   {
     "name": "Rilufito",
@@ -105,7 +110,8 @@
     "average_item_level": 620,
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
-    "last_updated": "2025-05-28T00:25:28.524321Z"
+    "mythic_plus": null,
+    "last_updated": "2025-05-28T03:23:27.630896Z"
   },
   {
     "name": "Rilufix",
@@ -123,7 +129,8 @@
     "average_item_level": 616,
     "guild": "Gear Gold Glory",
     "achievement_points": 8720,
-    "last_updated": "2025-05-28T00:25:25.152893Z"
+    "mythic_plus": null,
+    "last_updated": "2025-05-28T03:23:23.102846Z"
   },
   {
     "name": "Thulduk",
@@ -141,7 +148,8 @@
     "average_item_level": 601,
     "guild": null,
     "achievement_points": 8720,
-    "last_updated": "2025-05-28T00:25:23.252995Z"
+    "mythic_plus": null,
+    "last_updated": "2025-05-28T03:23:20.563145Z"
   },
   {
     "name": "Lythendre",
@@ -159,7 +167,8 @@
     "average_item_level": 595,
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
-    "last_updated": "2025-05-28T00:25:26.864852Z"
+    "mythic_plus": null,
+    "last_updated": "2025-05-28T03:23:25.476597Z"
   },
   {
     "name": "Zarknall",
@@ -177,6 +186,7 @@
     "average_item_level": 574,
     "guild": "Eterniam",
     "achievement_points": 7790,
-    "last_updated": "2025-05-28T00:25:27.697386Z"
+    "mythic_plus": null,
+    "last_updated": "2025-05-28T03:23:26.546782Z"
   }
 ]
