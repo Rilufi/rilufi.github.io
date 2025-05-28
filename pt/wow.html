@@ -8,32 +8,29 @@
 <link rel="stylesheet" href="../static/style.css">
 <style>
      .language-switcher {
-      display: flex;
-      justify-content: flex-end;
-      background-color: rgba(30, 30, 30, 0.7); /* mesma vibe do container */
-      padding: 8px 10px;
-      margin: -20px -20px 20px -20px; /* anula padding lateral do .container */
-      border-bottom: 2px solid var(--border-gold);
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
-    }
+       position: absolute;
+       top: 10px;
+       right: 10px;
+       display: flex;
+       gap: 10px;
+       z-index: 10;
+     }
+     
+     .language-btn {
+       background-color: var(--gold);
+       color: var(--dark-bg);
+       border: none;
+       padding: 6px 10px;
+       border-radius: 5px;
+       font-weight: bold;
+       cursor: pointer;
+       transition: background 0.2s ease;
+     }
+     
+     .language-btn:hover {
+       background-color: var(--keystone-orange);
+     }
 
-  
-  .language-btn {
-    background-color: var(--gold);
-    color: var(--dark-bg);
-    border: none;
-    margin-left: 5px;
-    padding: 6px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  
-  .language-btn:hover {
-    background-color: var(--keystone-orange);
-  }
 
   :root {
     --alliance-blue: #0078ff;
@@ -56,6 +53,7 @@
   }
   
   .container {
+    position: relative;
     max-width: 1000px;
     margin: 0 auto;
     background-color: rgba(10, 10, 10, 0.85);
@@ -239,14 +237,18 @@ async function loadCharacters() {
       if (char.mythic_plus) {
         // Formatando as melhores runs
         let bestRuns = '';
-        char.mythic_plus.best_runs?.slice(0, 4).forEach(run => {
-          bestRuns += `
-            <div class="mythic-run">
-              <div class="dungeon-name">${run.dungeon || 'Desconhecido'}</div>
-              <div class="dungeon-level">Nível ${run.mythic_level}</div>
-              <div>Pontos: ${run.score?.toFixed(1) || '0'}</div>
-            </div>`;
-        });
+        if (char.mythic_plus && Array.isArray(char.mythic_plus.best_runs) && char.mythic_plus.best_runs.length) {
+            let bestRuns = '';
+            char.mythic_plus.best_runs.slice(0, 4).forEach(run => {
+              bestRuns += `
+                <div class="mythic-run">
+                  <div class="dungeon-name">${run.dungeon || 'Desconhecido'}</div>
+                  <div class="dungeon-level">Nível ${run.mythic_level}</div>
+                  <div>Pontos: ${run.score?.toFixed(1) || '0'}</div>
+                </div>`;
+            });
+         
+
 
         mythicPlusSection = `
           <div class="mythic-section">
