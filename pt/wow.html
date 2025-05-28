@@ -235,32 +235,31 @@ async function loadCharacters() {
       // Construir seção de Mythic+ se existir
       let mythicPlusSection = '';
       if (char.mythic_plus) {
-        // Formatando as melhores runs
-        let bestRuns = '';
-        if (char.mythic_plus && Array.isArray(char.mythic_plus.best_runs) && char.mythic_plus.best_runs.length) {
-            let bestRuns = '';
-            char.mythic_plus.best_runs.slice(0, 4).forEach(run => {
-              bestRuns += `
-                <div class="mythic-run">
-                  <div class="dungeon-name">${run.dungeon || 'Desconhecido'}</div>
-                  <div class="dungeon-level">Nível ${run.mythic_level}</div>
-                  <div>Pontos: ${run.score?.toFixed(1) || '0'}</div>
-                </div>`;
-            });
-         
+            let bestRuns = '';  // ✅ Só essa linha aqui fora é suficiente
+          
+            if (Array.isArray(char.mythic_plus.best_runs) && char.mythic_plus.best_runs.length) {
+              char.mythic_plus.best_runs.slice(0, 4).forEach(run => {
+                bestRuns += `
+                  <div class="mythic-run">
+                    <div class="dungeon-name">${run.dungeon || 'Desconhecido'}</div>
+                    <div class="dungeon-level">Nível ${run.mythic_level}</div>
+                    <div>Pontos: ${run.score?.toFixed(1) || '0'}</div>
+                  </div>`;
+              });
+            }
+          
+            mythicPlusSection = `
+              <div class="mythic-section">
+                <p><span class="highlight">Mythic+ Score:</span> <span class="mythic-score">${char.mythic_plus.score?.toFixed(0) || 0}</span></p>
+                <p><span class="highlight">Melhores Runs:</span></p>
+                <div class="mythic-runs">
+                  ${bestRuns}
+                </div>
+                ${char.mythic_plus.best_runs?.length > 4 ? 
+                  `<p class="detail-item">+${char.mythic_plus.best_runs.length - 4} outras runs</p>` : ''}
+              </div>`;
+          }
 
-
-        mythicPlusSection = `
-          <div class="mythic-section">
-            <p><span class="highlight">Mythic+ Score:</span> <span class="mythic-score">${char.mythic_plus.score?.toFixed(0) || 0}</span></p>
-            <p><span class="highlight">Melhores Runs:</span></p>
-            <div class="mythic-runs">
-              ${bestRuns}
-            </div>
-            ${char.mythic_plus.best_runs?.length > 4 ? 
-              `<p class="detail-item">+${char.mythic_plus.best_runs.length - 4} outras runs</p>` : ''}
-          </div>`;
-      }
       
       section.innerHTML += `
         <div class="character ${factionClass}">
