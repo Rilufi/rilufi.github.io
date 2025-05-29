@@ -14,7 +14,7 @@
     "equipped_item_level": 663,
     "average_item_level": 663,
     "guild": "Frost Wolf Clan",
-    "achievement_points": 8795,
+    "achievement_points": 8830,
     "mythic_plus": {
       "score": 2075,
       "best_runs": [
@@ -286,26 +286,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-28T10:14:07.119180Z"
-  },
-  {
-    "name": "Kunglufi",
-    "realm": "Stormrage",
-    "level": 80,
-    "race": "Pandaren",
-    "class": "Monge",
-    "spec": "Tecelão da Névoa",
-    "faction": "Aliança",
-    "gender": "Masculino",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
-    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
-    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
-    "equipped_item_level": 655,
-    "average_item_level": 655,
-    "guild": "Jimmys Funnel Factory",
-    "achievement_points": 8700,
-    "mythic_plus": null,
-    "last_updated": "2025-05-28T10:14:09.855139Z"
+    "last_updated": "2025-05-29T10:13:29.277689Z"
   },
   {
     "name": "Draconyrith",
@@ -319,10 +300,10 @@
     "media": "https://render.worldofwarcraft.com/us/character/stormrage/148/257130132-main-raw.png",
     "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/148/257130132-main-raw.png",
     "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/148/257130132-main-raw.png",
-    "equipped_item_level": 653,
-    "average_item_level": 653,
+    "equipped_item_level": 658,
+    "average_item_level": 658,
     "guild": "Frost Wolf Clan",
-    "achievement_points": 8820,
+    "achievement_points": 8850,
     "mythic_plus": {
       "score": 817.3,
       "best_runs": [
@@ -429,7 +410,26 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-28T10:14:08.543860Z"
+    "last_updated": "2025-05-29T10:13:30.071353Z"
+  },
+  {
+    "name": "Kunglufi",
+    "realm": "Stormrage",
+    "level": 80,
+    "race": "Pandaren",
+    "class": "Monge",
+    "spec": "Tecelão da Névoa",
+    "faction": "Aliança",
+    "gender": "Masculino",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
+    "equipped_item_level": 655,
+    "average_item_level": 655,
+    "guild": "Jimmys Funnel Factory",
+    "achievement_points": 8700,
+    "mythic_plus": null,
+    "last_updated": "2025-05-29T10:13:30.930830Z"
   },
   {
     "name": "Shamil",
@@ -490,7 +490,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-28T10:14:14.720695Z"
+    "last_updated": "2025-05-29T10:13:34.397136Z"
   },
   {
     "name": "Rotpelt",
@@ -509,7 +509,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8730,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T10:14:12.213538Z"
+    "last_updated": "2025-05-29T10:13:32.745777Z"
   },
   {
     "name": "Rilufito",
@@ -528,7 +528,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T10:14:18.256662Z"
+    "last_updated": "2025-05-29T10:13:36.992052Z"
   },
   {
     "name": "Rilufix",
@@ -547,7 +547,7 @@
     "guild": "Gear Gold Glory",
     "achievement_points": 8720,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T10:14:13.453829Z"
+    "last_updated": "2025-05-29T10:13:33.609639Z"
   },
   {
     "name": "Thulduk",
@@ -566,7 +566,7 @@
     "guild": null,
     "achievement_points": 8720,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T10:14:10.988675Z"
+    "last_updated": "2025-05-29T10:13:31.884805Z"
   },
   {
     "name": "Lythendre",
@@ -585,7 +585,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T10:14:15.930512Z"
+    "last_updated": "2025-05-29T10:13:35.313154Z"
   },
   {
     "name": "Zarknall",
@@ -604,6 +604,6 @@
     "guild": "Eterniam",
     "achievement_points": 7790,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T10:14:17.121412Z"
+    "last_updated": "2025-05-29T10:13:36.204477Z"
   }
 ]

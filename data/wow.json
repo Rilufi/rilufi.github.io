@@ -14,7 +14,7 @@
     "equipped_item_level": 663,
     "average_item_level": 663,
     "guild": "Frost Wolf Clan",
-    "achievement_points": 8795,
+    "achievement_points": 8830,
     "mythic_plus": {
       "score": 2075,
       "best_runs": [
@@ -286,26 +286,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-28T10:13:51.241405Z"
-  },
-  {
-    "name": "Kunglufi",
-    "realm": "Stormrage",
-    "level": 80,
-    "race": "Pandaren",
-    "class": "Monk",
-    "spec": "Mistweaver",
-    "faction": "Alliance",
-    "gender": "Male",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
-    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
-    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
-    "equipped_item_level": 655,
-    "average_item_level": 655,
-    "guild": "Jimmys Funnel Factory",
-    "achievement_points": 8700,
-    "mythic_plus": null,
-    "last_updated": "2025-05-28T10:13:54.269740Z"
+    "last_updated": "2025-05-29T10:13:17.497352Z"
   },
   {
     "name": "Draconyrith",
@@ -319,10 +300,10 @@
     "media": "https://render.worldofwarcraft.com/us/character/stormrage/148/257130132-main-raw.png",
     "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/148/257130132-main-raw.png",
     "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/148/257130132-main-raw.png",
-    "equipped_item_level": 653,
-    "average_item_level": 653,
+    "equipped_item_level": 658,
+    "average_item_level": 658,
     "guild": "Frost Wolf Clan",
-    "achievement_points": 8820,
+    "achievement_points": 8850,
     "mythic_plus": {
       "score": 817.3,
       "best_runs": [
@@ -429,7 +410,26 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-28T10:13:52.940224Z"
+    "last_updated": "2025-05-29T10:13:18.693223Z"
+  },
+  {
+    "name": "Kunglufi",
+    "realm": "Stormrage",
+    "level": 80,
+    "race": "Pandaren",
+    "class": "Monk",
+    "spec": "Mistweaver",
+    "faction": "Alliance",
+    "gender": "Male",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
+    "equipped_item_level": 655,
+    "average_item_level": 655,
+    "guild": "Jimmys Funnel Factory",
+    "achievement_points": 8700,
+    "mythic_plus": null,
+    "last_updated": "2025-05-29T10:13:19.891023Z"
   },
   {
     "name": "Shamil",
@@ -490,7 +490,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-28T10:14:01.082869Z"
+    "last_updated": "2025-05-29T10:13:25.210377Z"
   },
   {
     "name": "Rotpelt",
@@ -509,7 +509,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8730,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T10:13:57.568053Z"
+    "last_updated": "2025-05-29T10:13:22.314713Z"
   },
   {
     "name": "Rilufito",
@@ -528,7 +528,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T10:14:05.949071Z"
+    "last_updated": "2025-05-29T10:13:28.408398Z"
   },
   {
     "name": "Rilufix",
@@ -547,7 +547,7 @@
     "guild": "Gear Gold Glory",
     "achievement_points": 8720,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T10:13:59.039946Z"
+    "last_updated": "2025-05-29T10:13:24.110812Z"
   },
   {
     "name": "Thulduk",
@@ -566,7 +566,7 @@
     "guild": null,
     "achievement_points": 8720,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T10:13:55.888451Z"
+    "last_updated": "2025-05-29T10:13:21.215084Z"
   },
   {
     "name": "Lythendre",
@@ -585,7 +585,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T10:14:02.750608Z"
+    "last_updated": "2025-05-29T10:13:26.241740Z"
   },
   {
     "name": "Zarknall",
@@ -604,6 +604,6 @@
     "guild": "Eterniam",
     "achievement_points": 7790,
     "mythic_plus": null,
-    "last_updated": "2025-05-28T10:14:04.630679Z"
+    "last_updated": "2025-05-29T10:13:27.330646Z"
   }
 ]
