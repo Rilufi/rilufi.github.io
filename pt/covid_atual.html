@@ -30,7 +30,7 @@
             <div class="row align-items-center">
                 <div class="col-md-8">
                     <h3><i class="bi bi-arrow-repeat"></i> Sistema Automatizado</h3>
-                    <p class="mb-0">Este dashboard é atualizado automaticamente todos os dias através de um pipeline de dados que coleta, processa e visualiza as informações mais recentes.</p>
+                    <p class="mb-0">Este dashboard é atualizado automaticamente sempre que novos dados são disponibilizados pela OMS, através de um pipeline de dados que coleta, processa e visualiza as informações mais recentes.</p>
                 </div>
                 <div class="col-md-4 text-md-end">
                     <div class="alert alert-light">
@@ -153,7 +153,7 @@
                 document.getElementById('lethality-rate').textContent = data.lethality_rate;
                 
                 // Atualiza a data de última atualização com a data dos dados reais da OMS
-                document.getElementById('update-date').textContent = data.data_date + ' (Dados WHO)';
+                document.getElementById('update-date').textContent = data.data_date + ' (Dados OMS)';
     
             } catch (error) {
                 console.error("Erro ao carregar dados de COVID-19:", error);
