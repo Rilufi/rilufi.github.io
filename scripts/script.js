@@ -8,12 +8,14 @@
 const languageConfig = {
   'pt': {
     path: {
-      'home': '/index.html',
-      'petbot': '/pt/petbot.html',
       'apod': '/pt/apod.html',
+      'clima': '/pt/clima.html',
       'covid_atual': '/pt/covid_atual.html',
       'covid_historico': '/pt/covid_historico.html',
-      'clima': '/pt/clima.html',
+      'durolon': '/pt/durolon.html',
+      'home': '/index.html',
+      'petbot': '/pt/petbot.html',
+      'stellarages': '/pt/stellarages.html',
       'triand': '/pt/triand.html',
       'wow': '/pt/wow.html'
     },
@@ -21,12 +23,14 @@ const languageConfig = {
   },
   'en': {
     path: {
-      'home': '/en/index.html',
-      'petbot': '/en/petbot.html',
       'apod': '/en/apod.html',
+      'clima': '/en/clima.html',
       'covid_atual': '/en/covid_atual.html',
       'covid_historico': '/en/covid_historico.html',
-      'clima': '/en/clima.html',
+      'durolon': '/en/durolon.html',
+      'home': '/en/index.html',
+      'petbot': '/en/petbot.html',
+      'stellarages': '/en/stellarages.html',
       'triand': '/en/triand.html',
       'wow': '/en/wow.html'
     },
@@ -43,12 +47,14 @@ function getCurrentPageIdentifier() {
   const cleanPath = path.replace(/^\/(en\/)?|\/$/g, '');
 
   const pageMap = {
-    'index': 'home',
-    'petbot': 'petbot',
     'apod': 'apod',
+    'clima': 'clima',
     'covid_atual': 'covid_atual',
     'covid_historico': 'covid_historico',
-    'clima': 'clima',
+    'durolon': 'durolon',
+    'index': 'home',
+    'petbot': 'petbot',
+    'stellarages': 'stellarages',
     'triand': 'triand',
     'wow': 'wow'
   };
