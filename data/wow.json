@@ -294,7 +294,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-30T10:12:45.843116Z"
+    "last_updated": "2025-05-31T10:11:15.521627Z"
   },
   {
     "name": "Draconyrith",
@@ -418,7 +418,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-30T10:12:47.720018Z"
+    "last_updated": "2025-05-31T10:11:16.439281Z"
   },
   {
     "name": "Kunglufi",
@@ -437,7 +437,7 @@
     "guild": "Jimmys Funnel Factory",
     "achievement_points": 8700,
     "mythic_plus": null,
-    "last_updated": "2025-05-30T10:12:49.244456Z"
+    "last_updated": "2025-05-31T10:11:17.547343Z"
   },
   {
     "name": "Shamil",
@@ -445,16 +445,16 @@
     "level": 80,
     "race": "Draenei",
     "class": "Shaman",
-    "spec": "Elemental",
+    "spec": "Restoration",
     "faction": "Alliance",
     "gender": "Male",
     "media": "https://render.worldofwarcraft.com/us/character/stormrage/1/257138433-main-raw.png",
     "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/1/257138433-main-raw.png",
     "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/1/257138433-main-raw.png",
-    "equipped_item_level": 645,
-    "average_item_level": 645,
+    "equipped_item_level": 647,
+    "average_item_level": 647,
     "guild": "Frostwolf Clån",
-    "achievement_points": 8765,
+    "achievement_points": 8895,
     "mythic_plus": {
       "score": 325.1,
       "best_runs": [
@@ -498,7 +498,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-30T10:12:58.150793Z"
+    "last_updated": "2025-05-31T10:11:21.725160Z"
   },
   {
     "name": "Rotpelt",
@@ -517,7 +517,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8730,
     "mythic_plus": null,
-    "last_updated": "2025-05-30T10:12:53.012069Z"
+    "last_updated": "2025-05-31T10:11:19.362644Z"
   },
   {
     "name": "Rilufito",
@@ -536,7 +536,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-05-30T10:13:03.436868Z"
+    "last_updated": "2025-05-31T10:11:25.134385Z"
   },
   {
     "name": "Rilufix",
@@ -555,7 +555,7 @@
     "guild": "Gear Gold Glory",
     "achievement_points": 8720,
     "mythic_plus": null,
-    "last_updated": "2025-05-30T10:12:54.571822Z"
+    "last_updated": "2025-05-31T10:11:20.817046Z"
   },
   {
     "name": "Thulduk",
@@ -574,7 +574,7 @@
     "guild": null,
     "achievement_points": 8720,
     "mythic_plus": null,
-    "last_updated": "2025-05-30T10:12:50.913672Z"
+    "last_updated": "2025-05-31T10:11:18.509770Z"
   },
   {
     "name": "Lythendre",
@@ -593,7 +593,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-05-30T10:13:00.106649Z"
+    "last_updated": "2025-05-31T10:11:23.397126Z"
   },
   {
     "name": "Zarknall",
@@ -612,6 +612,6 @@
     "guild": "Eterniam",
     "achievement_points": 7790,
     "mythic_plus": null,
-    "last_updated": "2025-05-30T10:13:01.967197Z"
+    "last_updated": "2025-05-31T10:11:24.255903Z"
   }
 ]
