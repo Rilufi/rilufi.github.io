@@ -14,9 +14,9 @@
     "equipped_item_level": 664,
     "average_item_level": 664,
     "guild": "Frost Wolf Clan",
-    "achievement_points": 8895,
+    "achievement_points": 8905,
     "mythic_plus": {
-      "score": 2131.5,
+      "score": 2170.9,
       "best_runs": [
         {
           "dungeon": "Mechagon Workshop",
@@ -122,6 +122,41 @@
             }
           ],
           "url": "https://raider.io/mythic-plus-runs/season-tww-2/14932838-8-theater-of-pain"
+        },
+        {
+          "dungeon": "Darkflame Cleft",
+          "short_name": "DFC",
+          "mythic_level": 8,
+          "completed_at": "2025-06-01T02:49:44.000Z",
+          "clear_time_ms": 1563246,
+          "keystone_run_id": 18277068,
+          "par_time_ms": 1860999,
+          "num_keystone_upgrades": 1,
+          "map_challenge_mode_id": 504,
+          "zone_id": 14882,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_darkflamecleft.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/darkflame-cleft.jpg",
+          "score": 281,
+          "affixes": [
+            {
+              "id": 162,
+              "name": "Xal'atath's Bargain: Pulsar",
+              "description": "While in combat, Xal'atath summons pulsars that orbit players.",
+              "icon": "inv_cosmicvoid_nova",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_cosmicvoid_nova.jpg",
+              "wowhead_url": "https://wowhead.com/affix=162"
+            },
+            {
+              "id": 9,
+              "name": "Tyrannical",
+              "description": "Bosses have 25% more health. Bosses and their minions inflict up to 15% increased damage.",
+              "icon": "achievement_boss_archaedas",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/achievement_boss_archaedas.jpg",
+              "wowhead_url": "https://wowhead.com/affix=9"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/18277068-8-darkflame-cleft"
         },
         {
           "dungeon": "The Rookery",
@@ -262,39 +297,12 @@
             }
           ],
           "url": "https://raider.io/mythic-plus-runs/season-tww-2/14345852-7-cinderbrew-meadery"
-        },
-        {
-          "dungeon": "Darkflame Cleft",
-          "short_name": "DFC",
-          "mythic_level": 6,
-          "completed_at": "2025-04-30T03:01:43.000Z",
-          "clear_time_ms": 1289606,
-          "keystone_run_id": 12909010,
-          "par_time_ms": 1860999,
-          "num_keystone_upgrades": 2,
-          "map_challenge_mode_id": 504,
-          "zone_id": 14882,
-          "zone_expansion_id": 10,
-          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_darkflamecleft.jpg",
-          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/darkflame-cleft.jpg",
-          "score": 241.5,
-          "affixes": [
-            {
-              "id": 148,
-              "name": "Xal'atath's Bargain: Ascendant",
-              "description": "While in combat, Xal'atath rains down orbs of cosmic energy that empower enemies or players.",
-              "icon": "inv_nullstone_cosmicvoid",
-              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_nullstone_cosmicvoid.jpg",
-              "wowhead_url": "https://wowhead.com/affix=148"
-            }
-          ],
-          "url": "https://raider.io/mythic-plus-runs/season-tww-2/12909010-6-darkflame-cleft"
         }
       ],
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-31T10:11:25.744575Z"
+    "last_updated": "2025-06-01T10:12:16.873548Z"
   },
   {
     "name": "Draconyrith",
@@ -418,7 +426,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-31T10:11:26.422629Z"
+    "last_updated": "2025-06-01T10:12:18.079278Z"
   },
   {
     "name": "Kunglufi",
@@ -437,7 +445,7 @@
     "guild": "Jimmys Funnel Factory",
     "achievement_points": 8700,
     "mythic_plus": null,
-    "last_updated": "2025-05-31T10:11:27.054880Z"
+    "last_updated": "2025-06-01T10:12:19.296035Z"
   },
   {
     "name": "Shamil",
@@ -498,7 +506,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-05-31T10:11:29.383286Z"
+    "last_updated": "2025-06-01T10:12:24.316047Z"
   },
   {
     "name": "Rotpelt",
@@ -517,7 +525,26 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8730,
     "mythic_plus": null,
-    "last_updated": "2025-05-31T10:11:28.180415Z"
+    "last_updated": "2025-06-01T10:12:21.742299Z"
+  },
+  {
+    "name": "Rilufix",
+    "realm": "Stormrage",
+    "level": 80,
+    "race": "Elfo Noturno",
+    "class": "Druida",
+    "spec": "Restauração",
+    "faction": "Aliança",
+    "gender": "Masculino",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
+    "equipped_item_level": 621,
+    "average_item_level": 623,
+    "guild": "Gear Gold Glory",
+    "achievement_points": 8905,
+    "mythic_plus": null,
+    "last_updated": "2025-06-01T10:12:22.963816Z"
   },
   {
     "name": "Rilufito",
@@ -536,26 +563,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-05-31T10:11:31.311063Z"
-  },
-  {
-    "name": "Rilufix",
-    "realm": "Stormrage",
-    "level": 80,
-    "race": "Elfo Noturno",
-    "class": "Druida",
-    "spec": "Restauração",
-    "faction": "Aliança",
-    "gender": "Masculino",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
-    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
-    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
-    "equipped_item_level": 613,
-    "average_item_level": 616,
-    "guild": "Gear Gold Glory",
-    "achievement_points": 8720,
-    "mythic_plus": null,
-    "last_updated": "2025-05-31T10:11:28.791348Z"
+    "last_updated": "2025-06-01T10:12:28.175235Z"
   },
   {
     "name": "Thulduk",
@@ -569,12 +577,12 @@
     "media": "https://render.worldofwarcraft.com/us/character/stormrage/75/257064011-main-raw.png",
     "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/75/257064011-main-raw.png",
     "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/75/257064011-main-raw.png",
-    "equipped_item_level": 601,
-    "average_item_level": 601,
+    "equipped_item_level": 605,
+    "average_item_level": 607,
     "guild": null,
-    "achievement_points": 8720,
+    "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-05-31T10:11:27.623627Z"
+    "last_updated": "2025-06-01T10:12:20.509383Z"
   },
   {
     "name": "Lythendre",
@@ -593,7 +601,26 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-05-31T10:11:30.025643Z"
+    "last_updated": "2025-06-01T10:12:25.610511Z"
+  },
+  {
+    "name": "Xifulir",
+    "realm": "Stormrage",
+    "level": 80,
+    "race": "Kultireno",
+    "class": "Druida",
+    "spec": "Feral",
+    "faction": "Aliança",
+    "gender": "Masculino",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
+    "equipped_item_level": 577,
+    "average_item_level": 582,
+    "guild": "The Forbidden Army",
+    "achievement_points": 8905,
+    "mythic_plus": null,
+    "last_updated": "2025-06-01T10:12:29.361869Z"
   },
   {
     "name": "Zarknall",
@@ -612,6 +639,6 @@
     "guild": "Eterniam",
     "achievement_points": 7790,
     "mythic_plus": null,
-    "last_updated": "2025-05-31T10:11:30.659553Z"
+    "last_updated": "2025-06-01T10:12:26.997647Z"
   }
 ]
