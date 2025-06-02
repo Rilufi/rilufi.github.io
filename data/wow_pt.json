@@ -302,7 +302,104 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-01T10:12:16.873548Z"
+    "last_updated": "2025-06-02T10:13:44.370526Z"
+  },
+  {
+    "name": "Kunglufi",
+    "realm": "Stormrage",
+    "level": 80,
+    "race": "Pandaren",
+    "class": "Monge",
+    "spec": "Andarilho do Vento",
+    "faction": "Aliança",
+    "gender": "Masculino",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
+    "equipped_item_level": 661,
+    "average_item_level": 661,
+    "guild": "Frost Wolf Clan",
+    "achievement_points": 8910,
+    "mythic_plus": {
+      "score": 591,
+      "best_runs": [
+        {
+          "dungeon": "Theater of Pain",
+          "short_name": "TOP",
+          "mythic_level": 4,
+          "completed_at": "2025-06-02T03:21:41.000Z",
+          "clear_time_ms": 1512186,
+          "keystone_run_id": 18442707,
+          "par_time_ms": 2040999,
+          "num_keystone_upgrades": 2,
+          "map_challenge_mode_id": 382,
+          "zone_id": 12841,
+          "zone_expansion_id": 8,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/achievement_dungeon_theatreofpain.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion8/base/theater-of-pain.jpg",
+          "score": 209.7,
+          "affixes": [
+            {
+              "id": 162,
+              "name": "Xal'atath's Bargain: Pulsar",
+              "description": "While in combat, Xal'atath summons pulsars that orbit players.",
+              "icon": "inv_cosmicvoid_nova",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_cosmicvoid_nova.jpg",
+              "wowhead_url": "https://wowhead.com/affix=162"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/18442707-4-theater-of-pain"
+        },
+        {
+          "dungeon": "Darkflame Cleft",
+          "short_name": "DFC",
+          "mythic_level": 4,
+          "completed_at": "2025-06-01T23:57:58.000Z",
+          "clear_time_ms": 1837928,
+          "keystone_run_id": 18430698,
+          "par_time_ms": 1860999,
+          "num_keystone_upgrades": 1,
+          "map_challenge_mode_id": 504,
+          "zone_id": 14882,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_darkflamecleft.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/darkflame-cleft.jpg",
+          "score": 200.5,
+          "affixes": [
+            {
+              "id": 162,
+              "name": "Xal'atath's Bargain: Pulsar",
+              "description": "While in combat, Xal'atath summons pulsars that orbit players.",
+              "icon": "inv_cosmicvoid_nova",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_cosmicvoid_nova.jpg",
+              "wowhead_url": "https://wowhead.com/affix=162"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/18430698-4-darkflame-cleft"
+        },
+        {
+          "dungeon": "The Rookery",
+          "short_name": "ROOK",
+          "mythic_level": 3,
+          "completed_at": "2025-06-01T23:13:33.000Z",
+          "clear_time_ms": 1236448,
+          "keystone_run_id": 18430537,
+          "par_time_ms": 1740999,
+          "num_keystone_upgrades": 2,
+          "map_challenge_mode_id": 500,
+          "zone_id": 14938,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_rookery.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/the-rookery.jpg",
+          "score": 180.9,
+          "affixes": [],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/18430537-3-the-rookery"
+        }
+      ],
+      "alternate_runs": [],
+      "season": "season-tww-2"
+    },
+    "last_updated": "2025-06-02T10:13:46.833320Z"
   },
   {
     "name": "Draconyrith",
@@ -426,26 +523,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-01T10:12:18.079278Z"
-  },
-  {
-    "name": "Kunglufi",
-    "realm": "Stormrage",
-    "level": 80,
-    "race": "Pandaren",
-    "class": "Monge",
-    "spec": "Tecelão da Névoa",
-    "faction": "Aliança",
-    "gender": "Masculino",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
-    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
-    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
-    "equipped_item_level": 655,
-    "average_item_level": 655,
-    "guild": "Jimmys Funnel Factory",
-    "achievement_points": 8700,
-    "mythic_plus": null,
-    "last_updated": "2025-06-01T10:12:19.296035Z"
+    "last_updated": "2025-06-02T10:13:45.651409Z"
   },
   {
     "name": "Shamil",
@@ -506,7 +584,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-01T10:12:24.316047Z"
+    "last_updated": "2025-06-02T10:13:52.202323Z"
   },
   {
     "name": "Rotpelt",
@@ -525,7 +603,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8730,
     "mythic_plus": null,
-    "last_updated": "2025-06-01T10:12:21.742299Z"
+    "last_updated": "2025-06-02T10:13:49.603194Z"
   },
   {
     "name": "Rilufix",
@@ -544,7 +622,7 @@
     "guild": "Gear Gold Glory",
     "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-06-01T10:12:22.963816Z"
+    "last_updated": "2025-06-02T10:13:50.859662Z"
   },
   {
     "name": "Rilufito",
@@ -563,7 +641,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-06-01T10:12:28.175235Z"
+    "last_updated": "2025-06-02T10:13:55.796828Z"
   },
   {
     "name": "Thulduk",
@@ -582,7 +660,7 @@
     "guild": null,
     "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-06-01T10:12:20.509383Z"
+    "last_updated": "2025-06-02T10:13:48.299022Z"
   },
   {
     "name": "Lythendre",
@@ -601,7 +679,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-06-01T10:12:25.610511Z"
+    "last_updated": "2025-06-02T10:13:53.450545Z"
   },
   {
     "name": "Xifulir",
@@ -620,7 +698,7 @@
     "guild": "The Forbidden Army",
     "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-06-01T10:12:29.361869Z"
+    "last_updated": "2025-06-02T10:13:56.991948Z"
   },
   {
     "name": "Zarknall",
@@ -639,6 +717,6 @@
     "guild": "Eterniam",
     "achievement_points": 7790,
     "mythic_plus": null,
-    "last_updated": "2025-06-01T10:12:26.997647Z"
+    "last_updated": "2025-06-02T10:13:54.617000Z"
   }
 ]
