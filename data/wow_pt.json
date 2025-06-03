@@ -14,7 +14,7 @@
     "equipped_item_level": 664,
     "average_item_level": 664,
     "guild": "Frost Wolf Clan",
-    "achievement_points": 8905,
+    "achievement_points": 8930,
     "mythic_plus": {
       "score": 2170.9,
       "best_runs": [
@@ -302,7 +302,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-02T10:13:44.370526Z"
+    "last_updated": "2025-06-03T10:13:35.056030Z"
   },
   {
     "name": "Kunglufi",
@@ -319,9 +319,9 @@
     "equipped_item_level": 661,
     "average_item_level": 661,
     "guild": "Frost Wolf Clan",
-    "achievement_points": 8910,
+    "achievement_points": 8930,
     "mythic_plus": {
-      "score": 591,
+      "score": 744.9,
       "best_runs": [
         {
           "dungeon": "Theater of Pain",
@@ -394,12 +394,30 @@
           "score": 180.9,
           "affixes": [],
           "url": "https://raider.io/mythic-plus-runs/season-tww-2/18430537-3-the-rookery"
+        },
+        {
+          "dungeon": "Operation: Floodgate",
+          "short_name": "FLOOD",
+          "mythic_level": 3,
+          "completed_at": "2025-06-02T02:43:38.000Z",
+          "clear_time_ms": 2040805,
+          "keystone_run_id": 18469087,
+          "par_time_ms": 1980999,
+          "num_keystone_upgrades": 0,
+          "map_challenge_mode_id": 525,
+          "zone_id": 15452,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_waterworks.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/operation-floodgate.jpg",
+          "score": 153.9,
+          "affixes": [],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/18469087-3-operation-floodgate"
         }
       ],
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-02T10:13:46.833320Z"
+    "last_updated": "2025-06-03T10:13:37.605400Z"
   },
   {
     "name": "Draconyrith",
@@ -523,7 +541,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-02T10:13:45.651409Z"
+    "last_updated": "2025-06-03T10:13:36.219902Z"
   },
   {
     "name": "Shamil",
@@ -584,7 +602,26 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-02T10:13:52.202323Z"
+    "last_updated": "2025-06-03T10:13:42.437878Z"
+  },
+  {
+    "name": "Rilufix",
+    "realm": "Stormrage",
+    "level": 80,
+    "race": "Elfo Noturno",
+    "class": "Druida",
+    "spec": "Restauração",
+    "faction": "Aliança",
+    "gender": "Masculino",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
+    "equipped_item_level": 621,
+    "average_item_level": 627,
+    "guild": "Gear Gold Glory",
+    "achievement_points": 8930,
+    "mythic_plus": null,
+    "last_updated": "2025-06-03T10:13:41.187937Z"
   },
   {
     "name": "Rotpelt",
@@ -603,26 +640,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8730,
     "mythic_plus": null,
-    "last_updated": "2025-06-02T10:13:49.603194Z"
-  },
-  {
-    "name": "Rilufix",
-    "realm": "Stormrage",
-    "level": 80,
-    "race": "Elfo Noturno",
-    "class": "Druida",
-    "spec": "Restauração",
-    "faction": "Aliança",
-    "gender": "Masculino",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
-    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
-    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/215/256807383-main-raw.png",
-    "equipped_item_level": 621,
-    "average_item_level": 623,
-    "guild": "Gear Gold Glory",
-    "achievement_points": 8905,
-    "mythic_plus": null,
-    "last_updated": "2025-06-02T10:13:50.859662Z"
+    "last_updated": "2025-06-03T10:13:40.002208Z"
   },
   {
     "name": "Rilufito",
@@ -641,7 +659,26 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-06-02T10:13:55.796828Z"
+    "last_updated": "2025-06-03T10:13:45.978998Z"
+  },
+  {
+    "name": "Xifulir",
+    "realm": "Stormrage",
+    "level": 80,
+    "race": "Kultireno",
+    "class": "Druida",
+    "spec": "Feral",
+    "faction": "Aliança",
+    "gender": "Masculino",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
+    "equipped_item_level": 577,
+    "average_item_level": 612,
+    "guild": "The Forbidden Army",
+    "achievement_points": 8920,
+    "mythic_plus": null,
+    "last_updated": "2025-06-03T10:13:47.241488Z"
   },
   {
     "name": "Thulduk",
@@ -660,7 +697,7 @@
     "guild": null,
     "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-06-02T10:13:48.299022Z"
+    "last_updated": "2025-06-03T10:13:38.822137Z"
   },
   {
     "name": "Lythendre",
@@ -679,26 +716,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-06-02T10:13:53.450545Z"
-  },
-  {
-    "name": "Xifulir",
-    "realm": "Stormrage",
-    "level": 80,
-    "race": "Kultireno",
-    "class": "Druida",
-    "spec": "Feral",
-    "faction": "Aliança",
-    "gender": "Masculino",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
-    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
-    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
-    "equipped_item_level": 577,
-    "average_item_level": 582,
-    "guild": "The Forbidden Army",
-    "achievement_points": 8905,
-    "mythic_plus": null,
-    "last_updated": "2025-06-02T10:13:56.991948Z"
+    "last_updated": "2025-06-03T10:13:43.661298Z"
   },
   {
     "name": "Zarknall",
@@ -717,6 +735,6 @@
     "guild": "Eterniam",
     "achievement_points": 7790,
     "mythic_plus": null,
-    "last_updated": "2025-06-02T10:13:54.617000Z"
+    "last_updated": "2025-06-03T10:13:44.819250Z"
   }
 ]
