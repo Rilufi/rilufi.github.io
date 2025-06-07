@@ -302,7 +302,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-07T11:53:36.492907Z"
+    "last_updated": "2025-06-07T22:09:11.240282+00:00"
   },
   {
     "name": "Kunglufi",
@@ -444,7 +444,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-07T11:53:39.399122Z"
+    "last_updated": "2025-06-07T22:09:14.612478+00:00"
   },
   {
     "name": "Draconyrith",
@@ -568,7 +568,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-07T11:53:37.900659Z"
+    "last_updated": "2025-06-07T22:09:12.926059+00:00"
   },
   {
     "name": "Shamil",
@@ -629,7 +629,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-07T11:53:45.048237Z"
+    "last_updated": "2025-06-07T22:09:20.781392+00:00"
   },
   {
     "name": "Rilufix",
@@ -648,7 +648,7 @@
     "guild": "Gear Gold Glory",
     "achievement_points": 8930,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T11:53:43.454669Z"
+    "last_updated": "2025-06-07T22:09:19.397951+00:00"
   },
   {
     "name": "Rotpelt",
@@ -667,7 +667,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8730,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T11:53:41.873211Z"
+    "last_updated": "2025-06-07T22:09:17.922363+00:00"
   },
   {
     "name": "Rilufito",
@@ -686,7 +686,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T11:53:48.651225Z"
+    "last_updated": "2025-06-07T22:09:26.912506+00:00"
   },
   {
     "name": "Xifulir",
@@ -705,7 +705,7 @@
     "guild": "The Forbidden Army",
     "achievement_points": 8920,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T11:53:49.819193Z"
+    "last_updated": "2025-06-07T22:09:29.823144+00:00"
   },
   {
     "name": "Rauxis",
@@ -724,7 +724,7 @@
     "guild": "Dont Sass Me",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T11:53:50.943868Z"
+    "last_updated": "2025-06-07T22:09:31.467377+00:00"
   },
   {
     "name": "Thulduk",
@@ -743,7 +743,7 @@
     "guild": null,
     "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T11:53:40.666813Z"
+    "last_updated": "2025-06-07T22:09:16.149253+00:00"
   },
   {
     "name": "Lythendre",
@@ -762,7 +762,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T11:53:46.244717Z"
+    "last_updated": "2025-06-07T22:09:22.384888+00:00"
   },
   {
     "name": "Zarknall",
@@ -781,7 +781,7 @@
     "guild": "Eterniam",
     "achievement_points": 7790,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T11:53:47.475984Z"
+    "last_updated": "2025-06-07T22:09:23.868265+00:00"
   },
   {
     "name": "Omong",
@@ -800,7 +800,64 @@
     "guild": "RUINOUS",
     "achievement_points": 7560,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T11:53:52.241295Z"
+    "last_updated": "2025-06-07T22:09:32.774354+00:00"
+  },
+  {
+    "name": "Ilufir",
+    "realm": "Azralon",
+    "level": 70,
+    "race": "Vulpera",
+    "class": "Monk",
+    "spec": "Mistweaver",
+    "faction": "Horde",
+    "gender": "Male",
+    "media": "https://render.worldofwarcraft.com/us/character/azralon/222/199363294-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/azralon/222/199363294-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/azralon/222/199363294-main-raw.png",
+    "equipped_item_level": 344,
+    "average_item_level": 344,
+    "guild": "Monster Faith",
+    "achievement_points": 6045,
+    "mythic_plus": null,
+    "last_updated": "2025-06-07T22:09:36.005343+00:00"
+  },
+  {
+    "name": "Effirië",
+    "realm": "Nemesis",
+    "level": 56,
+    "race": "Night Elf",
+    "class": "Demon Hunter",
+    "spec": "Havoc",
+    "faction": "Alliance",
+    "gender": "Male",
+    "media": "https://render.worldofwarcraft.com/us/character/nemesis/235/187882731-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/nemesis/235/187882731-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/nemesis/235/187882731-main-raw.png",
+    "equipped_item_level": 266,
+    "average_item_level": 296,
+    "guild": null,
+    "achievement_points": 6865,
+    "mythic_plus": null,
+    "last_updated": "2025-06-07T22:09:39.595910+00:00"
+  },
+  {
+    "name": "Shamanil",
+    "realm": "Azralon",
+    "level": 70,
+    "race": "Highmountain Tauren",
+    "class": "Shaman",
+    "spec": "Restoration",
+    "faction": "Horde",
+    "gender": "Male",
+    "media": null,
+    "media_main": null,
+    "media_main_raw": null,
+    "equipped_item_level": 258,
+    "average_item_level": 258,
+    "guild": "Fear Effect",
+    "achievement_points": 6045,
+    "mythic_plus": null,
+    "last_updated": "2025-06-07T22:09:37.458586+00:00"
   },
   {
     "name": "Ifulir",
@@ -819,6 +876,6 @@
     "guild": null,
     "achievement_points": 6090,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T11:53:53.490630Z"
+    "last_updated": "2025-06-07T22:09:34.248168+00:00"
   }
 ]
