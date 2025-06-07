@@ -302,7 +302,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-07T10:11:31.869117Z"
+    "last_updated": "2025-06-07T11:53:36.492907Z"
   },
   {
     "name": "Kunglufi",
@@ -444,7 +444,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-07T10:11:35.080080Z"
+    "last_updated": "2025-06-07T11:53:39.399122Z"
   },
   {
     "name": "Draconyrith",
@@ -568,7 +568,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-07T10:11:33.149092Z"
+    "last_updated": "2025-06-07T11:53:37.900659Z"
   },
   {
     "name": "Shamil",
@@ -629,7 +629,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-07T10:11:38.647708Z"
+    "last_updated": "2025-06-07T11:53:45.048237Z"
   },
   {
     "name": "Rilufix",
@@ -648,7 +648,7 @@
     "guild": "Gear Gold Glory",
     "achievement_points": 8930,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T10:11:37.747371Z"
+    "last_updated": "2025-06-07T11:53:43.454669Z"
   },
   {
     "name": "Rotpelt",
@@ -667,7 +667,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8730,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T10:11:36.905107Z"
+    "last_updated": "2025-06-07T11:53:41.873211Z"
   },
   {
     "name": "Rilufito",
@@ -686,7 +686,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T10:11:41.353033Z"
+    "last_updated": "2025-06-07T11:53:48.651225Z"
   },
   {
     "name": "Xifulir",
@@ -705,7 +705,26 @@
     "guild": "The Forbidden Army",
     "achievement_points": 8920,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T10:11:42.195443Z"
+    "last_updated": "2025-06-07T11:53:49.819193Z"
+  },
+  {
+    "name": "Rauxis",
+    "realm": "Stormrage",
+    "level": 80,
+    "race": "Lightforged Draenei",
+    "class": "Hunter",
+    "spec": "Survival",
+    "faction": "Alliance",
+    "gender": "Male",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/32/258449184-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/32/258449184-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/32/258449184-main-raw.png",
+    "equipped_item_level": 552,
+    "average_item_level": 611,
+    "guild": "Dont Sass Me",
+    "achievement_points": 8970,
+    "mythic_plus": null,
+    "last_updated": "2025-06-07T11:53:50.943868Z"
   },
   {
     "name": "Thulduk",
@@ -724,7 +743,7 @@
     "guild": null,
     "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T10:11:36.010607Z"
+    "last_updated": "2025-06-07T11:53:40.666813Z"
   },
   {
     "name": "Lythendre",
@@ -743,7 +762,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T10:11:39.548808Z"
+    "last_updated": "2025-06-07T11:53:46.244717Z"
   },
   {
     "name": "Zarknall",
@@ -762,6 +781,44 @@
     "guild": "Eterniam",
     "achievement_points": 7790,
     "mythic_plus": null,
-    "last_updated": "2025-06-07T10:11:40.588977Z"
+    "last_updated": "2025-06-07T11:53:47.475984Z"
+  },
+  {
+    "name": "Omong",
+    "realm": "Stormrage",
+    "level": 72,
+    "race": "Gnome",
+    "class": "Rogue",
+    "spec": "Assassination",
+    "faction": "Alliance",
+    "gender": "Male",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/24/258342936-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/24/258342936-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/24/258342936-main-raw.png",
+    "equipped_item_level": 467,
+    "average_item_level": 467,
+    "guild": "RUINOUS",
+    "achievement_points": 7560,
+    "mythic_plus": null,
+    "last_updated": "2025-06-07T11:53:52.241295Z"
+  },
+  {
+    "name": "Ifulir",
+    "realm": "Stormrage",
+    "level": 70,
+    "race": "Human",
+    "class": "Mage",
+    "spec": "Frost",
+    "faction": "Alliance",
+    "gender": "Male",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/35/258346019-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/35/258346019-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/35/258346019-main-raw.png",
+    "equipped_item_level": 186,
+    "average_item_level": 186,
+    "guild": null,
+    "achievement_points": 6090,
+    "mythic_plus": null,
+    "last_updated": "2025-06-07T11:53:53.490630Z"
   }
 ]
