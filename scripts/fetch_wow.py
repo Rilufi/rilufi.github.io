@@ -1,18 +1,34 @@
 import os
 import json
 import requests
-from datetime import datetime
+from datetime import datetime, timezone
 
 # Configurações principais
 REGION = "us"
-REALM = "stormrage"
 NAMESPACE = f"profile-{REGION}"
 LOCALES = {"en": "en_US", "pt": "pt_BR"}
+
+# Lista de personagens com seus respectivos reinos
 CHARACTERS = [
-    "Rilufi", "Draconyrith", "Kunglufi", "Thulduk", "Rotpelt",
-    "Rilufix", "Shamil", "Lythendre", "Zarknall", "Rilufito",
-    "Xifulir", "Rauxis", "Omong", "Ifulir", "Ilufir",
-    "Shamanil", "Dekghar", "Carkend", "Effirië"
+    {"name": "Rilufi", "realm": "Stormrage"},
+    {"name": "Draconyrith", "realm": "Stormrage"},
+    {"name": "Kunglufi", "realm": "Stormrage"},
+    {"name": "Thulduk", "realm": "Stormrage"},
+    {"name": "Rotpelt", "realm": "Stormrage"},
+    {"name": "Rilufix", "realm": "Stormrage"},
+    {"name": "Shamil", "realm": "Stormrage"},
+    {"name": "Lythendre", "realm": "Stormrage"},
+    {"name": "Zarknall", "realm": "Stormrage"},
+    {"name": "Rilufito", "realm": "Stormrage"},
+    {"name": "Xifulir", "realm": "Stormrage"},
+    {"name": "Rauxis", "realm": "Stormrage"},
+    {"name": "Omong", "realm": "Stormrage"},
+    {"name": "Ifulir", "realm": "Stormrage"},
+    {"name": "Ilufir", "realm": "Azralon"},
+    {"name": "Shamanil", "realm": "Azralon"},
+    {"name": "Dekghar", "realm": "Nemesis"},
+    {"name": "Carkend", "realm": "Nemesis"},
+    {"name": "Effirië", "realm": "Nemesis"}
 ]
 
 def get_token(client_id, client_secret):
@@ -22,8 +38,8 @@ def get_token(client_id, client_secret):
     response.raise_for_status()
     return response.json()["access_token"]
 
-def get_character_media(name, token, locale="en_US"):
-    url = f"https://{REGION}.api.blizzard.com/profile/wow/character/{REALM}/{name.lower()}/character-media"
+def get_character_media(name, realm, token, locale="en_US"):
+    url = f"https://{REGION}.api.blizzard.com/profile/wow/character/{realm.lower()}/{name.lower()}/character-media"
     headers = {"Authorization": f"Bearer {token}"}
     params = {"namespace": NAMESPACE, "locale": locale}
 
@@ -43,10 +59,10 @@ def get_character_media(name, token, locale="en_US"):
                     media_url = asset["value"]
         return media_url
     except requests.exceptions.RequestException as e:
-        print(f"Erro ao obter mídia para {name}: {e}")
+        print(f"Erro ao obter mídia para {name} ({realm}): {e}")
         return None
 
-def get_raider_io_data(name, realm=REALM, region=REGION):
+def get_raider_io_data(name, realm, region=REGION):
     """Obtém dados do Raider.IO para personagem"""
     url = f"https://raider.io/api/v1/characters/profile"
     params = {
@@ -61,11 +77,11 @@ def get_raider_io_data(name, realm=REALM, region=REGION):
         response.raise_for_status()
         return response.json()
     except requests.exceptions.RequestException as e:
-        print(f"Erro ao obter dados do Raider.IO para {name}: {e}")
+        print(f"Erro ao obter dados do Raider.IO para {name} ({realm}): {e}")
         return None
 
-def get_character_profile(name, token, locale="en_US"):
-    base_url = f"https://{REGION}.api.blizzard.com/profile/wow/character/{REALM}/{name.lower()}"
+def get_character_profile(name, realm, token, locale="en_US"):
+    base_url = f"https://{REGION}.api.blizzard.com/profile/wow/character/{realm.lower()}/{name.lower()}"
     headers = {"Authorization": f"Bearer {token}"}
     params = {"namespace": NAMESPACE, "locale": locale}
 
@@ -74,11 +90,11 @@ def get_character_profile(name, token, locale="en_US"):
         profile_response.raise_for_status()
         profile = profile_response.json()
 
-        media_url = get_character_media(name, token, locale)
+        media_url = get_character_media(name, realm, token, locale)
         equipment_response = requests.get(f"{base_url}/equipment", headers=headers, params=params)
         equipment_data = equipment_response.json() if equipment_response.status_code == 200 else {}
 
-        rio_data = get_raider_io_data(name)
+        rio_data = get_raider_io_data(name, realm)
 
         mythic_plus = {}
         if rio_data:
@@ -107,18 +123,18 @@ def get_character_profile(name, token, locale="en_US"):
             "guild": profile.get("guild", {}).get("name") if profile.get("guild") else None,
             "achievement_points": profile.get("achievement_points"),
             "mythic_plus": mythic_plus if mythic_plus.get("score") else None,
-            "last_updated": datetime.utcnow().isoformat() + "Z"
+            "last_updated": datetime.now(timezone.utc).isoformat()
         }
     except requests.exceptions.RequestException as e:
-        print(f"Erro ao obter perfil para {name}: {e}")
+        print(f"Erro ao obter perfil para {name} ({realm}): {e}")
         return None
 
 def save_data(locale_code, token):
     locale = LOCALES[locale_code]
     characters = []
 
-    for name in CHARACTERS:
-        char_data = get_character_profile(name, token, locale)
+    for char_info in CHARACTERS:
+        char_data = get_character_profile(char_info["name"], char_info["realm"], token, locale)
         if char_data:
             characters.append(char_data)
 
