@@ -10,7 +10,9 @@ NAMESPACE = f"profile-{REGION}"
 LOCALES = {"en": "en_US", "pt": "pt_BR"}
 CHARACTERS = [
     "Rilufi", "Draconyrith", "Kunglufi", "Thulduk", "Rotpelt",
-    "Rilufix", "Shamil", "Lythendre", "Zarknall", "Rilufito", "Xifulir"
+    "Rilufix", "Shamil", "Lythendre", "Zarknall", "Rilufito",
+    "Xifulir", "Rauxis", "Omong", "Ifulir", "Ilufir",
+    "Shamanil", "Dekghar", "Carkend", "Effirië"
 ]
 
 def get_token(client_id, client_secret):
