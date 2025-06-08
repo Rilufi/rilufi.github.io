@@ -302,7 +302,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-08T10:11:31.468350+00:00"
+    "last_updated": "2025-06-08T16:25:06.830035+00:00"
   },
   {
     "name": "Kunglufi",
@@ -444,7 +444,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-08T10:11:34.426416+00:00"
+    "last_updated": "2025-06-08T16:25:07.882835+00:00"
   },
   {
     "name": "Draconyrith",
@@ -568,7 +568,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-08T10:11:32.943454+00:00"
+    "last_updated": "2025-06-08T16:25:08.892052+00:00"
   },
   {
     "name": "Shamil",
@@ -629,7 +629,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-08T10:11:40.208170+00:00"
+    "last_updated": "2025-06-08T16:25:11.171784+00:00"
   },
   {
     "name": "Rilufix",
@@ -648,7 +648,7 @@
     "guild": "Gear Gold Glory",
     "achievement_points": 8930,
     "mythic_plus": null,
-    "last_updated": "2025-06-08T10:11:38.864485+00:00"
+    "last_updated": "2025-06-08T16:25:14.401188+00:00"
   },
   {
     "name": "Rotpelt",
@@ -667,7 +667,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8730,
     "mythic_plus": null,
-    "last_updated": "2025-06-08T10:11:37.396589+00:00"
+    "last_updated": "2025-06-08T16:25:13.610259+00:00"
   },
   {
     "name": "Rilufito",
@@ -686,7 +686,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-06-08T10:11:44.898217+00:00"
+    "last_updated": "2025-06-08T16:25:15.658271+00:00"
   },
   {
     "name": "Xifulir",
@@ -705,26 +705,26 @@
     "guild": "The Forbidden Army",
     "achievement_points": 8920,
     "mythic_plus": null,
-    "last_updated": "2025-06-08T10:11:46.291870+00:00"
+    "last_updated": "2025-06-08T16:25:11.965949+00:00"
   },
   {
-    "name": "Rauxis",
+    "name": "Omong",
     "realm": "Stormrage",
     "level": 80,
-    "race": "Lightforged Draenei",
-    "class": "Hunter",
-    "spec": "Survival",
+    "race": "Gnome",
+    "class": "Rogue",
+    "spec": "Outlaw",
     "faction": "Alliance",
     "gender": "Male",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/32/258449184-main-raw.png",
-    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/32/258449184-main-raw.png",
-    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/32/258449184-main-raw.png",
-    "equipped_item_level": 552,
-    "average_item_level": 611,
-    "guild": "Dont Sass Me",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/24/258342936-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/24/258342936-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/24/258342936-main-raw.png",
+    "equipped_item_level": 594,
+    "average_item_level": 608,
+    "guild": "Thèm",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-08T10:11:47.575726+00:00"
+    "last_updated": "2025-06-08T16:25:18.718324+00:00"
   },
   {
     "name": "Thulduk",
@@ -743,7 +743,26 @@
     "guild": null,
     "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-06-08T10:11:35.899734+00:00"
+    "last_updated": "2025-06-08T16:25:12.805480+00:00"
+  },
+  {
+    "name": "Rauxis",
+    "realm": "Stormrage",
+    "level": 80,
+    "race": "Lightforged Draenei",
+    "class": "Hunter",
+    "spec": "Survival",
+    "faction": "Alliance",
+    "gender": "Male",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/32/258449184-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/32/258449184-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/32/258449184-main-raw.png",
+    "equipped_item_level": 552,
+    "average_item_level": 606,
+    "guild": "Dont Sass Me",
+    "achievement_points": 8970,
+    "mythic_plus": null,
+    "last_updated": "2025-06-08T16:25:17.981647+00:00"
   },
   {
     "name": "Lythendre",
@@ -762,7 +781,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-06-08T10:11:42.042500+00:00"
+    "last_updated": "2025-06-08T16:25:17.275500+00:00"
   },
   {
     "name": "Zarknall",
@@ -781,26 +800,7 @@
     "guild": "Eterniam",
     "achievement_points": 7790,
     "mythic_plus": null,
-    "last_updated": "2025-06-08T10:11:43.369188+00:00"
-  },
-  {
-    "name": "Omong",
-    "realm": "Stormrage",
-    "level": 77,
-    "race": "Gnome",
-    "class": "Rogue",
-    "spec": "Outlaw",
-    "faction": "Alliance",
-    "gender": "Male",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/24/258342936-main-raw.png",
-    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/24/258342936-main-raw.png",
-    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/24/258342936-main-raw.png",
-    "equipped_item_level": 490,
-    "average_item_level": 494,
-    "guild": "Thèm",
-    "achievement_points": 8970,
-    "mythic_plus": null,
-    "last_updated": "2025-06-08T10:11:49.000444+00:00"
+    "last_updated": "2025-06-08T16:25:16.440093+00:00"
   },
   {
     "name": "Ilufir",
@@ -819,7 +819,26 @@
     "guild": "Monster Faith",
     "achievement_points": 6045,
     "mythic_plus": null,
-    "last_updated": "2025-06-08T10:11:51.700213+00:00"
+    "last_updated": "2025-06-08T16:25:23.797227+00:00"
+  },
+  {
+    "name": "Rilufi",
+    "realm": "Nemesis",
+    "level": 57,
+    "race": "Night Elf",
+    "class": "Druid",
+    "spec": "Balance",
+    "faction": "Alliance",
+    "gender": "Male",
+    "media": "https://render.worldofwarcraft.com/us/character/nemesis/158/187656094-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/nemesis/158/187656094-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/nemesis/158/187656094-main-raw.png",
+    "equipped_item_level": 304,
+    "average_item_level": 304,
+    "guild": null,
+    "achievement_points": 6865,
+    "mythic_plus": null,
+    "last_updated": "2025-06-08T16:25:27.088300+00:00"
   },
   {
     "name": "Effirië",
@@ -838,7 +857,26 @@
     "guild": null,
     "achievement_points": 6865,
     "mythic_plus": null,
-    "last_updated": "2025-06-08T10:11:54.871077+00:00"
+    "last_updated": "2025-06-08T16:25:25.842619+00:00"
+  },
+  {
+    "name": "Effirië",
+    "realm": "Azralon",
+    "level": 70,
+    "race": "Blood Elf",
+    "class": "Demon Hunter",
+    "spec": "Havoc",
+    "faction": "Horde",
+    "gender": "Male",
+    "media": "https://render.worldofwarcraft.com/us/character/azralon/9/176166409-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/azralon/9/176166409-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/azralon/9/176166409-main-raw.png",
+    "equipped_item_level": 244,
+    "average_item_level": 262,
+    "guild": "CrAzY LiFe BR",
+    "achievement_points": 6925,
+    "mythic_plus": null,
+    "last_updated": "2025-06-08T16:25:22.981893+00:00"
   },
   {
     "name": "Shamanil",
@@ -857,7 +895,45 @@
     "guild": "Fear Effect",
     "achievement_points": 6045,
     "mythic_plus": null,
-    "last_updated": "2025-06-08T10:11:52.950958+00:00"
+    "last_updated": "2025-06-08T16:25:21.259059+00:00"
+  },
+  {
+    "name": "Zandaril",
+    "realm": "Azralon",
+    "level": 70,
+    "race": "Zandalari Troll",
+    "class": "Druid",
+    "spec": "Balance",
+    "faction": "Horde",
+    "gender": "Male",
+    "media": "https://render.worldofwarcraft.com/us/character/azralon/114/199412082-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/azralon/114/199412082-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/azralon/114/199412082-main-raw.png",
+    "equipped_item_level": 213,
+    "average_item_level": 213,
+    "guild": "Comedores De Lixo",
+    "achievement_points": 6025,
+    "mythic_plus": null,
+    "last_updated": "2025-06-08T16:25:22.141661+00:00"
+  },
+  {
+    "name": "Rilufinho",
+    "realm": "Stormrage",
+    "level": 70,
+    "race": "Mechagnome",
+    "class": "Warrior",
+    "spec": "Fury",
+    "faction": "Alliance",
+    "gender": "Male",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/244/258388724-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/244/258388724-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/244/258388724-main-raw.png",
+    "equipped_item_level": 206,
+    "average_item_level": 206,
+    "guild": null,
+    "achievement_points": 6090,
+    "mythic_plus": null,
+    "last_updated": "2025-06-08T16:25:19.655912+00:00"
   },
   {
     "name": "Ifulir",
@@ -876,6 +952,44 @@
     "guild": null,
     "achievement_points": 6090,
     "mythic_plus": null,
-    "last_updated": "2025-06-08T10:11:50.335104+00:00"
+    "last_updated": "2025-06-08T16:25:20.524814+00:00"
+  },
+  {
+    "name": "Rilbourne",
+    "realm": "Azralon",
+    "level": 21,
+    "race": "Nightborne",
+    "class": "Warlock",
+    "spec": "Demonology",
+    "faction": "Horde",
+    "gender": "Male",
+    "media": "https://render.worldofwarcraft.com/us/character/azralon/217/199471833-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/azralon/217/199471833-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/azralon/217/199471833-main-raw.png",
+    "equipped_item_level": 51,
+    "average_item_level": 51,
+    "guild": "Omnispace",
+    "achievement_points": 6110,
+    "mythic_plus": null,
+    "last_updated": "2025-06-08T16:25:24.790934+00:00"
+  },
+  {
+    "name": "Rocheiro",
+    "realm": "Suramar",
+    "level": 11,
+    "race": "Earthen",
+    "class": "Shaman",
+    "spec": "Elemental",
+    "faction": "Horde",
+    "gender": "Male",
+    "media": "https://render.worldofwarcraft.com/us/character/suramar/137/182260361-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/suramar/137/182260361-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/suramar/137/182260361-main-raw.png",
+    "equipped_item_level": 25,
+    "average_item_level": 25,
+    "guild": null,
+    "achievement_points": 7775,
+    "mythic_plus": null,
+    "last_updated": "2025-06-08T16:25:28.209142+00:00"
   }
 ]
