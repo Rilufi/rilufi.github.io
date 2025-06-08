@@ -11,24 +11,32 @@ LOCALES = {"en": "en_US", "pt": "pt_BR"}
 # Lista de personagens com seus respectivos reinos
 CHARACTERS = [
     {"name": "Rilufi", "realm": "Stormrage"},
-    {"name": "Draconyrith", "realm": "Stormrage"},
     {"name": "Kunglufi", "realm": "Stormrage"},
+    {"name": "Draconyrith", "realm": "Stormrage"},
+    {"name": "Shamil", "realm": "Stormrage"},
+    {"name": "Xifulir", "realm": "Stormrage"},
     {"name": "Thulduk", "realm": "Stormrage"},
     {"name": "Rotpelt", "realm": "Stormrage"},
     {"name": "Rilufix", "realm": "Stormrage"},
-    {"name": "Shamil", "realm": "Stormrage"},
-    {"name": "Lythendre", "realm": "Stormrage"},
-    {"name": "Zarknall", "realm": "Stormrage"},
     {"name": "Rilufito", "realm": "Stormrage"},
-    {"name": "Xifulir", "realm": "Stormrage"},
+    {"name": "Zarknall", "realm": "Stormrage"},
+    {"name": "Lythendre", "realm": "Stormrage"},
     {"name": "Rauxis", "realm": "Stormrage"},
     {"name": "Omong", "realm": "Stormrage"},
+    {"name": "Rilufinho", "realm": "Stormrage"},
     {"name": "Ifulir", "realm": "Stormrage"},
-    {"name": "Ilufir", "realm": "Azralon"},
     {"name": "Shamanil", "realm": "Azralon"},
-    {"name": "Dekghar", "realm": "Nemesis"},
-    {"name": "Carkend", "realm": "Nemesis"},
-    {"name": "Effirië", "realm": "Nemesis"}
+    {"name": "Zandaril", "realm": "Azralon"},
+    {"name": "Effirië", "realm": "Azralon"}
+    {"name": "Ilufir", "realm": "Azralon"},
+    {"name": "Carkend", "realm": "Azralon"},
+    {"name": "Rilbourne", "realm": "Azralon"},
+    {"name": "Dekghar", "realm": "Azralon"},
+    {"name": "Effirië", "realm": "Nemesis"},
+    {"name": "Rilufi", "realm": "Nemesis"},
+    {"name": "Thulduk", "realm": "Nemesis"},
+    {"name": "Kalinos", "realm": "Nemesis"},
+    {"name": "Rocheiro", "realm": "Suramar"}
 ]
 
 def get_token(client_id, client_secret):
