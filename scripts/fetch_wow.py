@@ -27,7 +27,7 @@ CHARACTERS = [
     {"name": "Ifulir", "realm": "Stormrage"},
     {"name": "Shamanil", "realm": "Azralon"},
     {"name": "Zandaril", "realm": "Azralon"},
-    {"name": "Effirië", "realm": "Azralon"}
+    {"name": "Effirië", "realm": "Azralon"},
     {"name": "Ilufir", "realm": "Azralon"},
     {"name": "Carkend", "realm": "Azralon"},
     {"name": "Rilbourne", "realm": "Azralon"},
