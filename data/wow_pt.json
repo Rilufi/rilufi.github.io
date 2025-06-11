@@ -302,7 +302,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-10T10:13:47.424603+00:00"
+    "last_updated": "2025-06-11T10:13:56.070279+00:00"
   },
   {
     "name": "Kunglufi",
@@ -316,8 +316,8 @@
     "media": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
     "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
     "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/25/257129753-main-raw.png",
-    "equipped_item_level": 662,
-    "average_item_level": 662,
+    "equipped_item_level": 663,
+    "average_item_level": 663,
     "guild": "Frost Wolf Clan",
     "achievement_points": 8990,
     "mythic_plus": {
@@ -444,7 +444,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-10T10:13:48.405177+00:00"
+    "last_updated": "2025-06-11T10:13:56.992804+00:00"
   },
   {
     "name": "Draconyrith",
@@ -568,7 +568,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-10T10:13:49.364800+00:00"
+    "last_updated": "2025-06-11T10:13:57.879076+00:00"
   },
   {
     "name": "Shamil",
@@ -576,16 +576,16 @@
     "level": 80,
     "race": "Draenei",
     "class": "Xamã",
-    "spec": "Restauração",
+    "spec": "Aperfeiçoamento",
     "faction": "Aliança",
     "gender": "Masculino",
     "media": "https://render.worldofwarcraft.com/us/character/stormrage/1/257138433-main-raw.png",
     "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/1/257138433-main-raw.png",
     "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/1/257138433-main-raw.png",
-    "equipped_item_level": 647,
-    "average_item_level": 647,
+    "equipped_item_level": 645,
+    "average_item_level": 648,
     "guild": "Frostwolf Clån",
-    "achievement_points": 8895,
+    "achievement_points": 8990,
     "mythic_plus": {
       "score": 325.1,
       "best_runs": [
@@ -629,7 +629,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-10T10:13:50.242568+00:00"
+    "last_updated": "2025-06-11T10:13:58.728302+00:00"
   },
   {
     "name": "Rotpelt",
@@ -648,7 +648,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:13:53.218243+00:00"
+    "last_updated": "2025-06-11T10:14:01.551138+00:00"
   },
   {
     "name": "Rilufix",
@@ -667,7 +667,7 @@
     "guild": "Gear Gold Glory",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:13:54.076699+00:00"
+    "last_updated": "2025-06-11T10:14:02.482347+00:00"
   },
   {
     "name": "Rilufito",
@@ -686,7 +686,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:13:54.932740+00:00"
+    "last_updated": "2025-06-11T10:14:03.338291+00:00"
   },
   {
     "name": "Xifulir",
@@ -705,7 +705,7 @@
     "guild": "The Forbidden Army",
     "achievement_points": 8920,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:13:51.357707+00:00"
+    "last_updated": "2025-06-11T10:13:59.737165+00:00"
   },
   {
     "name": "Omong",
@@ -724,7 +724,7 @@
     "guild": "Thèm",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:13:58.537155+00:00"
+    "last_updated": "2025-06-11T10:14:07.021534+00:00"
   },
   {
     "name": "Thulduk",
@@ -743,7 +743,7 @@
     "guild": null,
     "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:13:52.291320+00:00"
+    "last_updated": "2025-06-11T10:14:00.645344+00:00"
   },
   {
     "name": "Rauxis",
@@ -762,7 +762,7 @@
     "guild": "Dont Sass Me",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:13:57.641149+00:00"
+    "last_updated": "2025-06-11T10:14:06.128634+00:00"
   },
   {
     "name": "Zarknall",
@@ -781,7 +781,7 @@
     "guild": "Keiynu",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:13:55.851566+00:00"
+    "last_updated": "2025-06-11T10:14:04.238529+00:00"
   },
   {
     "name": "Lythendre",
@@ -800,7 +800,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:13:56.743110+00:00"
+    "last_updated": "2025-06-11T10:14:05.184355+00:00"
   },
   {
     "name": "Rilufinho",
@@ -819,7 +819,7 @@
     "guild": null,
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:13:59.435067+00:00"
+    "last_updated": "2025-06-11T10:14:07.910096+00:00"
   },
   {
     "name": "Shamanil",
@@ -838,7 +838,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:14:01.467379+00:00"
+    "last_updated": "2025-06-11T10:14:09.733087+00:00"
   },
   {
     "name": "Ifulir",
@@ -857,7 +857,7 @@
     "guild": null,
     "achievement_points": 8990,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:14:00.380991+00:00"
+    "last_updated": "2025-06-11T10:14:08.820083+00:00"
   },
   {
     "name": "Zandaril",
@@ -876,7 +876,7 @@
     "guild": null,
     "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:14:03.428997+00:00"
+    "last_updated": "2025-06-11T10:14:10.635178+00:00"
   },
   {
     "name": "Ilufir",
@@ -895,7 +895,7 @@
     "guild": "Monster Faith",
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:14:05.216756+00:00"
+    "last_updated": "2025-06-11T10:14:12.372835+00:00"
   },
   {
     "name": "Rilufi",
@@ -914,7 +914,7 @@
     "guild": null,
     "achievement_points": 8990,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:14:09.765769+00:00"
+    "last_updated": "2025-06-11T10:14:16.965376+00:00"
   },
   {
     "name": "Effirië",
@@ -933,7 +933,7 @@
     "guild": null,
     "achievement_points": 8990,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:14:08.842555+00:00"
+    "last_updated": "2025-06-11T10:14:16.013900+00:00"
   },
   {
     "name": "Effirië",
@@ -952,7 +952,7 @@
     "guild": "CrAzY LiFe BR",
     "achievement_points": 6925,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:14:04.300997+00:00"
+    "last_updated": "2025-06-11T10:14:11.478264+00:00"
   },
   {
     "name": "Carkend",
@@ -971,7 +971,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:14:06.108174+00:00"
+    "last_updated": "2025-06-11T10:14:13.309845+00:00"
   },
   {
     "name": "Rilbourne",
@@ -990,7 +990,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:14:06.998273+00:00"
+    "last_updated": "2025-06-11T10:14:14.226568+00:00"
   },
   {
     "name": "Thulduk",
@@ -1009,7 +1009,7 @@
     "guild": null,
     "achievement_points": 8990,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:14:10.689715+00:00"
+    "last_updated": "2025-06-11T10:14:17.938829+00:00"
   },
   {
     "name": "Rocheiro",
@@ -1028,7 +1028,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:14:11.850993+00:00"
+    "last_updated": "2025-06-11T10:14:19.077500+00:00"
   },
   {
     "name": "Dekghar",
@@ -1047,6 +1047,6 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-10T10:14:07.948073+00:00"
+    "last_updated": "2025-06-11T10:14:15.131435+00:00"
   }
 ]
