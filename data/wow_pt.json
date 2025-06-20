@@ -302,7 +302,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-19T10:13:26.243295+00:00"
+    "last_updated": "2025-06-20T10:13:12.697899+00:00"
   },
   {
     "name": "Kunglufi",
@@ -444,7 +444,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-19T10:13:26.952583+00:00"
+    "last_updated": "2025-06-20T10:13:13.358247+00:00"
   },
   {
     "name": "Draconyrith",
@@ -568,7 +568,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-19T10:13:27.506907+00:00"
+    "last_updated": "2025-06-20T10:13:13.984432+00:00"
   },
   {
     "name": "Shamil",
@@ -629,7 +629,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-19T10:13:28.199255+00:00"
+    "last_updated": "2025-06-20T10:13:14.621688+00:00"
   },
   {
     "name": "Rotpelt",
@@ -648,7 +648,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:30.131185+00:00"
+    "last_updated": "2025-06-20T10:13:16.498788+00:00"
   },
   {
     "name": "Rilufix",
@@ -667,7 +667,7 @@
     "guild": "Gear Gold Glory",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:30.726253+00:00"
+    "last_updated": "2025-06-20T10:13:17.081667+00:00"
   },
   {
     "name": "Rilufito",
@@ -686,7 +686,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:31.351534+00:00"
+    "last_updated": "2025-06-20T10:13:17.661041+00:00"
   },
   {
     "name": "Xifulir",
@@ -705,7 +705,7 @@
     "guild": "The Forbidden Army",
     "achievement_points": 8920,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:28.856132+00:00"
+    "last_updated": "2025-06-20T10:13:15.209614+00:00"
   },
   {
     "name": "Omong",
@@ -724,7 +724,7 @@
     "guild": "Thèm",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:33.866326+00:00"
+    "last_updated": "2025-06-20T10:13:20.008424+00:00"
   },
   {
     "name": "Thulduk",
@@ -743,7 +743,7 @@
     "guild": null,
     "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:29.499168+00:00"
+    "last_updated": "2025-06-20T10:13:15.857652+00:00"
   },
   {
     "name": "Rauxis",
@@ -762,7 +762,7 @@
     "guild": "Dont Sass Me",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:33.259776+00:00"
+    "last_updated": "2025-06-20T10:13:19.420341+00:00"
   },
   {
     "name": "Zarknall",
@@ -781,7 +781,7 @@
     "guild": "Keiynu",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:32.146610+00:00"
+    "last_updated": "2025-06-20T10:13:18.227684+00:00"
   },
   {
     "name": "Lythendre",
@@ -800,7 +800,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:32.688324+00:00"
+    "last_updated": "2025-06-20T10:13:18.846982+00:00"
   },
   {
     "name": "Rilufinho",
@@ -819,7 +819,26 @@
     "guild": null,
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:34.548484+00:00"
+    "last_updated": "2025-06-20T10:13:20.620348+00:00"
+  },
+  {
+    "name": "Effirië",
+    "realm": "Azralon",
+    "level": 78,
+    "race": "Elfo Sangrento",
+    "class": "Caçador de Demônios",
+    "spec": "Devastação",
+    "faction": "Horda",
+    "gender": "Masculino",
+    "media": "https://render.worldofwarcraft.com/us/character/azralon/9/176166409-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/azralon/9/176166409-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/azralon/9/176166409-main-raw.png",
+    "equipped_item_level": 461,
+    "average_item_level": 508,
+    "guild": "Os Quebra Chave",
+    "achievement_points": 8960,
+    "mythic_plus": null,
+    "last_updated": "2025-06-20T10:13:23.090955+00:00"
   },
   {
     "name": "Shamanil",
@@ -838,7 +857,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:35.740131+00:00"
+    "last_updated": "2025-06-20T10:13:21.873578+00:00"
   },
   {
     "name": "Ifulir",
@@ -857,7 +876,7 @@
     "guild": null,
     "achievement_points": 8990,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:35.150376+00:00"
+    "last_updated": "2025-06-20T10:13:21.279444+00:00"
   },
   {
     "name": "Zandaril",
@@ -876,7 +895,7 @@
     "guild": null,
     "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:36.313386+00:00"
+    "last_updated": "2025-06-20T10:13:22.499095+00:00"
   },
   {
     "name": "Ilufir",
@@ -895,7 +914,7 @@
     "guild": "Monster Faith",
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:37.623082+00:00"
+    "last_updated": "2025-06-20T10:13:23.678341+00:00"
   },
   {
     "name": "Rilufi",
@@ -914,7 +933,7 @@
     "guild": null,
     "achievement_points": 8990,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:40.959072+00:00"
+    "last_updated": "2025-06-20T10:13:27.077410+00:00"
   },
   {
     "name": "Effirië",
@@ -933,26 +952,7 @@
     "guild": null,
     "achievement_points": 8990,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:40.374315+00:00"
-  },
-  {
-    "name": "Effirië",
-    "realm": "Azralon",
-    "level": 70,
-    "race": "Elfo Sangrento",
-    "class": "Caçador de Demônios",
-    "spec": "Devastação",
-    "faction": "Horda",
-    "gender": "Masculino",
-    "media": "https://render.worldofwarcraft.com/us/character/azralon/9/176166409-main-raw.png",
-    "media_main": "https://render.worldofwarcraft.com/us/character/azralon/9/176166409-main-raw.png",
-    "media_main_raw": "https://render.worldofwarcraft.com/us/character/azralon/9/176166409-main-raw.png",
-    "equipped_item_level": 244,
-    "average_item_level": 262,
-    "guild": "CrAzY LiFe BR",
-    "achievement_points": 6925,
-    "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:36.921592+00:00"
+    "last_updated": "2025-06-20T10:13:26.478046+00:00"
   },
   {
     "name": "Carkend",
@@ -971,7 +971,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:38.273689+00:00"
+    "last_updated": "2025-06-20T10:13:24.543954+00:00"
   },
   {
     "name": "Rilbourne",
@@ -990,7 +990,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:38.932754+00:00"
+    "last_updated": "2025-06-20T10:13:25.248164+00:00"
   },
   {
     "name": "Thulduk",
@@ -1009,7 +1009,7 @@
     "guild": null,
     "achievement_points": 8990,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:41.638073+00:00"
+    "last_updated": "2025-06-20T10:13:27.813808+00:00"
   },
   {
     "name": "Rocheiro",
@@ -1028,7 +1028,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:42.485812+00:00"
+    "last_updated": "2025-06-20T10:13:28.613396+00:00"
   },
   {
     "name": "Dekghar",
@@ -1047,6 +1047,6 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-19T10:13:39.695147+00:00"
+    "last_updated": "2025-06-20T10:13:25.894063+00:00"
   }
 ]
