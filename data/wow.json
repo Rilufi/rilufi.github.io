@@ -302,7 +302,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-24T10:13:43.306017+00:00"
+    "last_updated": "2025-06-25T10:13:32.200914+00:00"
   },
   {
     "name": "Kunglufi",
@@ -444,7 +444,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-24T10:13:44.888042+00:00"
+    "last_updated": "2025-06-25T10:13:34.613503+00:00"
   },
   {
     "name": "Draconyrith",
@@ -568,7 +568,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-24T10:13:46.409945+00:00"
+    "last_updated": "2025-06-25T10:13:36.161730+00:00"
   },
   {
     "name": "Shamil",
@@ -629,7 +629,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-24T10:13:47.972089+00:00"
+    "last_updated": "2025-06-25T10:13:37.688366+00:00"
   },
   {
     "name": "Xifulir",
@@ -643,12 +643,45 @@
     "media": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
     "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
     "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
-    "equipped_item_level": 645,
-    "average_item_level": 645,
-    "guild": "The Forbidden Army",
-    "achievement_points": 9105,
-    "mythic_plus": null,
-    "last_updated": "2025-06-24T10:13:49.578175+00:00"
+    "equipped_item_level": 653,
+    "average_item_level": 653,
+    "guild": "Frost Wolf Clan",
+    "achievement_points": 9135,
+    "mythic_plus": {
+      "score": 227.1,
+      "best_runs": [
+        {
+          "dungeon": "The Rookery",
+          "short_name": "ROOK",
+          "mythic_level": 5,
+          "completed_at": "2025-06-25T03:58:40.000Z",
+          "clear_time_ms": 1177398,
+          "keystone_run_id": 20914309,
+          "par_time_ms": 1740999,
+          "num_keystone_upgrades": 2,
+          "map_challenge_mode_id": 500,
+          "zone_id": 14938,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_rookery.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/the-rookery.jpg",
+          "score": 227.1,
+          "affixes": [
+            {
+              "id": 148,
+              "name": "Xal'atath's Bargain: Ascendant",
+              "description": "While in combat, Xal'atath rains down orbs of cosmic energy that empower enemies or players.",
+              "icon": "inv_nullstone_cosmicvoid",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_nullstone_cosmicvoid.jpg",
+              "wowhead_url": "https://wowhead.com/affix=148"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/20914309-5-the-rookery"
+        }
+      ],
+      "alternate_runs": [],
+      "season": "season-tww-2"
+    },
+    "last_updated": "2025-06-25T10:13:39.095534+00:00"
   },
   {
     "name": "Rotpelt",
@@ -667,7 +700,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:13:52.399175+00:00"
+    "last_updated": "2025-06-25T10:13:42.188319+00:00"
   },
   {
     "name": "Rilufix",
@@ -684,9 +717,9 @@
     "equipped_item_level": 621,
     "average_item_level": 624,
     "guild": "Gear Gold Glory",
-    "achievement_points": 9075,
+    "achievement_points": 9135,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:13:53.929319+00:00"
+    "last_updated": "2025-06-25T10:13:44.199869+00:00"
   },
   {
     "name": "Rilufito",
@@ -705,7 +738,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:13:55.281710+00:00"
+    "last_updated": "2025-06-25T10:13:45.765382+00:00"
   },
   {
     "name": "Omong",
@@ -724,7 +757,7 @@
     "guild": "Thèm",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:01.410821+00:00"
+    "last_updated": "2025-06-25T10:13:51.550726+00:00"
   },
   {
     "name": "Thulduk",
@@ -743,7 +776,7 @@
     "guild": null,
     "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:13:51.012717+00:00"
+    "last_updated": "2025-06-25T10:13:40.772878+00:00"
   },
   {
     "name": "Rauxis",
@@ -762,7 +795,7 @@
     "guild": "Dont Sass Me",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:13:59.896059+00:00"
+    "last_updated": "2025-06-25T10:13:50.197490+00:00"
   },
   {
     "name": "Zarknall",
@@ -781,7 +814,7 @@
     "guild": "Keiynu",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:13:56.686961+00:00"
+    "last_updated": "2025-06-25T10:13:47.333545+00:00"
   },
   {
     "name": "Lythendre",
@@ -800,7 +833,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:13:58.524548+00:00"
+    "last_updated": "2025-06-25T10:13:48.778039+00:00"
   },
   {
     "name": "Effirië",
@@ -819,7 +852,7 @@
     "guild": "Os Quebra Chave",
     "achievement_points": 9000,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:07.960788+00:00"
+    "last_updated": "2025-06-25T10:13:58.241654+00:00"
   },
   {
     "name": "Rilufinho",
@@ -838,7 +871,7 @@
     "guild": null,
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:02.717002+00:00"
+    "last_updated": "2025-06-25T10:13:53.015204+00:00"
   },
   {
     "name": "Shamanil",
@@ -857,7 +890,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:05.388238+00:00"
+    "last_updated": "2025-06-25T10:13:55.560192+00:00"
   },
   {
     "name": "Ifulir",
@@ -876,12 +909,12 @@
     "guild": null,
     "achievement_points": 8990,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:04.063623+00:00"
+    "last_updated": "2025-06-25T10:13:54.303282+00:00"
   },
   {
     "name": "Zandaril",
     "realm": "Azralon",
-    "level": 70,
+    "level": 72,
     "race": "Zandalari Troll",
     "class": "Druid",
     "spec": "Balance",
@@ -893,9 +926,9 @@
     "equipped_item_level": 467,
     "average_item_level": 467,
     "guild": "Legião De Azeroth",
-    "achievement_points": 9000,
+    "achievement_points": 9060,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:06.630958+00:00"
+    "last_updated": "2025-06-25T10:13:56.863302+00:00"
   },
   {
     "name": "Ilufir",
@@ -914,12 +947,12 @@
     "guild": "Monster Faith",
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:09.364496+00:00"
+    "last_updated": "2025-06-25T10:13:59.772697+00:00"
   },
   {
     "name": "Rilufi",
     "realm": "Nemesis",
-    "level": 60,
+    "level": 70,
     "race": "Night Elf",
     "class": "Druid",
     "spec": "Guardian",
@@ -928,12 +961,12 @@
     "media": "https://render.worldofwarcraft.com/us/character/nemesis/158/187656094-main-raw.png",
     "media_main": "https://render.worldofwarcraft.com/us/character/nemesis/158/187656094-main-raw.png",
     "media_main_raw": "https://render.worldofwarcraft.com/us/character/nemesis/158/187656094-main-raw.png",
-    "equipped_item_level": 307,
-    "average_item_level": 309,
-    "guild": null,
-    "achievement_points": 9105,
+    "equipped_item_level": 327,
+    "average_item_level": 336,
+    "guild": "Astral",
+    "achievement_points": 9135,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:16.465605+00:00"
+    "last_updated": "2025-06-25T10:14:06.647715+00:00"
   },
   {
     "name": "Effirië",
@@ -952,7 +985,7 @@
     "guild": "Os Naturalistas",
     "achievement_points": 9075,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:14.709922+00:00"
+    "last_updated": "2025-06-25T10:14:05.234119+00:00"
   },
   {
     "name": "Carkend",
@@ -971,7 +1004,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:10.774119+00:00"
+    "last_updated": "2025-06-25T10:14:01.057271+00:00"
   },
   {
     "name": "Rilbourne",
@@ -990,7 +1023,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:12.132281+00:00"
+    "last_updated": "2025-06-25T10:14:02.530857+00:00"
   },
   {
     "name": "Thulduk",
@@ -1009,7 +1042,7 @@
     "guild": null,
     "achievement_points": 8990,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:17.824117+00:00"
+    "last_updated": "2025-06-25T10:14:07.892804+00:00"
   },
   {
     "name": "Rocheiro",
@@ -1028,7 +1061,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:19.334280+00:00"
+    "last_updated": "2025-06-25T10:14:09.687060+00:00"
   },
   {
     "name": "Dekghar",
@@ -1047,6 +1080,6 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-24T10:14:13.409002+00:00"
+    "last_updated": "2025-06-25T10:14:03.814470+00:00"
   }
 ]
