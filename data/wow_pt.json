@@ -302,7 +302,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-25T10:14:10.982452+00:00"
+    "last_updated": "2025-06-26T10:13:36.970952+00:00"
   },
   {
     "name": "Kunglufi",
@@ -444,7 +444,94 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-25T10:14:12.350840+00:00"
+    "last_updated": "2025-06-26T10:13:38.048174+00:00"
+  },
+  {
+    "name": "Xifulir",
+    "realm": "Stormrage",
+    "level": 80,
+    "race": "Kultireno",
+    "class": "Druida",
+    "spec": "Feral",
+    "faction": "Aliança",
+    "gender": "Masculino",
+    "media": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
+    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
+    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
+    "equipped_item_level": 661,
+    "average_item_level": 661,
+    "guild": "Frost Wolf Clan",
+    "achievement_points": 9135,
+    "mythic_plus": {
+      "score": 493,
+      "best_runs": [
+        {
+          "dungeon": "Cinderbrew Meadery",
+          "short_name": "BREW",
+          "mythic_level": 7,
+          "completed_at": "2025-06-26T04:50:37.000Z",
+          "clear_time_ms": 1671004,
+          "keystone_run_id": 20998493,
+          "par_time_ms": 1980999,
+          "num_keystone_upgrades": 1,
+          "map_challenge_mode_id": 506,
+          "zone_id": 15103,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_cinderbrewmeadery.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/cinderbrew-meadery.jpg",
+          "score": 265.9,
+          "affixes": [
+            {
+              "id": 148,
+              "name": "Xal'atath's Bargain: Ascendant",
+              "description": "While in combat, Xal'atath rains down orbs of cosmic energy that empower enemies or players.",
+              "icon": "inv_nullstone_cosmicvoid",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_nullstone_cosmicvoid.jpg",
+              "wowhead_url": "https://wowhead.com/affix=148"
+            },
+            {
+              "id": 9,
+              "name": "Tyrannical",
+              "description": "Bosses have 25% more health. Bosses and their minions inflict up to 15% increased damage.",
+              "icon": "achievement_boss_archaedas",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/achievement_boss_archaedas.jpg",
+              "wowhead_url": "https://wowhead.com/affix=9"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/20998493-7-cinderbrew-meadery"
+        },
+        {
+          "dungeon": "The Rookery",
+          "short_name": "ROOK",
+          "mythic_level": 5,
+          "completed_at": "2025-06-25T03:58:40.000Z",
+          "clear_time_ms": 1177398,
+          "keystone_run_id": 20914309,
+          "par_time_ms": 1740999,
+          "num_keystone_upgrades": 2,
+          "map_challenge_mode_id": 500,
+          "zone_id": 14938,
+          "zone_expansion_id": 10,
+          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_rookery.jpg",
+          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/the-rookery.jpg",
+          "score": 227.1,
+          "affixes": [
+            {
+              "id": 148,
+              "name": "Xal'atath's Bargain: Ascendant",
+              "description": "While in combat, Xal'atath rains down orbs of cosmic energy that empower enemies or players.",
+              "icon": "inv_nullstone_cosmicvoid",
+              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_nullstone_cosmicvoid.jpg",
+              "wowhead_url": "https://wowhead.com/affix=148"
+            }
+          ],
+          "url": "https://raider.io/mythic-plus-runs/season-tww-2/20914309-5-the-rookery"
+        }
+      ],
+      "alternate_runs": [],
+      "season": "season-tww-2"
+    },
+    "last_updated": "2025-06-26T10:13:41.050967+00:00"
   },
   {
     "name": "Draconyrith",
@@ -568,7 +655,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-25T10:14:13.654107+00:00"
+    "last_updated": "2025-06-26T10:13:39.090445+00:00"
   },
   {
     "name": "Shamil",
@@ -629,59 +716,7 @@
       "alternate_runs": [],
       "season": "season-tww-2"
     },
-    "last_updated": "2025-06-25T10:14:14.875150+00:00"
-  },
-  {
-    "name": "Xifulir",
-    "realm": "Stormrage",
-    "level": 80,
-    "race": "Kultireno",
-    "class": "Druida",
-    "spec": "Feral",
-    "faction": "Aliança",
-    "gender": "Masculino",
-    "media": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
-    "media_main": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
-    "media_main_raw": "https://render.worldofwarcraft.com/us/character/stormrage/52/258449204-main-raw.png",
-    "equipped_item_level": 653,
-    "average_item_level": 653,
-    "guild": "Frost Wolf Clan",
-    "achievement_points": 9135,
-    "mythic_plus": {
-      "score": 227.1,
-      "best_runs": [
-        {
-          "dungeon": "The Rookery",
-          "short_name": "ROOK",
-          "mythic_level": 5,
-          "completed_at": "2025-06-25T03:58:40.000Z",
-          "clear_time_ms": 1177398,
-          "keystone_run_id": 20914309,
-          "par_time_ms": 1740999,
-          "num_keystone_upgrades": 2,
-          "map_challenge_mode_id": 500,
-          "zone_id": 14938,
-          "zone_expansion_id": 10,
-          "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_achievement_dungeon_rookery.jpg",
-          "background_image_url": "https://cdn.raiderio.net/images/dungeons/expansion10/base/the-rookery.jpg",
-          "score": 227.1,
-          "affixes": [
-            {
-              "id": 148,
-              "name": "Xal'atath's Bargain: Ascendant",
-              "description": "While in combat, Xal'atath rains down orbs of cosmic energy that empower enemies or players.",
-              "icon": "inv_nullstone_cosmicvoid",
-              "icon_url": "https://cdn.raiderio.net/images/wow/icons/large/inv_nullstone_cosmicvoid.jpg",
-              "wowhead_url": "https://wowhead.com/affix=148"
-            }
-          ],
-          "url": "https://raider.io/mythic-plus-runs/season-tww-2/20914309-5-the-rookery"
-        }
-      ],
-      "alternate_runs": [],
-      "season": "season-tww-2"
-    },
-    "last_updated": "2025-06-25T10:14:16.107577+00:00"
+    "last_updated": "2025-06-26T10:13:40.083559+00:00"
   },
   {
     "name": "Rotpelt",
@@ -700,7 +735,7 @@
     "guild": "SolØ Leveling",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:18.411304+00:00"
+    "last_updated": "2025-06-26T10:13:43.123761+00:00"
   },
   {
     "name": "Rilufix",
@@ -719,7 +754,7 @@
     "guild": "Gear Gold Glory",
     "achievement_points": 9135,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:19.597606+00:00"
+    "last_updated": "2025-06-26T10:13:44.078347+00:00"
   },
   {
     "name": "Rilufito",
@@ -738,7 +773,7 @@
     "guild": "Alliance Vanguard",
     "achievement_points": 8385,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:20.808315+00:00"
+    "last_updated": "2025-06-26T10:13:45.139330+00:00"
   },
   {
     "name": "Omong",
@@ -757,7 +792,7 @@
     "guild": "Thèm",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:25.931384+00:00"
+    "last_updated": "2025-06-26T10:13:49.242192+00:00"
   },
   {
     "name": "Thulduk",
@@ -776,7 +811,7 @@
     "guild": null,
     "achievement_points": 8905,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:17.227162+00:00"
+    "last_updated": "2025-06-26T10:13:42.093236+00:00"
   },
   {
     "name": "Rauxis",
@@ -795,7 +830,7 @@
     "guild": "Dont Sass Me",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:24.615239+00:00"
+    "last_updated": "2025-06-26T10:13:48.181703+00:00"
   },
   {
     "name": "Zarknall",
@@ -814,7 +849,7 @@
     "guild": "Keiynu",
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:21.961052+00:00"
+    "last_updated": "2025-06-26T10:13:46.152274+00:00"
   },
   {
     "name": "Lythendre",
@@ -833,7 +868,7 @@
     "guild": "Prog Deez Nutz",
     "achievement_points": 7995,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:23.234247+00:00"
+    "last_updated": "2025-06-26T10:13:47.130954+00:00"
   },
   {
     "name": "Effirië",
@@ -852,7 +887,7 @@
     "guild": "Os Quebra Chave",
     "achievement_points": 9000,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:31.928774+00:00"
+    "last_updated": "2025-06-26T10:13:54.464966+00:00"
   },
   {
     "name": "Rilufinho",
@@ -871,7 +906,7 @@
     "guild": null,
     "achievement_points": 8970,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:27.097485+00:00"
+    "last_updated": "2025-06-26T10:13:50.421361+00:00"
   },
   {
     "name": "Shamanil",
@@ -890,7 +925,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:29.474590+00:00"
+    "last_updated": "2025-06-26T10:13:52.484170+00:00"
   },
   {
     "name": "Ifulir",
@@ -909,7 +944,7 @@
     "guild": null,
     "achievement_points": 8990,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:28.290368+00:00"
+    "last_updated": "2025-06-26T10:13:51.508045+00:00"
   },
   {
     "name": "Zandaril",
@@ -928,7 +963,7 @@
     "guild": "Legião De Azeroth",
     "achievement_points": 9060,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:30.677464+00:00"
+    "last_updated": "2025-06-26T10:13:53.475889+00:00"
   },
   {
     "name": "Ilufir",
@@ -947,7 +982,7 @@
     "guild": "Monster Faith",
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:33.179681+00:00"
+    "last_updated": "2025-06-26T10:13:55.490004+00:00"
   },
   {
     "name": "Rilufi",
@@ -966,7 +1001,7 @@
     "guild": "Astral",
     "achievement_points": 9135,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:39.204905+00:00"
+    "last_updated": "2025-06-26T10:14:00.944802+00:00"
   },
   {
     "name": "Effirië",
@@ -985,7 +1020,7 @@
     "guild": "Os Naturalistas",
     "achievement_points": 9075,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:38.033064+00:00"
+    "last_updated": "2025-06-26T10:13:59.803530+00:00"
   },
   {
     "name": "Carkend",
@@ -1004,7 +1039,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:34.366826+00:00"
+    "last_updated": "2025-06-26T10:13:56.599349+00:00"
   },
   {
     "name": "Rilbourne",
@@ -1023,7 +1058,7 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:35.560595+00:00"
+    "last_updated": "2025-06-26T10:13:57.772237+00:00"
   },
   {
     "name": "Thulduk",
@@ -1042,7 +1077,7 @@
     "guild": null,
     "achievement_points": 8990,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:40.449359+00:00"
+    "last_updated": "2025-06-26T10:14:02.207119+00:00"
   },
   {
     "name": "Rocheiro",
@@ -1061,12 +1096,12 @@
     "guild": null,
     "achievement_points": 8915,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:41.996001+00:00"
+    "last_updated": "2025-06-26T10:14:03.509339+00:00"
   },
   {
     "name": "Dekghar",
     "realm": "Azralon",
-    "level": 10,
+    "level": 15,
     "race": "Orc Mag'har",
     "class": "Cavaleiro da Morte",
     "spec": "Sangue",
@@ -1075,11 +1110,11 @@
     "media": "https://render.worldofwarcraft.com/us/character/azralon/13/199471885-main-raw.png",
     "media_main": "https://render.worldofwarcraft.com/us/character/azralon/13/199471885-main-raw.png",
     "media_main_raw": "https://render.worldofwarcraft.com/us/character/azralon/13/199471885-main-raw.png",
-    "equipped_item_level": 13,
-    "average_item_level": 13,
+    "equipped_item_level": 23,
+    "average_item_level": 23,
     "guild": null,
-    "achievement_points": 8915,
+    "achievement_points": 9060,
     "mythic_plus": null,
-    "last_updated": "2025-06-25T10:14:36.764707+00:00"
+    "last_updated": "2025-06-26T10:13:58.817315+00:00"
   }
 ]
